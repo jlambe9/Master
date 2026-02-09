@@ -5,11 +5,11 @@
 
 ## 🔴 Active (max 3)
 
-| Task | Stage | Domain | Last Surface | Next Action |
-|------|-------|--------|--------------|-------------|
-| ClawdBot file restructure | EXPLOIT | ai | ClawdBot | Feed rewrite doc, let it self-restructure |
-| Master repo scaffold | EXPLOIT | ai | Cursor | Create file structure from blueprint |
-| LinkedIn outreach automation | BLOCKED | boss/lead-gen | ClawdBot | Needs ClawdBot restructure first |
+| Task | Cat | Pipeline | Stage | Domain | Next Action |
+|------|-----|----------|-------|--------|-------------|
+| ClawdBot file restructure | 🟢 E | In-progress | EXPLOIT | ai | Feed rewrite doc, let it self-restructure |
+| LinkedIn outreach automation | 🟠 M | Blocked | BLOCKED | boss/lead-gen | Needs ClawdBot restructure first |
+| Task system integration | 🟢 E | In-progress | EXPLOIT | ai | Build into /master, test with first tasks |
 
 ## 🟡 Queued
 
@@ -23,6 +23,7 @@
 
 | Task | Date | Notes |
 |------|------|-------|
+| Master repo scaffold | 2026-02-09 | Full v2 structure with BOSS system |
 | ClawdBot rewrite spec | 2026-02-09 | Full file contents ready |
 | Cross-tool sync architecture | 2026-02-08 | Git repo as coordination layer |
 | Cowork ENOSPC diagnosis | 2026-02-09 | Remove academic-research MCP |

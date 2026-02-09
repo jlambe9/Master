@@ -1,14 +1,26 @@
 # Daily Review — YYYY-MM-DD
 
+## Session State (Layer 2)
+- **Energy:** 🔋/⚡/🪫
+- **Time:** Morning / Afternoon / Evening
+- **State:** nominal
+
 ## Tasks Touched
-| Task | Stage Change? | Surface | Output |
-|------|--------------|---------|--------|
+| Task | Cat | Pipeline → | Predicted | Actual | Duration | Deviation |
+|------|-----|-----------|-----------|--------|----------|-----------|
+| | | | | | | |
+
+## Stall Log
+| Task | Stalled At | Friction Source | Structural or Intrinsic? |
+|------|-----------|----------------|--------------------------|
 | | | | |
 
-## Decisions Made
--
+## Experiment Observations
+| Exp | Observation | Implication |
+|-----|-------------|-------------|
+| | | |
 
-## Blockers
+## Decisions Made
 -
 
 ## KPI Actuals
