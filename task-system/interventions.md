@@ -1,5 +1,8 @@
 # Category Routing & Pattern Recognition
 
+*For specific intervention stacks per aversion driver → see `intervention-library.md` + `intervention-drivers.md`.*
+*For process decomposition when task is undefined → see `templates/process-map.md`.*
+
 ## 🟢 E — Epistemic
 - **Action:** Execute.
 - **Risk:** Time-hogging. Agent flags: "You've been in [E-task] for [X hours]. [B/A task] due [when]."

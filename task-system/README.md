@@ -34,28 +34,41 @@ EXECUTION → LEARNING (prediction vs reality → model updates)
 | `jamie-profile.md` | Layer 1: CHC, 7BES, precision weights, pharma | At boot |
 | `layer0-scoring.md` | Layer 0: dimension definitions for scoring | When profiling a new task |
 | `interventions.md` | Category routing, pattern recognition triggers | When selecting intervention |
+| `intervention-library.md` | Stack composition, conflict table, validation protocol | When B/A task needs specific support |
+| `intervention-drivers.md` | Menus per aversion driver (6 drivers) | When composing intervention stack |
 | `task-log.md` | Accumulated task profiles + execution history | When a task appears (lookup) |
 | `experiments.md` | Active hypotheses, variables, observations | Daily review, weekly patterns |
 
+## Diagnosis Protocol (when task is undefined)
+
+```
+TASK APPEARS → Agent asks: "Is this task defined?"
+      │
+  Check PROCESSES.md — does a process exist?
+  Check task-log.md — does a profile exist?
+      │
+  BOTH EXIST → Load profile, auto-fill, present to Jamie
+      │
+  PROCESS MISSING → Map it using templates/process-map.md
+    → Identify: trigger, inputs, steps, tools, outputs, win state, edge cases
+    → Add to PROCESSES.md registry
+    → Link from relevant boss/ domain file
+      │
+  PROFILE MISSING → Score with layer0-scoring.md, create profile in task-log.md
+    → Load jamie-profile.md for mismatch computation
+    → Assign category (E/B/A/M), predict failure point
+    → If B/A: load intervention-library.md → compose stack
+      │
+  PRESENT TO JAMIE → with category, intervention, estimated duration
+```
+
 ## Lookup/Create Loop
-
 1. Task appears → identify domain (from boss/ or domains/)
-2. Check `task-log.md` — has this task type been profiled?
-3. **YES:** Load profile, auto-fill prediction, present to Jamie
-4. **NO:** Agent pre-fills Layer 0, Jamie confirms/corrects (~2-3 min one-time)
-5. After execution: Jamie notes outcome (~15 sec)
-6. System compares prediction to reality, updates profile
+2. Check `task-log.md` — profiled? **YES:** auto-fill. **NO:** Layer 0 scoring (~2-3 min one-time)
+3. After execution: Jamie notes outcome (~15 sec). System compares prediction to reality.
 
-## Session Start Format (Layer 2 — Jamie provides, 15 seconds)
+## Session Start (Layer 2 — Jamie, 15 seconds)
+Energy: 🔋High / ⚡Medium / 🪫Low · Time: auto-detected · State: optional 1-3 words
 
-| Field | Input | Options |
-|-------|-------|---------|
-| Energy | Tap one | 🔋High / ⚡Medium / 🪫Low |
-| Time | Auto-detected | Morning / Afternoon / Evening |
-| State | Optional, 1-3 words | e.g., "slept badly," "post-gym" |
-
-## Key Metric
-
-**Time-to-execution.** If Jamie starts within 5 min of seeing the recommended
-sequence, the system is working — regardless of prediction accuracy.
-Secondary: automation/delegation conversion rate on flagged B-tasks.
+## Key Metrics
+**Primary:** Time-to-execution (<5 min from seeing sequence = working). **Secondary:** Automation/delegation conversion rate on flagged B-tasks.

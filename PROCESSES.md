@@ -1,5 +1,8 @@
 # PROCESSES.md — Process Registry
 
+*To define a new process: use `templates/process-map.md`. Then add it here and link from the relevant boss/ file.*
+*To score a process as a task: use `task-system/layer0-scoring.md` → log to `task-system/task-log.md`.*
+
 ## ✅ Defined & Active
 
 | Process | Where Documented | Last Verified | Boss Domain |
