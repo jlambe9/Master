@@ -1,5 +1,7 @@
 # Finance
 
+*CRN = Companies House Registration Number. HMRC = UK tax authority (quarterly filing). See bodycog-admin repo for filing documents.*
+
 ## Company [CONFIRMED]
 - Entity: Cognition Marketing Ltd (CRN: 13152893)
 - Status: Active

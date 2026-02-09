@@ -1,5 +1,7 @@
 # Weekly Review — Week NN (MMM DD-DD)
 
+*Sources: daily logs in `logs/daily/`, task profiles in `task-system/task-log.md`, experiment data in `task-system/experiments.md`. Categories: E/B/A/M (see `task-system/README.md`). KPI targets from `boss/BOSS.md`.*
+
 ## Summary
 One paragraph: what moved, what didn't, why.
 

@@ -1,5 +1,7 @@
 # AI Infrastructure — Agent Architecture & Cross-Tool Systems
 
+*MCP = Model Context Protocol (tool integration standard). Opus 4.6 = Claude flagship model. For Jamie's cognitive profile (CHC/7BES) and how it affects task routing, see `task-system/jamie-profile.md`.*
+
 ## Current Stack
 
 | Tool | Role | Status | Notes |

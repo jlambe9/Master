@@ -2,6 +2,8 @@
 
 *Updated when: new assessment data, pharmacological changes, 7BES reassessment.*
 *Last updated: 2026-02-09*
+*CHC = Cattell-Horn-Carroll cognitive ability model. 7BES = Panksepp's seven emotional systems.*
+*RSD = rejection sensitive dysphoria. PFC = prefrontal cortex. DA/NE = dopamine/norepinephrine.*
 
 ## Precision Weights
 

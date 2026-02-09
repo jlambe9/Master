@@ -1,5 +1,7 @@
 # Research — Thesis & Academic Work
 
+*IPSA = Institute of Psycho-systems Analysis. Bradford Hill = evidence quality grading criteria. CPD = Continuing Professional Development.*
+
 ## IPSA Diploma [CONFIRMED]
 - **Programme:** Institute of Psycho-systems Analysis — online psychotherapy diploma
 - **Status:** Completed. Thesis written and submitted with revisions.

@@ -2,6 +2,7 @@
 
 *Agent computes from task description. Jamie does NOT score manually.*
 *If agent can't infer a dimension: ask one clarifying question.*
+*CHC key: Gc=knowledge, Gf=reasoning, Gv=spatial, Glr=encoding, Gs=speed, Gwm=working memory, Grw=reading-writing, Ga=auditory, Gk=kinaesthetic, Gsm=short-term memory.*
 
 ## 0A: Computational Structure
 

@@ -3,6 +3,10 @@
 *Last updated: 2026-02-09*
 *Updated by: Claude web*
 
+*Cat: 🟢E=Epistemic 🟡B=Boring 🔴A=Aversive 🟠M=Misrouted → `task-system/interventions.md`*
+*Pipeline: Goal clarity → Decomposition → Sequencing → Planning → Initiation → In-progress → Completion → Context persistence*
+*Stage: PLAN → EXPLORE → EXPLOIT → BLOCKED*
+
 ## 🔴 Active (max 3)
 
 | Task | Cat | Pipeline | Stage | Domain | Next Action |

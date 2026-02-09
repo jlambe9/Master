@@ -1,5 +1,7 @@
 # Legal & HR
 
+*GDPR = General Data Protection Regulation (EU/UK data protection law). ICO = Information Commissioner's Office (regulator). CRN = Companies House Registration Number. Before first client: build data handling policy + client contract.*
+
 ## Company Structure [CONFIRMED]
 - Cognition Marketing Ltd (CRN: 13152893)
 - Sole director: Jamie Lambe

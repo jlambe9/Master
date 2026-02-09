@@ -1,5 +1,7 @@
 # Product
 
+*Outcome metrics: PSS-10 = Perceived Stress Scale, PANAS = Positive and Negative Affect Schedule, BPS Signature = biopsychosocial measurement framework (design in thesis repo). See `domains/research/thesis.md` for protocols.*
+
 ## Programs [CONFIRMED]
 | Program | Duration | Price | Status |
 |---------|----------|-------|--------|

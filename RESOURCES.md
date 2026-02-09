@@ -22,6 +22,8 @@
 | ClawdBot rewrite spec | Claude web chat + /master DECISIONS.md | Deployed via ClawdBot |
 | Ad creative framework | bodycog-marketing/ads/ or Claude web ad-wizard skill | 14DC + 1-2-1 campaigns |
 | BPS Signature design | thesis/protocols/ | Design phase |
+| Task routing system | /master/task-system/ | E/B/A/M categories, Layer 0-3 scoring, task profiles |
+| Jamie's cognitive profile | /master/task-system/jamie-profile.md | CHC capacities, 7BES thresholds, pharma context |
 
 ## Tools
 

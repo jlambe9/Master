@@ -1,6 +1,7 @@
 # Experiments — Active Hypotheses & Protocol Tracking
 
 *Competing hypotheses about task failure. Each has: hypothesis, variables, measurement, verdict.*
+*Baseline: Dextroamphetamine 10mg (ADHD dopamine support). Guanfacine = α2 agonist (emotional regulation). Cholinergic stack = acetylcholine precursors (encoding support). See `jamie-profile.md` for full context.*
 
 ## Active Experiments
 

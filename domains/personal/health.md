@@ -1,5 +1,7 @@
 # Personal — Health Protocols
 
+*Genetic variants affecting nutrient metabolism and neurotransmitter synthesis. MTHFR = methylenetetrahydrofolate reductase (folate). COMT = catechol-O-methyltransferase (dopamine/norepinephrine). SOD2 = superoxide dismutase (mitochondrial). GSTM1 = glutathione S-transferase (detox). DRI = Dietary Reference Intake. See ClawdBot `nutrition/jamie-personal-dri.json` for full genetic analysis.*
+
 ## Genetic Profile [CONFIRMED]
 - MTHFR: needs methylfolate, not folic acid
 - COMT: affects catecholamine metabolism (needs P5P, high dose)
