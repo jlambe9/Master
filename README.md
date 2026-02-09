@@ -29,6 +29,7 @@ Control plane for all of Jamie's projects, tools, and life domains.
 
 ## Automated (ClawdBot)
 
+- Full integration guide: `agents/clawdbot.md` (boot order, task routing, sync rules)
 - Evening: compile daily log → `logs/daily/`
 - Weekly: compile weekly review → `logs/weekly/`
 - Continuous: `git pull` / `git push` to keep current
