@@ -11,15 +11,20 @@
 
 | Task | Cat | Pipeline | Stage | Domain | Next Action |
 |------|-----|----------|-------|--------|-------------|
+| Connect ClawdBot to /master | 🟢 E | Planning | PLAN | ai | Git clone on Mac Mini, add to BOOT.md, set up cron sync |
 | ClawdBot file restructure | 🟢 E | In-progress | EXPLOIT | ai | Feed rewrite doc, let it self-restructure |
 | LinkedIn outreach automation | 🟠 M | Blocked | BLOCKED | boss/lead-gen | Needs ClawdBot restructure first |
-| Task system integration | 🟢 E | In-progress | EXPLOIT | ai | Build into /master, test with first tasks |
 
 ## 🟡 Queued
 
 | Task | Domain | Blocked By |
 |------|--------|------------|
+| Connect Cursor workspaces to /master | ai | ClawdBot connection first |
 | Install claude-mem | ai | Nothing — ready |
+| Set KPI targets + 90/30 day goals | boss | Jamie input needed |
+| Define client onboarding process | boss/product | CRITICAL — before first client |
+| GDPR/data handling policy | boss/legal-hr | Before first client |
+| Sales call workflow | boss/sales | Outreach pipeline active |
 | 14-day challenge funnel | boss/lead-nurture | Outreach automation |
 | Thesis revision for publication | research | Time allocation |
 
@@ -27,10 +32,24 @@
 
 | Task | Date | Notes |
 |------|------|-------|
+| Task system integration | 2026-02-09 | E/B/A/M categories, Layer 0-3, interventions, process mapping |
 | Master repo scaffold | 2026-02-09 | Full v2 structure with BOSS system |
 | ClawdBot rewrite spec | 2026-02-09 | Full file contents ready |
 | Cross-tool sync architecture | 2026-02-08 | Git repo as coordination layer |
 | Cowork ENOSPC diagnosis | 2026-02-09 | Remove academic-research MCP |
+
+## ⚠️ Verification Needed (Jamie — ~2 min)
+
+| Item | File | Question |
+|------|------|----------|
+| GoHighLevel | RESOURCES.md, finance.md | Active? What plan? Monthly cost? |
+| Linear | RESOURCES.md | Still using? Connected to anything? |
+| Google AI Pro | RESOURCES.md | Monthly cost? Still needed? |
+| Obsidian | RESOURCES.md | Still using? If not, remove |
+| 12-month goals | boss/BOSS.md:19 | Still current? Confirm or update |
+| Growth roadmap | boss/BOSS.md:77 | Still the plan? Months may have shifted |
+| CPD renewal | domains/research/thesis.md | Current? When due? |
+| Website/landing page | boss/infrastructure.md | Exists? URL? |
 
 ## 📌 Pins
 - ClawdBot running on Opus 4.6 [CONFIRMED]
