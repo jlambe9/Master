@@ -24,5 +24,24 @@
 
 ## Profiled Tasks
 
-*No tasks profiled yet. Profiles will be added as tasks are encountered and classified.*
-*First two weeks of use will build profiles for most recurring business task types.*
+### Write Intro Messages (Daily Repeat)
+- **Domain:** boss/lead-gen
+- **Created:** 2026-02-10
+- **Ref:** BC-052 (spec), BC-063 (execution)
+- **Layer 0:** Entropy: M | Spec: S | Complexity: M | Error: M
+- **Channel:** Default: Research (LinkedIn profile) → Writing (personalized hook) | Flexible: N
+- **Affective:** SEEKING (research is engaging), mild aversion (repetitive once pattern learned)
+- **Predicted:** 🟢 E initially → 🟡 B after ~2 weeks | **Failure point:** Initiation (finding time daily)
+- **Intervention:** Automated via cron (21:30 daily catch-up), removes initiation barrier
+- **Est. duration:** ~5 min/lead (research + write), batch of 5-10 = 30-60 min
+- **Spec:** `~/clawd/reference/intro-writing-spec.md`
+- **Process:** `~/clawd/processes/write-intro-messages.md`
+- **Find leads:** `node scripts/check-intro-backlog.js --json`
+- **Output:** H1 column J (draft_message)
+- **Notes:** MVP spec consolidated 2026-02-10. Skip if insufficient data — never send generic intros.
+
+#### Execution History
+| Date | Duration | Cat | Deviation | Friction | Output | Notes |
+|------|----------|-----|-----------|----------|--------|-------|
+| 2026-01-28 | ~2h | 🟢 E | None | Low | 27 intros | First batch, manual |
+| 2026-02-03 | ~5min | 🟠 M | High | High | 8 intros (all fallback) | Auto-gen failed — no profile data |

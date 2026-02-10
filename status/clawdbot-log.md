@@ -1,17 +1,20 @@
-# ClawdBot Session Log (Append-Only)
+# ClawdBot Log
 
-*ClawdBot writes here after each session. Never edit STATUS.md directly — flag changes here and Jamie/Cursor moves them.*
+## 2026-02-10 15:30
 
-## Format
+### BC-052 Updates
+- Created MVP intro-writing-spec at `~/clawd/reference/intro-writing-spec.md` (v1.0)
+- Consolidated template, personalization rules, real good/bad examples, validation criteria into single file
+- Updated `~/clawd/processes/write-intro-messages.md` — now references MVP spec, correct column (J), includes daily process
 
-```
-### YYYY-MM-DD HH:MM
-**Did:** [what was executed]
-**Result:** [outcome]
-**Flags:** [anything needing Jamie's attention — approvals, errors, decisions]
-**STATUS.md update needed:** [e.g., "move X to completed" or "none"]
-```
+### Intro Writing — Daily Repeat Task
+- **Type:** Daily repeat, runs via cron at 21:30 ("Daily Intro Catch-up")
+- **Process:** `~/clawd/processes/write-intro-messages.md`
+- **Find leads:** `node scripts/check-intro-backlog.js --json` → returns accepted connections with no draft
+- **Write intros:** Using `reference/intro-writing-spec.md` (v3 template + layered personalization)
+- **Output:** H1 column J only
+- **Skip rule:** If insufficient profile data, write SKIP not a generic intro
 
-## Log
-
-<!-- ClawdBot: append new entries below this line -->
+### STATUS.md suggested updates
+- BC-052: Stage → EXPLOIT, next action = "Jamie review MVP spec, then daily execution"
+- Add "Write intros for new connections" as daily repeat task in Active
