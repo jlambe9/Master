@@ -82,3 +82,23 @@ Created `~/clawd/reference/task-lifecycle.md`
 - Process automation assessment — triggers when 3-5 tasks reach OPERATIONAL
 - Will review whether HUMAN_REVIEW steps can be eliminated
 - Parked until we have evidence
+
+## 2026-02-10 18:10 — Full Pipeline Map + Funnel KPIs
+
+### Created
+- `~/clawd/reference/linkedin-funnel-kpis.md` — funnel maths, steady-state workload, revenue projection
+- Sub-agent spawned to write 47 intros
+
+### Pipeline gaps identified
+- ❌ Follow-up sequences (FU1/2/3/Ghost) — no templates, no process, no automation
+- ❌ Reply monitoring — no real-time detection
+- ❌ Morning queue — no daily briefing of what needs attention
+- ⚠️ Lead extraction — 8 weeks runway, not urgent but needs planning
+
+### Revenue math at steady state
+- 70 CRs/day → 27 connections → ~7 replies/day → ~2 calls/day → ~£5K/month
+- Based on assumptions that need validating with real data
+
+### STATUS.md suggestions
+- BC-058 (Pipeline Tracking) should reference `~/clawd/reference/linkedin-funnel-kpis.md`
+- New tasks needed: FU sequences, reply monitoring, morning queue
