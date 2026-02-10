@@ -1,7 +1,7 @@
 # STATUS.md — What's Active Right Now
 
-*Last updated: 2026-02-09*
-*Updated by: Claude web*
+*Last updated: 2026-02-10*
+*Updated by: ClawdBot (Rich)*
 
 *Cat: 🟢E=Epistemic 🟡B=Boring 🔴A=Aversive 🟠M=Misrouted → `task-system/interventions.md`*
 *Pipeline: Goal clarity → Decomposition → Sequencing → Planning → Initiation → In-progress → Completion → Context persistence*
@@ -11,7 +11,7 @@
 
 | Task | Cat | Pipeline | Stage | Domain | Next Action |
 |------|-----|----------|-------|--------|-------------|
-| Connect ClawdBot to /master | 🟢 E | Planning | PLAN | ai | Git clone on Mac Mini, add to BOOT.md, set up cron sync |
+| Connect ClawdBot to /master | 🟢 E | Completed | ✅ DONE | ai | Connected — BOOT.md created, git sync working |
 | ClawdBot file restructure | 🟢 E | In-progress | EXPLOIT | ai | Feed rewrite doc, let it self-restructure |
 | LinkedIn outreach automation | 🟠 M | Blocked | BLOCKED | boss/lead-gen | Needs ClawdBot restructure first |
 
