@@ -1,21 +1,26 @@
 # ClawdBot ↔ /master Integration Guide
 
-*This file tells ClawdBot how to use the /master coordination repo. ClawdBot's own files (BOOT.md, PLAN.md, SOUL.md) define HOW ClawdBot works. This file defines HOW ClawdBot reads and writes to /master for shared context.*
+*ClawdBot's AGENTS.md (auto-injected) controls boot. This file is loaded via AGENTS.md step 5 or on-demand. It defines how ClawdBot reads and writes to /master.*
 
 ## Ownership Rule
 
 | Owns | Source |
 |------|--------|
-| Agent identity, tools, skills, behavioral rules | ClawdBot workspace files |
-| Business state, task queue, processes, cognitive profile, interventions | /master repo |
-| **Conflict?** Always prefer /master for business data. Always prefer ClawdBot files for agent behavior. |
+| Agent identity, tools, skills, behavioral rules, PLAN.md execution queue | ClawdBot workspace (~/clawd) |
+| Business state, shared task list, processes, cognitive profile, interventions | /master repo (~/Master) |
+| **Conflict?** /master wins for business data. ClawdBot files win for agent behavior. |
 
-## Boot Sequence (after ClawdBot's own BOOT.md loads)
+## Relationship: PLAN.md vs STATUS.md
 
-1. `git pull origin main -q` in /master directory
-2. Read `STATUS.md` — active tasks, queued tasks, pins
-3. Read `task-system/jamie-profile.md` — Jamie's cognitive profile (load once, stable)
-4. You now have context. Proceed with PLAN.md or await instructions.
+- **STATUS.md** = cross-tool truth. All tools see it. Jamie/Cursor updates it.
+- **PLAN.md** = ClawdBot's personal execution queue. Derived from STATUS.md but ClawdBot-owned.
+- **tasks/BC-xxx.md** = ClawdBot's working notes per task. Not in /master.
+- **task-system/** = cognitive routing layer (E/B/A/M classification). Consult when profiling tasks.
+
+## Boot Sequence (AGENTS.md handles steps 1-4, then:)
+
+5. Read this file for /master integration rules
+6. Read `task-system/jamie-profile.md` — Jamie's cognitive profile (load once, stable)
 
 ## When a Task Appears
 
@@ -41,17 +46,18 @@
 4. If a decision was made → log to `DECISIONS.md`
 5. `git add -A && git commit -m "clawdbot: [brief description]" && git push origin main -q`
 
-## Evening Routine (automated, ~19:00)
+## Evening Routine (extends ClawdBot's existing 21:30 cron)
 
-1. Compile daily log using `templates/daily-review.md` → save to `logs/daily/YYYY-MM-DD.md`
-2. Prepare tomorrow using `templates/evening-plan.md` (context packet for morning cold start)
-3. Commit and push
+ClawdBot already runs evening review → `journal/logs/`. Additionally:
+1. Append summary to `status/clawdbot-log.md` (what other tools should know)
+2. Optionally prepare tomorrow using `templates/evening-plan.md` → save to `logs/daily/`
+3. Commit and push /master
 
-## Weekly Routine (automated, Sunday evening)
+## Weekly Routine (Sunday evening)
 
 1. Compile weekly review using `templates/weekly-review.md` → save to `logs/weekly/YYYY-WNN.md`
 2. Check `task-system/experiments.md` for observations due
-3. Commit and push
+3. Commit and push /master
 
 ## Git Sync Rules
 

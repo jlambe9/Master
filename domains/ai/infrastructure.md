@@ -16,7 +16,7 @@
 
 ## Architecture Decisions [CONFIRMED]
 - Git repo (/master) as coordination layer
-- ClawdBot: BOOT.md → PLAN.md → on-demand loading (~1.5k token boot)
+- ClawdBot: AGENTS.md (auto-injected) → PLAN.md → on-demand loading (~1.5k token boot)
 - claude-mem for Cursor session persistence (when installed)
 - STATUS.md as universal session-start file
 
@@ -51,13 +51,9 @@ Router (lightweight) → specialist agents: LinkedIn, Content, Research, Task Ma
 ```bash
 cd ~/.openclaw/workspace && git clone <master-repo-url> master
 ```
-Add to ClawdBot BOOT.md:
-```
-## Master Context
-On boot: read master/STATUS.md
-On new task: check master/PROCESSES.md → master/task-system/README.md (diagnosis protocol)
-After execution: update master/STATUS.md, commit, push
-```
+ClawdBot's AGENTS.md already pulls Master and reads STATUS.md on boot.
+For full integration protocol, ClawdBot reads `Master/agents/clawdbot.md`.
+Key rule: ClawdBot writes to `status/clawdbot-log.md`, never STATUS.md directly.
 Cron sync (every 15 min):
 ```bash
 */15 * * * * cd ~/.openclaw/workspace/master && git pull origin main -q
