@@ -12,14 +12,15 @@
 | Task | Cat | Pipeline | Stage | Domain | Next Action |
 |------|-----|----------|-------|--------|-------------|
 | Connect ClawdBot to /master | 🟢 E | Completed | ✅ DONE | ai | Connected — BOOT.md created, git sync working |
-| ClawdBot file restructure | 🟢 E | In-progress | EXPLOIT | ai | Feed rewrite doc, let it self-restructure |
+| ClawdBot file restructure | 🟢 E | Completed | ✅ DONE | ai | Deployed — slim injected files, on-demand loading, Master wired in |
 | LinkedIn outreach automation | 🟠 M | Blocked | BLOCKED | boss/lead-gen | Needs ClawdBot restructure first |
 
 ## 🟡 Queued
 
 | Task | Domain | Blocked By |
 |------|--------|------------|
-| Connect Cursor workspaces to /master | ai | ClawdBot connection first |
+| Reconcile task systems (ClawdBot tasks/ vs Master task-system/) | ai | ClawdBot restructure done ✅ |
+| Connect Cursor workspaces to /master | ai | ClawdBot connection first ✅ |
 | Install claude-mem | ai | Nothing — ready |
 | Set KPI targets + 90/30 day goals | boss | Jamie input needed |
 | Define client onboarding process | boss/product | CRITICAL — before first client |
@@ -32,6 +33,8 @@
 
 | Task | Date | Notes |
 |------|------|-------|
+| ClawdBot file restructure | 2026-02-10 | Slim injected files (~2.7K tokens from ~15K), on-demand loading, Master integration |
+| ClawdBot → Master connection | 2026-02-10 | Git clone, BOOT.md, pull/push cycle verified |
 | Task system integration | 2026-02-09 | E/B/A/M categories, Layer 0-3, interventions, process mapping |
 | Master repo scaffold | 2026-02-09 | Full v2 structure with BOSS system |
 | ClawdBot rewrite spec | 2026-02-09 | Full file contents ready |
