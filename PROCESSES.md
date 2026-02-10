@@ -17,6 +17,7 @@
 | Process | What Exists | What's Missing | Boss Domain |
 |---------|-------------|----------------|-------------|
 | LinkedIn intro writing | Rules in ClawdBot | End-to-end flow, quality verification | lead-gen |
+| LinkedIn FU sequence (FU1–breakup) | Timing + specs in playbooks/ | Automation, A/B testing | lead-gen |
 | Lead extraction | PhantomBuster scripts | Automation, error handling | lead-gen |
 | Daily review | Template exists | ClawdBot automation, cron job | infrastructure |
 | Thesis research pipeline | MCP tools, Bradford Hill grading | Documented workflow | research |
@@ -28,7 +29,7 @@
 | Client onboarding | CRITICAL | product | Must exist before first paying client |
 | Sales call workflow | HIGH | sales | Script, booking, follow-up |
 | 14-day challenge delivery | HIGH | lead-nurture | Primary conversion mechanism |
-| Follow-up sequences | HIGH | lead-nurture | After initial outreach |
+| Follow-up sequences | HIGH | lead-nurture | Defined in `playbooks/linkedin-personalisation.md` — needs automation |
 | Content publishing (organic) | MEDIUM | lead-gen | Calendar, creation, scheduling |
 | Weekly review compilation | MEDIUM | infrastructure | ClawdBot automated |
 | HMRC quarterly filing | MEDIUM | finance | bodycog-admin |

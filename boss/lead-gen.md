@@ -6,13 +6,18 @@
 - Paid ads: Not yet active (ad wizard skill exists in Claude web)
 - Status: Infrastructure being built, zero outreach volume currently
 
-## KPIs
-| Metric | Target | Actual | Source |
-|--------|--------|--------|--------|
-| Outreach sent/day | [PLACEHOLDER] | 0 | Expandi dashboard |
-| Connection accept rate | [PLACEHOLDER] | N/A | Expandi dashboard |
-| Content posts/week | [PLACEHOLDER] | 0 | Manual tracking |
-| Inbound leads/week | [PLACEHOLDER] | 0 | GoHighLevel |
+## KPIs (targets from funnel model — see `playbooks/linkedin-funnel.md`)
+| Metric | Target (mid) | Actual | Source |
+|--------|-------------|--------|--------|
+| CRs sent/day | 50 | 0 | Expandi dashboard |
+| Accept rate | 50% | N/A | Expandi dashboard |
+| Intros sent/day | 25 | 0 | ClawdBot log |
+| Intro reply rate | 10% | N/A | ClawdBot log |
+| Conversations/week | 44 | 0 | Manual |
+| Calls booked/week | 11 | 0 | Calendly/CRM |
+| Calls showed/week | 8 | 0 | Calendly/CRM |
+| Closed/month | 8–12 | 0 | CRM |
+| Content posts/week | 3 | 0 | Manual |
 
 ## Tools [with status]
 | Tool | Purpose | Status | Critical? |
@@ -28,10 +33,19 @@
 | Process | Status | Where Documented |
 |---------|--------|-----------------|
 | LinkedIn lead extraction | Partial | ClawdBot: skills/expandi/RUNBOOK.md |
-| Intro message writing | Partial | ClawdBot: skills/linkedin-intros/RULES.md |
+| Intro message writing | Partial | ClawdBot: reference/intro-writing-spec.md |
+| Follow-up sequence (FU1–FU3 + breakup) | Defined | `playbooks/linkedin-personalisation.md` |
+| Daily operations schedule | Defined | `playbooks/linkedin-daily-ops.md` |
 | Content creation (organic) | [NOT YET BUILT] | — |
 | Ad creative production | Active | Claude web: bodycog-ad-wizard skill |
 | Traffic source tracking | [NOT YET BUILT] | — |
+
+## Playbook Reference
+- Funnel maths + KPI benchmarks: `playbooks/linkedin-funnel.md`
+- Daily ops schedule: `playbooks/linkedin-daily-ops.md`
+- Message personalisation specs: `playbooks/linkedin-personalisation.md`
+- Diagnostic cheat sheet (low metrics → fixes): `playbooks/linkedin-diagnostics.md`
+- Improvement actions + global levers: `playbooks/linkedin-improvement.md`
 
 ## Operational Detail
 - **Repo:** bodycog-marketing (campaigns/, content/, leads/)
