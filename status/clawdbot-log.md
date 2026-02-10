@@ -113,3 +113,22 @@ Created task files for everything Jamie requested:
 - Fixed linkedin-funnel-kpis.md: removed fabricated FU projections, marked unknowns as NO DATA
 
 FEEDBACK LOGGED: Fabricated FU pipeline numbers and presented as real. Rule: never present assumptions as data.
+
+## 2026-02-10 19:05 — Tasks Logged + Intro Status
+
+### Intro status
+- 27 intros written, 5 SKIPs, 13 remaining
+- Sub-agent got further than reported (auth died at ~28, not 2)
+- Finishing remaining 13 now in main session
+
+### New tasks created
+- BC-071: Fix sub-agent reliability (CRITICAL — blocks overnight automation)
+- BC-072: LinkedIn profile optimisation (bio, landing page, Khesia review)
+- BC-073: Lead processing for next month (ICP scoring, sources, workflow)
+- BC-074: Product V0.1 (1:1 coaching offer, landing page, BOSS structure)
+- LIFE-ADMIN.md: HCG vial, medical bills, finances map, new flat bills, serve notice, pay Khesia, connect Gmail
+
+### Feedback logged
+- Sub-agent failures unacceptable for overnight tasks
+- "Do not stop" means find another way if agent dies
+- Stop using decorative emojis
