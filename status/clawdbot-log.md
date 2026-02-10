@@ -45,3 +45,23 @@
 ### STATUS.md suggestions
 - Add BC-064 (v1.0 pipeline) as Active, stage EXPLOIT
 - Add BC-065 (v1.1 Gmail) as Queued
+
+## 2026-02-10 16:05 — BC-064 Subtask 2 Complete + Lifecycle Model
+
+### Execution
+- Marked 33 leads as crAccepted in H1 column K (date: 2026-02-10)
+- 15 already marked from earlier campaign  
+- Intro backlog now at 59 (was 27)
+- 9 remaining from Expandi page 2 — will catch tomorrow
+
+### New: Task Lifecycle Model
+Created `~/clawd/reference/task-lifecycle.md`
+- OPEN → IN PROGRESS → VALIDATE → OPERATIONAL → (DEPRECATED)
+- OPERATIONAL = the post-DONE state for repeatable tasks
+- OPERATIONAL tasks move from PLAN.md active list to "Running Processes" section
+- Rich executes via cron, only alerts Jamie if broken
+- Key insight: repeatable tasks are never "done" — they become OPERATIONAL or DEPRECATED
+
+### STATUS.md suggestions
+- BC-064: stage VALIDATE
+- New section: "Running Processes" for OPERATIONAL tasks
