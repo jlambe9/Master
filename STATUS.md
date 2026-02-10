@@ -29,6 +29,11 @@
 | 14-day free challenge as conversion mechanism | — | 🟡 | CAPTURED | EXPLORE | boss/lead-nurture | Outreach live |
 | Short-form video content pipeline | BC-042 | ⚪ | CAPTURED | EXPLORE | boss/lead-gen | Content strategy |
 | Set weekly KPI targets + 90/30-day goals | — | ⚪ | CAPTURED | ADMIN | boss | Jamie input |
+| Total up monthly living expenses | FIN-001 | 🟡 | CAPTURED | EXPLOIT | boss/finance | — |
+| Add expenses to 3-month runway plan | FIN-002 | 🟡 | BLOCKED | EXPLOIT | boss/finance | FIN-001 first |
+| Organise regular cleaner | LA-001 | ⚪ | CAPTURED | EXPLORE | personal/life-admin | — |
+| Clean flat | LA-002 | ⚪ | CAPTURED | ADMIN | personal/life-admin | — |
+| Do washing | LA-003 | ⚪ | CAPTURED | ADMIN | personal/life-admin | — |
 | Revise thesis for journal publication | — | ⚪ | CAPTURED | EXPLOIT | research | Time allocation |
 
 ## 🟢 Recently Completed
