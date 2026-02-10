@@ -12,9 +12,9 @@
 
 | Task | Ref | Priority | Status | Type | Domain | Next Action |
 |------|-----|----------|--------|------|--------|-------------|
-| Restart LinkedIn outreach to right audience | BC-057 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Build campaign with ICP filters |
 | Finalize intro message rules for ClawdBot | BC-052 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Jamie reviews draft spec |
-| Build outreach funnel visibility | BC-058 | 🟡 | GOAL CLARITY | EXPLORE | boss/lead-gen | Audit what Expandi already tracks |
+| Find all connections without intros written | BC-062 | 🔴 | GOAL CLARITY | EXPLOIT | boss/lead-gen | ClawdBot scans + compiles list |
+| Write personalized intros for new connections | BC-063 | 🔴 | BLOCKED | EXPLOIT | boss/lead-gen | Needs BC-052 + BC-062 first |
 
 ## 🟡 Queued
 
@@ -22,6 +22,8 @@
 |------|-----|----------|--------|------|--------|------------|
 | What happens payment → first session | BOSS-ONBOARD | 🔴 | CAPTURED | EXPLORE | boss/product | Before first client |
 | Legal docs to operate (GDPR, contracts, T&Cs) | BOSS-GDPR | 🔴 | CAPTURED | EXPLORE | boss/legal-hr | Before first client |
+| Build outreach funnel visibility | BC-058 | 🟡 | GOAL CLARITY | EXPLORE | boss/lead-gen | Audit what Expandi tracks |
+| Manual 100 daily CRs (backup if Expandi fails) | BC-043 | ⚪ | CAPTURED | EXPLOIT | boss/lead-gen | Backup — use if needed |
 | Lead → call → close → onboard process | BOSS-SALES | 🟡 | CAPTURED | EXPLORE | boss/sales | Need leads first |
 | Auto-score tasks with cognitive profile | META-TASK-SYSTEM | 🟡 | CAPTURED | EXPLORE | meta | — |
 | 14-day free challenge as conversion mechanism | — | 🟡 | CAPTURED | EXPLORE | boss/lead-nurture | Outreach live |
@@ -33,6 +35,7 @@
 
 | Task | Date | Notes |
 |------|------|-------|
+| Rebuild Expandi + ICP screening | 2026-02-10 | BC-057 — campaign live with ICP filters |
 | ClawdBot ↔ Master integration | 2026-02-10 | AGENTS.md wired, status/clawdbot-log.md write surface, concurrency-safe |
 | ClawdBot file restructure | 2026-02-10 | ~2.7K token boot (from ~15K), on-demand loading |
 | Task system integration | 2026-02-09 | E/B/A/M, Layer 0-3, interventions, process mapping |
