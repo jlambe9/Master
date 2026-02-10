@@ -102,3 +102,14 @@ Created `~/clawd/reference/task-lifecycle.md`
 ### STATUS.md suggestions
 - BC-058 (Pipeline Tracking) should reference `~/clawd/reference/linkedin-funnel-kpis.md`
 - New tasks needed: FU sequences, reply monitoring, morning queue
+
+## 2026-02-10 18:12 — Task files created for full pipeline
+
+Created task files for everything Jamie requested:
+- BC-067: Follow-up sequences (templates, cadence, process) — OPEN
+- BC-068: Real-time reply monitoring — OPEN
+- BC-069: Morning queue / daily briefing — OPEN
+- BC-070: Lead extraction pipeline — OPEN (8 wks runway)
+- Fixed linkedin-funnel-kpis.md: removed fabricated FU projections, marked unknowns as NO DATA
+
+FEEDBACK LOGGED: Fabricated FU pipeline numbers and presented as real. Rule: never present assumptions as data.
