@@ -1,5 +1,7 @@
 # BOSS-GDPR — GDPR/Data Handling Policy + Legal Compliance
 
+> **Summary:** Create the legal documents needed to operate as a coaching business — privacy policy, terms, client contracts, GDPR compliance. Legally required before taking any client's money or data.
+
 **Domain:** boss/legal-hr
 **Priority:** 🔴 CRITICAL
 **Status:** CAPTURED
@@ -9,6 +11,11 @@
 
 ## Win State
 GDPR-compliant data handling policy, privacy policy, terms & conditions, and client contract. All published/ready before first client.
+
+## KPI / How We Measure
+- All 6 documents drafted and reviewed
+- ICO registration confirmed or ruled out
+- Links to: boss/legal-hr.md compliance checklist
 
 ## Steps
 <!-- EXPLORE first — need to figure out requirements -->

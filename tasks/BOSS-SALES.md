@@ -1,5 +1,7 @@
 # BOSS-SALES — Sales Call Workflow
 
+> **Summary:** Design the process for turning a warm lead into a paying client — how they book a call, what happens on the call, how we close, what happens after they say yes.
+
 **Domain:** boss/sales
 **Priority:** 🟡 HIGH
 **Status:** CAPTURED
@@ -9,6 +11,11 @@
 
 ## Win State
 End-to-end sales process: lead books call → call script → objection handling → close → handoff to onboarding. Tested with mock call.
+
+## KPI / How We Measure
+- Calls booked per week (target: TBD once leads flowing)
+- Call → sale conversion rate (target: >25%)
+- Links to: boss/sales.md → Calls booked/week, Conversion rate
 
 ## Steps
 <!-- EXPLORE first — no process exists -->

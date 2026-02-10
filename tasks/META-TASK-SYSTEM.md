@@ -1,5 +1,7 @@
 # META-TASK-SYSTEM — Expand Task Tracker to v1.1
 
+> **Summary:** Upgrade the task tracking system to automatically score tasks using Jamie's cognitive profile (12 dimensions, channel matching, emotional load) instead of manual classification.
+
 **Domain:** meta/task-system
 **Priority:** 🟡 HIGH
 **Status:** CAPTURED
@@ -24,6 +26,10 @@ Task pipeline expanded from v1.0 (8 stages + simple gate checks) to v1.1 with fu
 - `task-system/intervention-library.md` — stack composition, conflict table
 - `task-system/intervention-drivers.md` — 6 aversion driver menus
 - `task-system/jamie-profile.md` — CHC capacities, 7BES thresholds, pharma context
+
+## KPI / How We Measure
+- Time-to-execution for new tasks <5 min (from seeing sequence to starting)
+- Prediction accuracy: predicted vs actual E/B/A/M category match rate
 
 ## Subtasks
 | # | Type | Task | Status | Notes |

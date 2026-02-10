@@ -12,22 +12,22 @@
 
 | Task | Ref | Priority | Status | Type | Domain | Next Action |
 |------|-----|----------|--------|------|--------|-------------|
-| Rebuild Expandi + ICP screening | BC-057 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Build campaign with ICP filters |
-| Define intro reference spec | BC-052 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Review draft spec |
-| Pipeline tracking infrastructure | BC-058 | 🟡 | GOAL CLARITY | EXPLORE | boss/lead-gen | Audit what Expandi already tracks |
+| Restart LinkedIn outreach to right audience | BC-057 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Build campaign with ICP filters |
+| Finalize intro message rules for ClawdBot | BC-052 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Jamie reviews draft spec |
+| Build outreach funnel visibility | BC-058 | 🟡 | GOAL CLARITY | EXPLORE | boss/lead-gen | Audit what Expandi already tracks |
 
 ## 🟡 Queued
 
 | Task | Ref | Priority | Status | Type | Domain | Blocked By |
 |------|-----|----------|--------|------|--------|------------|
-| Client onboarding process | BOSS-ONBOARD | 🔴 | CAPTURED | EXPLORE | boss/product | Before first client |
-| GDPR/data handling + legal | BOSS-GDPR | 🔴 | CAPTURED | EXPLORE | boss/legal-hr | Before first client |
-| Sales call workflow | BOSS-SALES | 🟡 | CAPTURED | EXPLORE | boss/sales | Need leads first |
-| Expand task tracker to v1.1 | META-TASK-SYSTEM | 🟡 | CAPTURED | EXPLORE | meta | — |
-| 14-day challenge funnel | — | 🟡 | CAPTURED | EXPLORE | boss/lead-nurture | Outreach live |
-| Video creation pipeline | BC-042 | ⚪ | CAPTURED | EXPLORE | boss/lead-gen | Content strategy |
-| Set KPI targets + goals | — | ⚪ | CAPTURED | ADMIN | boss | Jamie input |
-| Thesis revision | — | ⚪ | CAPTURED | EXPLOIT | research | Time allocation |
+| What happens payment → first session | BOSS-ONBOARD | 🔴 | CAPTURED | EXPLORE | boss/product | Before first client |
+| Legal docs to operate (GDPR, contracts, T&Cs) | BOSS-GDPR | 🔴 | CAPTURED | EXPLORE | boss/legal-hr | Before first client |
+| Lead → call → close → onboard process | BOSS-SALES | 🟡 | CAPTURED | EXPLORE | boss/sales | Need leads first |
+| Auto-score tasks with cognitive profile | META-TASK-SYSTEM | 🟡 | CAPTURED | EXPLORE | meta | — |
+| 14-day free challenge as conversion mechanism | — | 🟡 | CAPTURED | EXPLORE | boss/lead-nurture | Outreach live |
+| Short-form video content pipeline | BC-042 | ⚪ | CAPTURED | EXPLORE | boss/lead-gen | Content strategy |
+| Set weekly KPI targets + 90/30-day goals | — | ⚪ | CAPTURED | ADMIN | boss | Jamie input |
+| Revise thesis for journal publication | — | ⚪ | CAPTURED | EXPLOIT | research | Time allocation |
 
 ## 🟢 Recently Completed
 

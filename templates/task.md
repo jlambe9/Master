@@ -1,5 +1,7 @@
 # [ID] — [Task Name]
 
+> **Summary:** [1 sentence. What this is and why it matters. Plain English, no jargon.]
+
 **Domain:** [boss/x or domains/x]
 **Priority:** [🔴 CRITICAL / 🟡 HIGH / ⚪ MEDIUM]
 **Status:** [CAPTURED → GOAL CLARITY → DECOMPOSED → SEQUENCED → PLANNED → INITIATED → IN PROGRESS → COMPLETED → PERSISTED | BLOCKED]
@@ -9,6 +11,9 @@
 
 ## Win State
 <!-- REQUIRED for GOAL CLARITY. What does "done" look like? One sentence. -->
+
+## KPI / How We Measure
+<!-- What metric proves this task is working? Link to boss/ KPI if applicable. -->
 
 ## Steps
 <!-- REQUIRED for DECOMPOSED. Numbered list OR link to PROCESSES.md entry. -->

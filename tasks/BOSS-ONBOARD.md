@@ -1,5 +1,7 @@
 # BOSS-ONBOARD — Define Client Onboarding Process
 
+> **Summary:** Figure out exactly what happens between "client pays" and "first coaching session." No process exists yet — this must be built before we can take a single paying client.
+
 **Domain:** boss/product
 **Priority:** 🔴 CRITICAL
 **Status:** CAPTURED
@@ -9,6 +11,11 @@
 
 ## Win State
 Documented onboarding process: from "client pays" to "first session delivered." Steps, tools, templates, timeline. Tested with mock run-through.
+
+## KPI / How We Measure
+- Process documented and testable end-to-end
+- Time from payment to first session <48hrs
+- Links to: boss/product.md → Clients enrolled
 
 ## Steps
 <!-- EXPLORE first — no process exists yet -->
