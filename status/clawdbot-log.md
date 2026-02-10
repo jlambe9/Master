@@ -26,3 +26,22 @@
 - **Problem:** Expandi shows 70 connected, H1 has 28 marked. 27 leads need intros. Pipeline has gaps between detection → marking → writing.
 - **Task file:** ~/clawd/tasks/BC-064.md
 - **Suggested STATUS.md update:** Add BC-064 to Active (replace a completed task), domain boss/lead-gen, stage PLAN
+
+## 2026-02-10 15:45 — BC-064/BC-065 Pipeline Diagnosis Complete
+
+### Root cause
+- Expandi uses LinkedIn internal member IDs (ACoAAB...) in URLs
+- H1 uses public profile URLs (linkedin.com/in/username)
+- Old scripts tried URL matching → only 3 of 50 matched
+- Name matching works: 50/50 verified
+
+### Actions taken
+- BC-064 updated: v1.0 process = Expandi as source, name matching, mark crAccepted
+- BC-065 created: v1.1 = Gmail monitoring (real-time, catches organic, public URLs)
+- Process doc created: `~/clawd/processes/detect-new-connections.md`
+- Deprecated: mark-connected-leads.js, get-connected-leads.js
+- **40 leads need intros, 37 not yet marked crAccepted**
+
+### STATUS.md suggestions
+- Add BC-064 (v1.0 pipeline) as Active, stage EXPLOIT
+- Add BC-065 (v1.1 Gmail) as Queued
