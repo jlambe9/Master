@@ -3,30 +3,31 @@
 *Last updated: 2026-02-10*
 *Updated by: Claude Code*
 
-*Cat: 🟢E=Epistemic 🟡B=Boring 🔴A=Aversive 🟠M=Misrouted → `task-system/interventions.md`*
-*Pipeline: Goal clarity → Decomposition → Sequencing → Planning → Initiation → In-progress → Completion → Context persistence*
-*Stage: PLAN → EXPLORE → EXPLOIT → BLOCKED*
+*Pipeline v1.0: CAPTURED → GOAL CLARITY → DECOMPOSED → SEQUENCED → PLANNED → INITIATED → IN PROGRESS → COMPLETED → PERSISTED | BLOCKED*
+*Priority: 🔴 CRITICAL  🟡 HIGH  ⚪ MEDIUM — see `task-system/pipeline.md` for gate checks*
+*Cat: 🟢E 🟡B 🔴A 🟠M — see `task-system/interventions.md`*
+*Task files: `tasks/[REF].md` — detail, subtasks, execution log*
 
 ## 🔴 Active (max 3)
 
-| Task | Ref | Cat | Stage | Domain | Next Action |
-|------|-----|-----|-------|--------|-------------|
-| Rebuild Expandi campaign + ICP screening | BC-057 | 🟠 M | EXPLOIT | boss/lead-gen | Rebuild campaign in Expandi, add ICP screening |
-| Define intro reference spec | BC-052 | 🟢 E | EXPLOIT | boss/lead-gen | Review draft intro-writing-spec.md |
-| Pipeline tracking infrastructure | BC-058 | 🟢 E | PLAN | boss/lead-gen | Set up tracking for outreach metrics |
+| Task | Ref | Priority | Status | Type | Domain | Next Action |
+|------|-----|----------|--------|------|--------|-------------|
+| Rebuild Expandi + ICP screening | BC-057 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Build campaign with ICP filters |
+| Define intro reference spec | BC-052 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Review draft spec |
+| Pipeline tracking infrastructure | BC-058 | 🟡 | GOAL CLARITY | EXPLORE | boss/lead-gen | Audit what Expandi already tracks |
 
 ## 🟡 Queued
 
-| Task | Ref | Domain | Blocked By |
-|------|-----|--------|------------|
-| Connect Cursor workspaces to /master | — | ai | Nothing — ready |
-| Set KPI targets + 90/30 day goals | — | boss | Jamie input needed |
-| Define client onboarding process | — | boss/product | CRITICAL — before first client |
-| GDPR/data handling policy | — | boss/legal-hr | Before first client |
-| Sales call workflow | — | boss/sales | Outreach pipeline active |
-| 14-day challenge funnel | — | boss/lead-nurture | Outreach automation |
-| Video creation pipeline | BC-042 | boss/lead-gen | Content strategy |
-| Thesis revision for publication | — | research | Time allocation |
+| Task | Ref | Priority | Status | Type | Domain | Blocked By |
+|------|-----|----------|--------|------|--------|------------|
+| Client onboarding process | BOSS-ONBOARD | 🔴 | CAPTURED | EXPLORE | boss/product | Before first client |
+| GDPR/data handling + legal | BOSS-GDPR | 🔴 | CAPTURED | EXPLORE | boss/legal-hr | Before first client |
+| Sales call workflow | BOSS-SALES | 🟡 | CAPTURED | EXPLORE | boss/sales | Need leads first |
+| Expand task tracker to v1.1 | META-TASK-SYSTEM | 🟡 | CAPTURED | EXPLORE | meta | — |
+| 14-day challenge funnel | — | 🟡 | CAPTURED | EXPLORE | boss/lead-nurture | Outreach live |
+| Video creation pipeline | BC-042 | ⚪ | CAPTURED | EXPLORE | boss/lead-gen | Content strategy |
+| Set KPI targets + goals | — | ⚪ | CAPTURED | ADMIN | boss | Jamie input |
+| Thesis revision | — | ⚪ | CAPTURED | EXPLOIT | research | Time allocation |
 
 ## 🟢 Recently Completed
 
