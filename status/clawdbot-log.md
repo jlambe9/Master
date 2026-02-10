@@ -65,3 +65,20 @@ Created `~/clawd/reference/task-lifecycle.md`
 ### STATUS.md suggestions
 - BC-064: stage VALIDATE
 - New section: "Running Processes" for OPERATIONAL tasks
+
+## 2026-02-10 17:55 — Task Template + Process Map Implemented
+
+### New task template
+- `~/clawd/reference/task-template.md` — includes process map with input/output chain per step
+- Each step tagged: AUTOMATABLE | HUMAN_REVIEW | HUMAN_REQUIRED
+- Lifecycle states: OPEN → IN PROGRESS → VALIDATE → OPERATIONAL → DEPRECATED
+
+### BC-064 retrofitted
+- Full process map with 3 steps, input→output chains explicit
+- Steps 1-2 AUTOMATABLE, Step 3 HUMAN_REVIEW
+- All resources, columns, constraints, error handling documented
+
+### BC-066 created (QUEUED)
+- Process automation assessment — triggers when 3-5 tasks reach OPERATIONAL
+- Will review whether HUMAN_REVIEW steps can be eliminated
+- Parked until we have evidence
