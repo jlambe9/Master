@@ -35,10 +35,11 @@
 
 ## After Completing Work
 
-1. Update `STATUS.md` — move task, change stage, add to completed if done
-2. Log execution to `task-system/task-log.md` — actual category, actual difficulty, notes
-3. If a decision was made → log to `DECISIONS.md`
-4. `git add -A && git commit -m "clawdbot: [brief description]" && git push origin main -q`
+1. **DO NOT edit STATUS.md directly** — you and Cursor/Jamie write to the same repo concurrently. Editing STATUS.md causes merge conflicts.
+2. Append to `status/clawdbot-log.md` — what you did, result, any flags for Jamie, and what STATUS.md update is needed (Jamie/Cursor will apply it)
+3. Log execution to `task-system/task-log.md` — actual category, actual difficulty, notes
+4. If a decision was made → log to `DECISIONS.md`
+5. `git add -A && git commit -m "clawdbot: [brief description]" && git push origin main -q`
 
 ## Evening Routine (automated, ~19:00)
 
@@ -61,6 +62,7 @@
 
 ## Files You Should Never Edit
 
+- `STATUS.md` — Jamie/Cursor only. Log your updates to `status/clawdbot-log.md` instead.
 - `task-system/jamie-profile.md` — only Jamie or his explicit instruction
 - `boss/BOSS.md` goals/targets — only Jamie
 - `RESOURCES.md` tool statuses — only Jamie confirms these
