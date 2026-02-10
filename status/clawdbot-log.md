@@ -18,3 +18,11 @@
 ### STATUS.md suggested updates
 - BC-052: Stage → EXPLOIT, next action = "Jamie review MVP spec, then daily execution"
 - Add "Write intros for new connections" as daily repeat task in Active
+
+## 2026-02-10 15:30 — BC-064 Created
+
+### New task: BC-064 — Fix Connection Detection → Intro Pipeline
+- **Priority:** 🔴 CRITICAL
+- **Problem:** Expandi shows 70 connected, H1 has 28 marked. 27 leads need intros. Pipeline has gaps between detection → marking → writing.
+- **Task file:** ~/clawd/tasks/BC-064.md
+- **Suggested STATUS.md update:** Add BC-064 to Active (replace a completed task), domain boss/lead-gen, stage PLAN
