@@ -1,7 +1,8 @@
 # SKILLS.md — Skills Registry
 
-*A "skill" is a defined capability deployed on a specific tool.
-Track: does it exist, does it work, what does it impact, when did we last verify?*
+*A "skill" is a standalone set of instructions an agent can use for a specific task.*
+*Every skill has a SKILL.md with frontmatter (name + description) and execution instructions.*
+*Full definitions: ClawdBot `STRUCTURE.md`*
 
 ## Skill Status Legend
 - **ACTIVE** — deployed and verified working
@@ -12,33 +13,55 @@ Track: does it exist, does it work, what does it impact, when did we last verify
 
 ## Registry
 
-| Skill | Tool | Status | Process It Supports | KPI Impacted | Last Verified | Evidence It Works |
-|-------|------|--------|--------------------|--------------|--------------|--------------------|
-| Ad Wizard (bodycog-ad-wizard) | Claude web | ACTIVE | Ad creative production | Lead gen: ad volume | 2026-02-09 | Generates compliant creatives; conversion data TBD |
-| Expandi monitoring | ClawdBot | TESTING | LinkedIn outreach | Lead gen: outreach/day | [NEEDS VERIFICATION] | Script runs; no volume data yet |
-| LinkedIn intro writing | ClawdBot | TESTING | Intro messages | Lead gen: reply rate | [NEEDS VERIFICATION] | Rules defined; no reply data yet |
-| Grok search (X/web) | ClawdBot | ACTIVE | Research, monitoring | N/A (support skill) | [NEEDS VERIFICATION] | Returns results |
-| Academic research MCP | Cursor | ACTIVE | Thesis research | Research: papers reviewed | [NEEDS VERIFICATION] | PubMed/SciHub queries work |
-| Heartbeat protocol | ClawdBot | TESTING | Proactive check-ins | N/A (operational) | [NEEDS VERIFICATION] | Fires but noisy |
-| Frontend design | Claude web | ACTIVE | Landing pages, dashboards | Conversion rate | — | Built-in skill, works |
+### LinkedIn Outreach Skills
+
+| Skill | Location | Status | Process Step | LinkedIn Account | Last Verified |
+|-------|----------|--------|-------------|-----------------|---------------|
+| linkedin-outreach | ClawdBot: `skills/linkedin-outreach/` | ACTIVE | Pipeline entry point | — | 2026-02-11 |
+| write-intro-messages | ClawdBot: `skills/write-intro-messages/` | ACTIVE | P5: Intro writing | Jamie Alexander | 2026-02-11 |
+| detect-new-connections | ClawdBot: `skills/detect-new-connections/` | ACTIVE | P4: CR detection | Jamie Alexander (Expandi) | 2026-02-11 |
+| pb-activity-extractor | ClawdBot: `skills/pb-activity-extractor/` | TESTING | P12.1B: Activity scraping | Jamie Sandy | 2026-02-11 |
+| pb-profile-scraper | ClawdBot: `skills/pb-profile-scraper/` | ACTIVE | P12.1A: Profile scraping | Jamie Sandy | 2026-02-11 |
+| sync-expandi-h1 | ClawdBot: `skills/sync-expandi-h1/` | ACTIVE | Expandi↔H1 sync | — | 2026-02-11 |
+| expandi | ClawdBot: `skills/expandi/` | TESTING | P3: Connection requests | Jamie Alexander | 2026-02-11 |
+
+### Utility Skills
+
+| Skill | Location | Status | What It Does | Last Verified |
+|-------|----------|--------|-------------|---------------|
+| grok-search | ClawdBot: `skills/grok-search/` | ACTIVE | Web + X/Twitter search via Grok | 2026-02-11 |
+| Ad Wizard | Claude web: bodycog-ad-wizard | ACTIVE | Ad creative production | 2026-02-09 |
+| Academic research MCP | Cursor | ACTIVE | PubMed/SciHub queries | — |
+| Heartbeat protocol | ClawdBot: `HEARTBEAT.md` | TESTING | Proactive check-ins | 2026-02-09 |
+
+### LinkedIn Accounts (Quick Reference)
+
+| Profile | Connections | Assigned To |
+|---------|-------------|-------------|
+| Jamie Alexander | ~5,500 | Expandi, manual outreach, browser research |
+| Jamie Sandy | ~300 | PhantomBuster scraping |
+| Jamie Lambe | ~2,000 | Reserve (not assigned) |
+
+⚠️ Full details: ClawdBot `reference/linkedin-account-registry.md`
 
 ## Skills Needed (Gap Analysis)
 
 | Skill Needed | Would Support | Priority | Blocked By |
 |-------------|---------------|----------|------------|
-| Follow-up automation | Lead nurture | HIGH | CRM setup |
-| Sales call booking | Sales | HIGH | No process defined |
-| Content scheduling | Lead gen: content | MEDIUM | No content calendar |
-| Daily review automation | Operational rhythm | MEDIUM | ClawdBot restructure |
-| Client onboarding flow | Product delivery | CRITICAL | No process defined |
-| Outcome tracking dashboard | Product measurement | HIGH | No clients yet |
+| Follow-up automation | Lead nurture FU1-breakup | HIGH | No CRM / process defined |
+| Intent scoring skill | P12.2: LLM scoring | HIGH | Script exists, needs skill packaging |
+| ICP filter skill | P10: Anti-ICP screen | MEDIUM | Script exists, needs skill packaging |
+| Sales call booking | Sales workflow | HIGH | No process defined |
+| Client onboarding | Product delivery | CRITICAL | No process defined |
+| Content scheduling | Organic lead gen | MEDIUM | No content calendar |
 
 ## How to Verify a Skill Works
 
-1. **Functional test:** Does it execute without errors?
-2. **Output quality:** Is the output usable without significant manual rework?
-3. **KPI impact:** Can we measure a change in the linked KPI?
-4. **Reliability:** Does it work consistently over 5+ uses?
+1. **Functional:** Executes without errors
+2. **Output quality:** Output is usable without significant rework
+3. **KPI impact:** Measurable change in linked metric
+4. **Reliability:** Works consistently over 5+ uses
 
-Update this file when: a skill is deployed, tested, breaks, or gets deprecated.
-A skill is only ACTIVE if it passes tests 1-3. Otherwise it's TESTING.
+Skill is only ACTIVE if it passes 1-3. Otherwise TESTING.
+
+*Last updated: 2026-02-11*
