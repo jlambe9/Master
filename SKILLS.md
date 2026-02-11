@@ -13,7 +13,7 @@
 
 ## Registry
 
-### LinkedIn Outreach Skills
+### LinkedIn Outreach Skills (Domain: `boss/lead-gen.md`)
 
 | Skill | Location | Status | Process Step | LinkedIn Account | Last Verified |
 |-------|----------|--------|-------------|-----------------|---------------|
@@ -25,14 +25,14 @@
 | sync-expandi-h1 | ClawdBot: `skills/sync-expandi-h1/` | ACTIVE | Expandi↔H1 sync | — | 2026-02-11 |
 | expandi | ClawdBot: `skills/expandi/` | TESTING | P3: Connection requests | Jamie Alexander | 2026-02-11 |
 
-### Utility Skills
+### Utility Skills (Domain: `boss/infrastructure.md`)
 
-| Skill | Location | Status | What It Does | Last Verified |
-|-------|----------|--------|-------------|---------------|
-| grok-search | ClawdBot: `skills/grok-search/` | ACTIVE | Web + X/Twitter search via Grok | 2026-02-11 |
-| Ad Wizard | Claude web: bodycog-ad-wizard | ACTIVE | Ad creative production | 2026-02-09 |
-| Academic research MCP | Cursor | ACTIVE | PubMed/SciHub queries | — |
-| Heartbeat protocol | ClawdBot: `HEARTBEAT.md` | TESTING | Proactive check-ins | 2026-02-09 |
+| Skill | Location | Status | What It Does | Domain | Last Verified |
+|-------|----------|--------|-------------|--------|---------------|
+| grok-search | ClawdBot: `skills/grok-search/` | ACTIVE | Web + X/Twitter search | infrastructure | 2026-02-11 |
+| Ad Wizard | Claude web: bodycog-ad-wizard | ACTIVE | Ad creative production | lead-gen | 2026-02-09 |
+| Academic research MCP | Cursor | ACTIVE | PubMed/SciHub queries | research | — |
+| Heartbeat protocol | ClawdBot: `HEARTBEAT.md` | TESTING | Proactive check-ins | infrastructure | 2026-02-09 |
 
 ### LinkedIn Accounts (Quick Reference)
 
