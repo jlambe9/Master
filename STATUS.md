@@ -1,7 +1,7 @@
 # STATUS.md — What's Active Right Now
 
-*Last updated: 2026-02-10*
-*Updated by: Claude Code*
+*Last updated: 2026-02-11*
+*Updated by: ClawdBot*
 
 *Pipeline v1.0: CAPTURED → GOAL CLARITY → DECOMPOSED → SEQUENCED → PLANNED → INITIATED → IN PROGRESS → COMPLETED → PERSISTED | BLOCKED*
 *Priority: 🔴 CRITICAL  🟡 HIGH  ⚪ MEDIUM — see `task-system/pipeline.md` for gate checks*
@@ -15,6 +15,7 @@
 | Finalize intro message rules for ClawdBot | BC-052 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Jamie reviews draft spec |
 | Find all connections without intros written | BC-062 | 🔴 | GOAL CLARITY | EXPLOIT | boss/lead-gen | ClawdBot scans + compiles list |
 | Write personalized intros for new connections | BC-063 | 🔴 | BLOCKED | EXPLOIT | boss/lead-gen | Needs BC-052 + BC-062 first |
+| Fix overnight failure cascade | CLAWD-001 | 🔴 | DECOMPOSED | EXPLOIT | clawd/reliability | Implement 4 fixes (fallback model, cron hours, isolated sessions, compaction) |
 
 ## 🟡 Queued
 
