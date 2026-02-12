@@ -13,6 +13,7 @@
 | Task | Ref | Priority | Status | Type | Domain | Next Action |
 |------|-----|----------|--------|------|--------|-------------|
 | Build Pipeline v2: pre-screen, pre-write, auto-send | BC-065 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | 7 subtasks — see tasks/BC-065.md |
+| Outreach cron audit — all necessary automations | BC-067 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | List all crons, validate, implement missing |
 | Finalize intro message rules for ClawdBot | BC-052 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Superseded by BC-065 |
 | Find all connections without intros written | BC-062 | 🔴 | COMPLETED | EXPLOIT | boss/lead-gen | Done — 90 accepts mapped |
 | Write personalized intros for new connections | BC-063 | 🔴 | IN PROGRESS | EXPLOIT | boss/lead-gen | 33 written, 3 outstanding |
