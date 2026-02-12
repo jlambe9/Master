@@ -71,3 +71,4 @@
 - Cowork fix: remove academic-research MCP server [CONFIRMED]
 - Revenue target: £14,750/month [CONFIRMED]
 - Morning cardio non-negotiable — mobile tasks only [CONFIRMED]
+| Setup Pencil app (whiteboard) | LIFE-001 | ⚪ | CAPTURED | ADMIN | personal/life-admin | — |
