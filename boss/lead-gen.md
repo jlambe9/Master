@@ -6,15 +6,20 @@
 - Secondary: Organic content (not yet active)
 - Paid ads: Not yet active (ad wizard skill exists in Claude web)
 
-## KPIs
+## KPIs (rebased 2026-02-12 at 35 CRs/day)
 | Metric | Target | Actual (Feb 2026) | Source |
 |--------|--------|-------------------|--------|
-| CRs sent/day | 70 | ~70 | Expandi |
-| Accept rate | 41% | 41% | Expandi |
-| Intros written | all accepted | 37/60 done | H1 sheet |
-| Intros sent/day | 25 | manual (Jamie) | LinkedIn |
-| Reply rate | 10% | TBD | Manual |
-| Calls booked/week | 11 | 0 | TBD |
+| CRs sent/day | 35 | 35 (paused — weekly LinkedIn cap) | Expandi |
+| Accept rate | 42.9% | 42.9% (115/268) | Expandi |
+| Intros sent/day | 15 (all accepts) | 18 total sent ever | H1 sheet |
+| Intro reply rate | 16.7% | 16.7% (3/18) | H1 sheet |
+| Conversations/week | 30 | ~3 | H1 sheet |
+| Calls booked/week | 8 | 0 | TBD |
+| Calls showed/week | 5-6 | 0 | TBD |
+| Closed/week | 1.5 | 0 | TBD |
+| Revenue/month | £3,000 (min) | £0 | Pre-revenue |
+
+*Full funnel maths: `playbooks/linkedin-funnel.md` (rebased to 35/day with actuals)*
 
 ## LinkedIn Accounts
 | Account | Use | Status |
@@ -47,17 +52,23 @@ Full details: ClawdBot `reference/linkedin-account-registry.md`
 | Content creation | NOT YET BUILT |
 
 ## Playbooks
-- Funnel maths: `playbooks/linkedin-funnel.md`
+- **Full outbound playbook:** `playbooks/linkedin-outbound-playbook.md` (master reference — personalisation, diagnostics, multipliers, levers)
+- Funnel maths (35/day, firm): `playbooks/linkedin-funnel.md`
 - Daily ops: `playbooks/linkedin-daily-ops.md`
 - Personalisation: `playbooks/linkedin-personalisation.md`
 - Diagnostics: `playbooks/linkedin-diagnostics.md`
 
 ## What's Working
-- Expandi CRs at 70/day with 41% accept rate
-- LLM intro writing producing quality personalised messages
-- PB scraping pipeline operational
+- Expandi CRs at 35/day with 42.9% accept rate (excellent)
+- LLM intro writing producing quality personalised messages (16.7% reply rate)
+- PB scraping pipeline operational (118 profiles, 5,914 activity records)
+- Competitor screening operational (34 flagged from 751)
+- Automated health checks, morning briefing, daily intro catch-up (crons)
 
 ## What's Not Working
-- LinkedIn bot detection triggered (dual-account simultaneous automation)
-- Intro sending still manual (Jamie bottleneck)
-- No reply data yet — need to start sending intros to measure
+- LinkedIn weekly CR cap limits to ~270/week
+- Intro sending still manual (Jamie bottleneck — 92 drafted, unreviewed)
+- FU sequence not operational (18 overdue, no templates built)
+- No call booking system (no Calendly, no CTA)
+- No sales call framework
+- No content engine (passive warming not happening)
