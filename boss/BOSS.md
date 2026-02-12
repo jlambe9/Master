@@ -23,44 +23,50 @@ Everything else is delivery mechanism + measurement + evidence.
 4. At least one peer-reviewed publication submitted
 
 ### 90-Day Goals (May 12, 2026)
-1. £7,000-10,000/month revenue
-2. 10-13 program clients closing/month + 8-10 group members
-3. Content engine producing inbound (5-10 leads/month)
+1. **£13,500/mo run rate** (£34K cumulative)
+2. 15+ program clients/month + 20 group members (£2,400/mo recurring)
+3. Content engine: 3,000 impressions/post, 30 inbound leads/month, 2 inbound closes
 
 ### 60-Day Goals (April 12, 2026)
-1. £4,000-6,000/month revenue
-2. Both pipelines producing, 25+ calls completed, close rate validated
-3. Content executing 3x/day for 60 days
+1. **£10,000/mo run rate** (£20K cumulative)
+2. Pipeline A at full steady state, 14 closes/month, 65+ calls completed
+3. Content: 1,500 impressions/post, 15 inbound conversations/month
 
 ### 30-Day Goals (March 14, 2026)
-1. £2,000-3,500 revenue (first month)
-2. 4-7 clients closed, both pipelines active, 50+ conversations
-3. Financial survival plan complete (FIN-001/002/003)
+1. **£7,400 cumulative** — 13 program clients + 4 group members
+2. Both pipelines exhausting/steady, 300+ conversations, 30+ calls, all rates validated
+3. FIN-001/002/003 complete. Content at 90 posts.
 
 ### 2-Week Goals (Feb 26, 2026)
-1. All optimisations live (bio, headline, articles, landing page)
-2. 92 intros sent + 700 existing contacts messaged + FU templates built
-3. 5-8 calls booked, 1-3 first closes
+1. **£2,100** — 4-5 closes across both pipelines
+2. All 11 prerequisites complete. 1,100+ messages sent. 60+ conversations. 15+ calls booked.
+3. Content calendar executing 3x/day (42 posts).
 
 ### This Week [→ see STATUS.md for tactical]
 
-*Full goal cascade with day-by-day plan: `boss/goal-cascade.md`*
+*Goal cascade (concise + KPIs): `boss/goal-cascade.md`*
+*Full revenue model: `boss/goal-cascade-detailed.md`*
 
 ## KPI Dashboard
 
 | Domain | Primary KPI | Target | Actual | Status |
 |--------|------------|--------|--------|--------|
-| Lead Gen | Outreach sent/week | [PLACEHOLDER] | 0 | ❌ NOT TRACKING |
-| Lead Nurture | Follow-ups sent/week | [PLACEHOLDER] | 0 | ❌ NOT TRACKING |
-| Sales | Calls booked/week | [PLACEHOLDER] | 0 | ❌ NOT TRACKING |
-| Sales | Revenue/month | £14,750 | £0 | ❌ PRE-REVENUE |
-| Product | Clients enrolled | [PLACEHOLDER] | 0 | ❌ NOT STARTED |
-| Product | Outcome Δ ≥20% (PSS-10, PANAS) | ≥20% | N/A | ❌ NO DATA |
-| Content | Posts/week | [PLACEHOLDER] | 0 | ❌ NOT TRACKING |
-| Finance | Gross margin | ≥70% | N/A | ❌ NO DATA |
+| Lead Gen (A) | CRs sent/week | 245 | 0 (weekly cap) | ⚠️ PAUSED |
+| Lead Gen (B) | Existing contact intros/week | 427 (61/day) | 0 | ❌ NOT STARTED |
+| Lead Nurture | FU1s sent/week | 350+ | 0 | ❌ NOT STARTED |
+| Sales | Calls booked/week | 8+ | 0 | ❌ NOT STARTED |
+| Sales | Close rate | ≥20% | N/A | ❌ NO DATA |
+| Sales | Revenue/month | £10,000 (60-day) | £0 | ❌ PRE-REVENUE |
+| Product | Program clients active | 13 (30-day) | 0 | ❌ NOT STARTED |
+| Product | Group members | 20 (90-day) | 0 | ❌ NOT STARTED |
+| Content | Posts/day | 3 | 0 | ❌ NOT STARTED |
+| Content | Impressions/post | 500→3,000 | N/A | ❌ NO DATA |
+| Content | Inbound leads/month | 30 (90-day) | 0 | ❌ NOT STARTED |
+| Finance | Monthly expenses | Calculated | Unknown | ❌ FIN-001 |
+| Finance | Runway | Calculated | Unknown | ❌ FIN-003 |
 
-*KPI targets marked [PLACEHOLDER] need Jamie to set based on pipeline math.*
-*ClawdBot updates actuals daily when tracking is active.*
+*KPIs from funnel maths at 35 CRs/day + 1,750 existing contacts + 3x daily content.*
+*ClawdBot updates actuals daily via morning briefing.*
 
 ## Domain Map
 
