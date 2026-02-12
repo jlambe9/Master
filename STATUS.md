@@ -73,3 +73,4 @@
 - Morning cardio non-negotiable — mobile tasks only [CONFIRMED]
 | Setup Pencil app (whiteboard) | LIFE-001 | ⚪ | CAPTURED | ADMIN | personal/life-admin | — |
 | Gmail access for CR acceptance monitoring (auto-sync to H1) | BC-064 | 🔴 | CAPTURED | EXPLOIT | boss/lead-gen | Jamie creates App Password for jlambe9@gmail.com |
+| Google Calendar access (proactive scheduling, reminders, event awareness) | CLAWD-002 | 🟡 | CAPTURED | EXPLOIT | clawd/integrations | Jamie grants access or creates service account scope |
