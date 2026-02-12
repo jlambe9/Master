@@ -12,9 +12,10 @@
 
 | Task | Ref | Priority | Status | Type | Domain | Next Action |
 |------|-----|----------|--------|------|--------|-------------|
-| Finalize intro message rules for ClawdBot | BC-052 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Jamie reviews draft spec |
-| Find all connections without intros written | BC-062 | 🔴 | GOAL CLARITY | EXPLOIT | boss/lead-gen | ClawdBot scans + compiles list |
-| Write personalized intros for new connections | BC-063 | 🔴 | BLOCKED | EXPLOIT | boss/lead-gen | Needs BC-052 + BC-062 first |
+| Build Pipeline v2: pre-screen, pre-write, auto-send | BC-065 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | 7 subtasks — see tasks/BC-065.md |
+| Finalize intro message rules for ClawdBot | BC-052 | 🔴 | DECOMPOSED | EXPLOIT | boss/lead-gen | Superseded by BC-065 |
+| Find all connections without intros written | BC-062 | 🔴 | COMPLETED | EXPLOIT | boss/lead-gen | Done — 90 accepts mapped |
+| Write personalized intros for new connections | BC-063 | 🔴 | IN PROGRESS | EXPLOIT | boss/lead-gen | 33 written, 3 outstanding |
 | Fix overnight failure cascade | CLAWD-001 | 🔴 | DECOMPOSED | EXPLOIT | clawd/reliability | Implement 4 fixes (fallback model, cron hours, isolated sessions, compaction) |
 
 ## 🟡 Queued
