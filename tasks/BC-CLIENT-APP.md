@@ -166,6 +166,144 @@ Flag: [anything unusual — e.g. "3 days no check-in"]
 - `PROTOCOL.md` — Their personalised metabolic/habit protocol
 - `journal/` — Daily logs (auto-populated from check-ins)
 
+## Daily App Workflow (Client Experience)
+
+What the client's bot does each day, in order. This IS the coaching product — the daily structure that ADHD brains can't self-generate.
+
+### Morning Block (wake time + 30 min)
+
+```
+🌅 Morning Briefing
+
+1. PROTOCOL CHECK
+   "Morning Jamie — here's your protocol for today:"
+   → Supplements list (personalised, timed)
+   → Morning habit stack (order matters)
+   → One-line reminder of WHY each item (motivation, not nagging)
+
+2. TODAY'S FOCUS
+   "Your top priority today:"
+   → Pull from PLAN.md — single most important task
+   → Win state in one sentence
+   → First step defined (zero activation energy)
+   → Time estimate
+
+3. ENERGY CHECK-IN
+   "Quick check — how's energy this morning? (1-10)"
+   → Client replies with number
+   → Bot logs to journal, tracks trend
+   → If below 4: "Sounds like a low-spoon day. Want me to adjust today's plan?"
+
+4. CALENDAR PREVIEW (if connected)
+   → Meetings/calls today
+   → Prep reminders for coaching calls
+   → Buffer warnings ("Back-to-back 2-4pm — protect transition time")
+```
+
+### Midday Check (lunch time, configurable)
+
+```
+☀️ Midday Pulse
+
+1. PROGRESS TAP
+   "How's the morning gone? Did you get to [focus task]?"
+   → Quick capture: done / partial / blocked / pivoted
+   → If blocked: "What's in the way?" → log blocker
+
+2. AFTERNOON SETUP
+   → Reminder of afternoon protocol items (if any)
+   → Suggest task for next work block
+   → If energy was low AM: offer reduced plan
+```
+
+### Afternoon (ad-hoc, responsive)
+
+```
+Bot is available but doesn't initiate unless:
+- Task deadline approaching
+- Medication reminder (if in protocol)
+- Client hasn't checked in and usually does by now
+- Exercise/movement reminder (if in protocol)
+
+Client can:
+- Brain dump tasks ("I need to do X, Y, Z" → bot captures all)
+- Ask for help breaking down a task
+- Flag a blocker or win
+- Request accountability ("Ping me in 25 min to check if I started")
+```
+
+### Evening Check-In (configurable, default 21:00)
+
+```
+🌙 Evening Wrap-Up
+
+1. DAY REVIEW
+   "How was today overall? (1-10)"
+   → Self-rating logged
+   → "What went well?"
+   → "What was hardest?"
+
+2. PROTOCOL REVIEW
+   → Checklist of today's protocol items
+   → Client ticks off what they did
+   → Adherence % calculated and logged
+
+3. TOMORROW PREP (optional)
+   "Anything on your mind for tomorrow?"
+   → Capture any tasks/worries
+   → "I'll include that in tomorrow's briefing"
+
+4. WIND-DOWN NUDGE (if in protocol)
+   → Screen time reminder
+   → Sleep hygiene checklist
+   → "Goodnight [name] — solid day. 6/7 protocol items done 💪"
+```
+
+### Weekly Rhythm
+
+```
+📊 Weekly Summary (day before coaching call)
+
+FOR CLIENT:
+- "Here's your week at a glance"
+- Protocol adherence: X/7 days (trend ↑↓→)
+- Energy trend graph (text-based)
+- Wins: [auto-captured from daily check-ins]
+- Patterns: [AI-identified — e.g. "Thursdays are consistently your hardest day"]
+- Focus for next week: [suggested based on data]
+
+FOR COACH (consented summary):
+- Coach report sent to Jamie (see Coach Report Format above)
+- Includes friction analysis + suggested coaching focus
+- Client previews before send (if preview_before_send = true)
+```
+
+### Interaction Principles
+
+| Principle | Implementation |
+|-----------|---------------|
+| Zero activation energy | Bot initiates — client just responds |
+| No guilt | Missed items noted neutrally, never shamed |
+| Flexible structure | Low-energy days get adapted plans |
+| Capture everything | Brain dumps → structured tasks automatically |
+| Pattern recognition | Bot spots trends client can't see |
+| Coach-informed | Data flows to coaching calls (with consent) |
+| Consistent but not rigid | Same rhythm daily, but content adapts |
+
+### Configurable Parameters (per client)
+
+```yaml
+# In PROTOCOL.md or HEARTBEAT.md
+morning_briefing: "07:30"       # wake time + 30 min
+midday_check: "13:00"           # or null to skip
+evening_checkin: "21:00"        # or null to skip
+accountability_pings: true       # "did you start?" reminders
+medication_reminders: true       # if applicable
+exercise_reminders: true         # if in protocol
+wind_down_nudge: "22:00"        # or null
+weekly_summary_day: "sunday"    # day before coaching call
+```
+
 ## Process Recording & Automation (V2+)
 
 ### How it works:
