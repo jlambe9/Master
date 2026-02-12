@@ -77,3 +77,4 @@
 | Gmail access for CR acceptance monitoring (auto-sync to H1) | BC-064 | 🔴 | CAPTURED | EXPLOIT | boss/lead-gen | Jamie creates App Password for jlambe9@gmail.com |
 | Google Calendar access (proactive scheduling, reminders, event awareness) | CLAWD-002 | 🟡 | CAPTURED | EXPLOIT | clawd/integrations | Jamie grants access or creates service account scope |
 | Setup calendar tracking (jamie@bodycog.com) for call booking | BC-066 | 🟡 | CAPTURED | EXPLOIT | boss/lead-gen | Needs Google Calendar API access for bodycog account |
+| Live pipeline dashboard (mobile + web, real-time data) | CLAWD-003 | 🟡 | CAPTURED | EXPLOIT | clawd/integrations | Visual process map, cron status, funnel metrics — accessible on mobile |
