@@ -1,167 +1,170 @@
 # Goal Cascade — 2wk / 30 / 60 / 90 / North Star
 
-*Created: 2026-02-12. Based on 35 CRs/day targeted + 1,375 existing contacts + 3x daily content.*
+*Created: 2026-02-12. All optimisations assumed in place from Feb 13.*
 *Funnel maths: `playbooks/linkedin-funnel.md`*
 
-## North Star
+## Assumptions (in place from tomorrow, Feb 13)
 
-**BodyCog is the MindBody Gym that trains your Zone of Genius.**
+- Bio rewritten for ICP
+- Headline/job title optimised
+- 3-5 articles published on top ICP problems
+- Landing page restructured with clear offer + deliverables
+- Content engine: 3x daily posts (content calendar defined)
+- Existing contacts extracted, ICP filtered, competitor/coach screened
+- All 92 drafted intros cleared and sent TODAY
+- FU templates built
+- Calendly live
 
-Accredited coaching + BPS protocol + AI companion app that tracks cognitive and emotional fitness like wearables track physical health.
+## Two Pipelines + Content
 
-Revenue north star: **£10K+/month** — self-sustaining, can reinvest in scaling.
+### Pipeline A — Targeted CRs (ongoing engine)
+- 35 CRs/day via Expandi (ADHD ICP)
+- Optimised rates: 52% accept, 20% intro reply, 33% conversation, 30% call booking, 80% show, 30% close
+- Revenue per CR: ~£6.45
+- **Steady state: £7,250/mo**
 
----
+### Pipeline B — Existing Contacts (one-shot boost)
+- 5,500 connections → ICP filter (remove coaches/competitors/irrelevant) → ~1,375 leads
+- 80 personalised messages/day (LinkedIn safe limit for 1st-degree)
+- 17 days to send all
+- Lower rates (general ICP, not ADHD-specific): 12% intro reply, 18% conversation, 20% call booking, 75% show, 15% close
+- Revenue per message: ~£2.65
+- **Total lifetime yield: ~£3,900 (spread over weeks 2-7)**
 
-## 90-Day Goal (May 12, 2026)
-
-**Revenue: £7,000-10,000/month**
-
-Both pipelines at full steady state + content compounding (60-90 day effect).
-
-| Metric | Target |
-|--------|--------|
-| Revenue/month | £7,000-10,000 |
-| Program clients closing/month | 10-13 |
-| Group members (downsell) | 8-10 |
-| Active conversations/week | 40+ |
-| Calls/week | 12-15 |
-| Content: posts published | 270 (3/day × 90 days) |
-| Inbound leads/month | 5-10 (content-driven) |
-| Client outcome data | 3+ clients with pre/post measures |
-| Offer | Refined based on feedback from 15+ calls |
-| Group program | Live and accepting downsells |
-
-**What must be true:**
-- Pipeline A (targeted) at steady state: £5,500-7,250/mo contribution
-- Pipeline B (existing contacts): exhausted but produced £3-4K in months 1-2
-- Content creating inbound: £500-1,500/mo contribution and growing
-- Sales call system refined from 20+ completed calls
-- Offer-market fit validated (close rate ≥25%)
-- Referral pipeline starting (1-2 referrals/month)
+### Content Engine (amplifier + inbound)
+- 3 posts/day from defined content calendar
+- Feed warming: +10-20% lift on all pipeline rates by day 60-90
+- Direct inbound: ~2-5 conversations/month by day 60, 5-10 by day 90
 
 ---
 
-## 60-Day Goal (April 12, 2026)
+## 2-WEEK GOAL (Feb 26)
 
-**Revenue: £4,000-6,000/month**
+*Setup complete. Both pipelines firing. First closes.*
 
-Both pipelines producing. Content warming feeds. Offer tested.
+| | Pipeline A (Targeted) | Pipeline B (Existing) | Combined |
+|---|---|---|---|
+| **Volume in** | 490 CRs + 92 existing = 582 | 1,120 messages (80/day × 14) | 1,702 leads in pipeline |
+| **Accepts/delivered** | 347 (582 × ~60% blended) | 1,120 (already connected) | 1,467 |
+| **Conversations** | 65 | 80 | **145** |
+| **Calls booked** | 12 | 8 | **20** |
+| **Calls showed** | 9 | 6 | **15** |
+| **Program closes** | 3 | 1 | **4** |
+| **Group downsells** | 1 | 1 | **2** |
+| **Revenue** | £1,650 | £650 | **£2,300** |
 
-| Metric | Target |
-|--------|--------|
-| Revenue/month | £4,000-6,000 |
-| Total clients closed (cumulative) | 12-18 |
-| Program clients active | 6-10 |
-| Group members | 5-8 |
-| Calls completed (cumulative) | 25+ |
-| Close rate measured | ≥20% |
-| Pipeline A steady state | Yes — 35 CRs/day, same-day intros, FU running |
-| Pipeline B completion | 100% — all 1,375 existing contacts messaged |
-| Content output | 180 posts (3/day × 60 days) |
-| Sales page | Tested with 25+ visitors, conversion measured |
+*Note: ~40% of pipeline has completed full FU sequence. Remaining leads still in sequence — revenue continues into month 2.*
 
-**What must be true:**
-- Pipeline A producing 4-6 closes/month
-- Pipeline B producing 3-5 closes/month (tail end, FU completions)
-- Close rate validated from real data (≥20%)
-- Content starting to generate inbound conversations
-- At least 2 clients with positive outcome feedback
-- Financial position stabilised (burn rate covered)
+**Non-revenue milestones:**
+- All profile optimisations live
+- Content calendar executing (42 posts published)
+- Calendly live, first calls completed
+- Financial plan started (FIN-001)
 
 ---
 
-## 30-Day Goal (March 14, 2026)
+## 30-DAY GOAL (March 14)
 
-**Revenue: £2,000-3,500 (first month, ramp-up)**
+*2-week results + 2 more weeks at near-steady-state.*
 
-Both pipelines active. First clients closed. Sales system operational.
+| | Pipeline A (Targeted) | Pipeline B (Existing) | Content/Inbound | Combined |
+|---|---|---|---|---|
+| **Cumulative volume** | 1,142 leads | 1,375 (all sent) | — | 2,517 |
+| **Sequence completion** | ~70% | ~65% | — | — |
+| **Conversations** | 180 | 160 | 5 | **345** |
+| **Calls booked** | 35 | 20 | 1 | **56** |
+| **Calls showed** | 28 | 15 | 1 | **44** |
+| **Program closes** | 8 | 3 | 0 | **11** |
+| **Group downsells** | 4 | 2 | 0 | **6** |
+| **Cumulative revenue** | £4,600 | £1,800 | £0 | **£6,400** |
 
-| Metric | Target |
-|--------|--------|
-| Revenue (month 1) | £2,000-3,500 |
-| Clients closed (cumulative) | 4-7 |
-| Program clients | 3-5 |
-| Group downsells | 1-2 |
-| Calls completed | 12-15 |
-| Pipeline A: CRs sent | ~600 (35/day × ~17 days post-reset) |
-| Pipeline A: intros sent | ~250 |
-| Pipeline B: existing contacts messaged | 1,375 (all) |
-| Pipeline B: conversations active | 150+ |
-| Content: posts published | 90 (3/day × 30 days) |
-| Articles published | 3-5 (ICP problem articles) |
-| Active conversations (combined) | 50+ |
-| Calls booked/week | 5-8 |
-| FU sequence | Fully operational (FU1-breakup automated/templated) |
-| Financial plan | FIN-001/002/003 complete |
-
-**What must be true:**
-- All existing contacts ICP-filtered and messaged
-- Targeted pipeline past the weekly cap reset, running smoothly at 35/day
-- FU templates built and running for both pipelines
-- Calendly live, booking calls
-- Sales call framework tested on 10+ calls
-- Content calendar executing consistently
-- First real close rate and show rate data
+**Non-revenue milestones:**
+- Pipeline A approaching steady state
+- Pipeline B ~65% exhausted
+- 90 posts published, feed presence building
+- First close rate data from 40+ calls — validate or adjust
+- FIN-001/002/003 complete (know survival number)
+- First client outcomes in progress
 
 ---
 
-## 2-Week Goal (Feb 26, 2026)
+## 60-DAY GOAL (April 12)
 
-**Revenue: £500-1,500 (first closes possible)**
+*Pipeline A at full steady state. Pipeline B tail end. Content compounding.*
 
-Everything set up. Both pipelines firing. First conversations converting.
+| | Pipeline A (Monthly rate) | Pipeline B (Tail) | Content/Inbound | Combined Monthly |
+|---|---|---|---|---|
+| **Monthly volume in** | 1,050 CRs | Exhausted (tail FUs only) | 5-8 inbound | 1,055+ |
+| **Conversations/mo** | 182 | 30 (tail) | 5 | **217** |
+| **Calls booked/mo** | 55 | 4 | 2 | **61** |
+| **Calls showed/mo** | 44 | 3 | 1 | **48** |
+| **Program closes/mo** | 13 | 1 | 0 | **14** |
+| **Group downsells/mo** | 6 | 1 | 0 | **7** |
+| **Monthly revenue** | £7,250 | £650 | £150 | **£8,050/mo** |
+| **Cumulative revenue** | | | | **~£14,500** |
 
-| Metric | Target |
-|--------|--------|
-| Revenue | £500-1,500 (1-3 closes) |
-| Profile optimised | Bio, headline, articles, landing page — all live |
-| 92 drafted intros | ALL reviewed and sent (day 1-2) |
-| Existing contacts extracted | 5,500 exported, ICP filtered |
-| Existing contacts messaged | ~700 (50/day × 14 days) |
-| Targeted CRs sent | ~350 (35/day once cap resets ~Feb 13) |
-| FU templates | Built (FU2, FU3, breakup) |
-| Content calendar | Defined and executing (3x/day) |
-| Calendly | Live with specific CTA |
-| Conversations active | 15-25 (from cleared intros + existing contacts) |
-| Calls booked | 5-8 |
-| Calls completed | 3-5 |
-| FIN-001 | Monthly expenses calculated |
-
-**Day-by-day execution plan:**
-
-| Day | Date | Actions |
-|-----|------|---------|
-| 1 | Feb 12 | Clear + send all 92 intros. Start bio/headline rewrite. Start content calendar design. |
-| 2 | Feb 13 | Finish profile optimisations. Extract existing contacts. Start ICP filtering. Publish first article. LinkedIn weekly cap resets — CRs resume. |
-| 3 | Feb 14 | Start messaging existing contacts (50/day). Build FU templates. Set up Calendly. Publish second article. Valentine's Day (REL-002). |
-| 4-5 | Feb 15-16 | Continue existing contact outreach. Publish remaining articles. First intro replies arriving from 92 batch. Content 3x/day starts. |
-| 6-7 | Feb 17-18 | First conversations from existing contacts. FU1s firing for 92 batch. Sales page rewrite. |
-| 8-10 | Feb 19-21 | Conversations building. First calls booked. FU1s for existing contacts starting. |
-| 11-14 | Feb 22-26 | First calls completed. First closes possible. Both pipelines in full flow. FU2s firing. |
+**Non-revenue milestones:**
+- Close rate validated from 80+ calls
+- Offer refined from client feedback
+- Content producing measurable inbound
+- First client completing 6-week program
+- Group program active with 6+ members
 
 ---
 
-## Combined Revenue Trajectory
+## 90-DAY GOAL (May 12)
 
-| Period | Pipeline A (Targeted) | Pipeline B (Existing) | Content/Inbound | Total |
-|--------|----------------------|----------------------|-----------------|-------|
-| 2 weeks | £500 (1 close) | £500-1,000 (1-2 closes) | £0 | **£500-1,500** |
-| 30 days | £1,500 (3 closes) | £1,500-2,000 (3-4 closes) | £0 | **£2,000-3,500** |
-| 60 days | £3,000-4,000/mo | £1,500-2,000 (tail) | £500 | **£4,000-6,000/mo** |
-| 90 days | £5,500-7,250/mo | Exhausted | £1,000-1,500 | **£7,000-10,000/mo** |
+*Pipeline A steady. Pipeline B fully exhausted. Content is now a real channel.*
 
-*Pipeline B is a one-shot boost (1,375 leads) — produces revenue in months 1-2 then depletes. Pipeline A is the ongoing engine. Content/inbound grows over time and replaces Pipeline B's contribution.*
+| | Pipeline A (Monthly) | Content/Inbound (Monthly) | Combined Monthly |
+|---|---|---|---|
+| **Conversations/mo** | 182 | 15-25 | **197-207** |
+| **Calls booked/mo** | 55 | 5-8 | **60-63** |
+| **Calls showed/mo** | 44 | 4-6 | **48-50** |
+| **Program closes/mo** | 13 | 1-2 | **14-15** |
+| **Group members (cumulative)** | | | **15-20** |
+| **Monthly revenue (program)** | £7,250 | £500-1,000 | **£7,750-8,250** |
+| **Monthly revenue (group)** | | | **£2,250-3,000** |
+| **Total monthly revenue** | | | **£10,000-11,250** |
+| **Cumulative revenue** | | | **~£30,000** |
+
+*Content lift: all Pipeline A rates now +15-20% from 90 days of daily posting. Above numbers include this compound effect.*
+
+**Non-revenue milestones:**
+- 270 posts published, thought leadership established
+- 3+ clients with measured outcomes (case studies)
+- Referral pipeline active (1-3 referrals/month)
+- Group program self-sustaining
+- First inbound from articles/content
+- Ready to add channels (paid ads, second LinkedIn account) if needed
+
+---
+
+## North Star: £10K+/month
+
+Achieved at ~day 90 via:
+- Pipeline A at optimised steady state: £7,250-8,500
+- Group program (cumulative, recurring): £2,250-3,000
+- Content inbound: £500-1,000 and growing
+- Referrals: £500+ and growing
+
+**Beyond £10K — scaling levers:**
+- Second LinkedIn account (doubles Pipeline A)
+- Paid ads (new channel)
+- Podcast/webinar funnel
+- Referral program
+- Group program scaling (£150 × 30+ = £4,500+)
+- Raise program price (£750-1,000 once proven)
 
 ---
 
 ## Validation Checkpoints
 
-| Date | Check | Action if missed |
-|------|-------|-----------------|
-| Feb 19 (1 week) | Optimisations live? 300+ contacts messaged? | Drop everything else, finish setup |
-| Feb 26 (2 weeks) | 5+ calls booked? | Diagnose: intro quality? CTA? Booking friction? |
-| March 7 (3 weeks) | First close? | Diagnose: call framework? Offer? Qualification? |
-| March 14 (30 days) | £2K+ revenue? | If £0: fundamental offer/market problem — pivot |
-| April 12 (60 days) | £4K+/month? | If <£2K: close rate or volume problem — diagnose |
-| May 12 (90 days) | £7K+/month? | If <£4K: scaling problem — add channels or fix conversion |
+| Date | Check | Red Flag |
+|------|-------|----------|
+| Feb 19 | Optimisations live? 500+ messages sent? | Setup not complete — drop everything |
+| Feb 26 | 15+ calls booked? | Volume or CTA problem |
+| Mar 7 | 3+ closes? | Call framework or offer problem |
+| Mar 14 | £5K+ cumulative? | Fundamental conversion problem |
+| Apr 12 | £8K/mo run rate? | Pipeline or close rate issue |
+| May 12 | £10K/mo? | Add channels or raise price |
