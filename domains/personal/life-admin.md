@@ -4,7 +4,7 @@
 0700 wake → fiction → cardio (2hrs, mobile tasks) → deep work → sales calls → gym (2.5hrs, mobile tasks) → evening
 
 ## Key Facts
-- Engaged to: Saida [CONFIRMED]
+- Partner: Saida (not engaged)
 - Location: London, Clapham (132B Lavender Hill) [CONFIRMED]
 
 ## HMRC / Tax

@@ -30,8 +30,14 @@
 | 14-day free challenge as conversion mechanism | — | 🟡 | CAPTURED | EXPLORE | boss/lead-nurture | Outreach live |
 | Short-form video content pipeline | BC-042 | ⚪ | CAPTURED | EXPLORE | boss/lead-gen | Content strategy |
 | Set weekly KPI targets + 90/30-day goals | — | ⚪ | CAPTURED | ADMIN | boss | Jamie input |
-| Total up monthly living expenses | FIN-001 | 🟡 | CAPTURED | EXPLOIT | boss/finance | — |
-| Add expenses to 3-month runway plan | FIN-002 | 🟡 | BLOCKED | EXPLOIT | boss/finance | FIN-001 first |
+| Monthly expenses calculation (inc. medication + new flat) | FIN-001 | 🔴 | CAPTURED | EXPLOIT | personal/finance | — |
+| Complete financial audit (bills, due dates, payment plans, double rent) | FIN-002 | 🔴 | CAPTURED | EXPLOIT | personal/finance | FIN-001 |
+| 3-6 month financial plan (survival maths) | FIN-003 | 🔴 | BLOCKED | EXPLOIT | personal/finance | FIN-001, FIN-002 |
+| Business KPIs from financial reality (daily actions über alles) | FIN-004 | 🔴 | BLOCKED | EXPLOIT | boss/finance | FIN-003 |
+| Financial timeline plan (what happens when) | FIN-005 | 🔴 | BLOCKED | EXPLOIT | personal/finance | FIN-002, FIN-003 |
+| Discuss finances with Saida | FIN-006 | 🟡 | BLOCKED | EXPLOIT | personal/relationship | FIN-002, FIN-003 |
+| Write "moving in talk" with Saida (expectations, timelines, tension) | REL-001 | 🟡 | CAPTURED | EXPLORE | personal/relationship | FIN-003 (partial) |
+| Proactive relationship plan (actions, gestures, joint projects) | REL-002 | 🟡 | CAPTURED | EXPLOIT | personal/relationship | — |
 | Organise regular cleaner | LA-001 | ⚪ | CAPTURED | EXPLORE | personal/life-admin | — |
 | Clean flat | LA-002 | ⚪ | CAPTURED | ADMIN | personal/life-admin | — |
 | Do washing | LA-003 | ⚪ | CAPTURED | ADMIN | personal/life-admin | — |
