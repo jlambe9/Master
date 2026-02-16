@@ -30,6 +30,11 @@
 
 Full details: ClawdBot `reference/linkedin-account-registry.md`
 
+## H1 Sheet: campaignId Column (col AP)
+**Format:** `NNN_DDMM` — campaign number + launch date (e.g. `003_1602`)
+**Purpose:** Tracks which Expandi campaign batch each lead was allocated to. Set at batch selection, before CRs sent.
+**Full column schema:** ClawdBot `processes/linkedin-outreach-process-map.md`
+
 ## Skills (ClawdBot)
 | Skill | Status | What |
 |-------|--------|------|
