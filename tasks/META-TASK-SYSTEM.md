@@ -44,6 +44,13 @@ Task pipeline expanded from v1.0 (8 stages + simple gate checks) to v1.1 with fu
 | 3 | EXPLOIT | Update pipeline.md with v1.1 definitions | COMPLETED | v1.1.0, 2026-02-20 |
 | 4 | EXPLOIT | Update templates/task.md with new fields | COMPLETED | template-v1.1.md created |
 | 5 | EXPLOIT | Validate v1.1 with first real task | CAPTURED | Next step |
+| 6 | EXPLOIT | Create Task Registry — canonical library of all task types/profiles by domain/subdomain | IN PROGRESS | ~/Master/TASK-REGISTRY.md, mirrored to ~/clawd/TASK-REGISTRY.md |
+| 7 | EXPLOIT | Scan all existing tasks → populate registry with correctly formatted profiles | IN PROGRESS | 30 task files to scan |
+| 8 | EXPLORE | Define Owner field spec (Jamie/Rich/Hybrid/Undefined) + add to template | CAPTURED | Who executes — determines daily bucket |
+| 9 | EXPLORE | Define 3-bucket daily planning structure (Rich E2E / Rich+Jamie handoff / Jamie only) | CAPTURED | Feeds into morning planning session |
+| 10 | EXPLORE | Define instance vs profile distinction — process for any agent to follow | CAPTURED | When does a task instance become a profile? When does a profile become an RTP? |
+| 11 | EXPLOIT | Build maturity scan task — scan all tasks, identify missing RTP sections, create remediation tasks | CAPTURED | Not a cron yet — manual fire each evening |
+| 12 | EXPLORE | Define daily planning session format — reverse-engineer from goals → outputs → tasks → schedule | CAPTURED | The actual morning workflow |
 
 ## Execution Log
 | Date | What Happened | Outcome | Duration |
