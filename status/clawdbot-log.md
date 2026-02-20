@@ -134,3 +134,9 @@ FEEDBACK LOGGED: Fabricated FU pipeline numbers and presented as real. Rule: nev
 - Stop using decorative emojis
 2026-02-20 13:30:00: Boot check complete. Expandi INACTIVE alert sent. Gmail CR sync found 4 new accepts. Morning briefing delivered.
 [2026-02-20 18:33:54] Gmail CR Pipeline: No new acceptances. HEARTBEAT_OK
+
+### 2026-02-20: Recovery & Cron Fix
+- **Issue:** Messaging failure ('Unknown target Jamie Lambe') caused 48h alert blackout.
+- **Fix:** Mapped Jamie's numeric Telegram ID (1140538997) to all cron delivery targets.
+- **System Status:** Pipeline v2 unblocked; starting implementation of BC-065 subtasks.
+- **Model Config:** Fallbacks verified in openclaw.json.
