@@ -59,12 +59,36 @@ Process proven, output verifiable → 🤖 Rich
 ### FULL SPEC — Complete Task File
 **When:** Actively worked or planned, complex, has dependencies.
 **Required fields:** All headlines PLUS:
-- Steps with Input → Action → Output per step
-- Subtasks (if applicable) with owner per subtask
+- Steps with Input → Action → Output (proof of completion) per step
+- Subtasks (if applicable) — see Subtask Structure below
 - Dependencies / Links (upstream + downstream)
 - Layer 0 scoring (agent layer)
 - Intervention stack (if B/A)
 - Tools / Inputs needed
+
+### Subtask Structure
+Subtasks are the atomic units of work within a task. They follow the same output-driven principles as tasks themselves.
+
+**Table format:**
+`| # | Type | Task | Status | Owner | Output (proof of completion) |`
+
+**Rules:**
+1. **Every subtask has a defined output.** No output = can't verify completion = can't mark done.
+2. **Every subtask has its own owner.** Parent may be 🔄 Hybrid while individual subtasks are 🤖 or 🧑.
+3. **One output per subtask.** If it has multiple outputs, split it into multiple subtasks.
+4. **Input validation before starting.** If subtask B depends on subtask A's output, A's output must verifiably exist before B starts. Otherwise B is BLOCKED.
+5. **Same completion gate as tasks.** Before marking a subtask done, verify its output exists (file, column, script run, state change).
+6. **Parent completion = ALL subtasks complete + win state outputs verified.** Never mark a parent done with incomplete subtasks.
+7. **Note dependencies in Notes column.** E.g. "needs #3" if subtask 4 depends on subtask 3's output.
+
+**Statuses:** CAPTURED → IN PROGRESS → COMPLETED / BLOCKED
+
+**Validation flow for each subtask:**
+```
+Check inputs exist → Start work → Produce output → Verify output exists → Mark COMPLETED
+       ↓ (if missing)
+    Mark BLOCKED + note what's missing
+```
 
 ### RTP (Repeatable Task Process) — Full Spec + Process Layer
 **When:** Task recurs, has been done 2+ times, should be systematised/automated.
