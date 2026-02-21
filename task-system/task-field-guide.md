@@ -151,10 +151,32 @@ Makes it better / more effective, but you CAN proceed without it.
 - "Dashboard is nice but you can read H1 manually"
 - Notation in task files: **Soft ~>** [task ID]
 
+### Threshold Dependency (⊕)
+Proceeds when a quantitative condition is met. The upstream task doesn't "complete" — it produces signal that accumulates until a threshold triggers the downstream task.
+- "Don't build course until ≥10 signups"
+- "Don't invest in automation until process run 5+ times manually"
+- Notation: **Threshold ⊕** [task ID] ⊕ [condition] [source: where metric lives]
+
+**Three components:**
+1. Source task — producing the signal
+2. Metric + threshold — what's measured, what triggers
+3. Source location — where the scanner reads the current value (H1 column, execution log count, KPI node)
+
+**Scanner behaviour:**
+- Below threshold → report: "X at 3/10. 7 to go."
+- At ≥80% → flag: "X at 8/10 — start preparing."
+- Met → change downstream status: WAITING → CAPTURED. Alert Jamie.
+
+**Neo4J translation:**
+```cypher
+(downstream:Task)-[:DEPENDS_ON {type: 'threshold', metric: 'signups', threshold: 10, current: 3, source: 'H1:columnX'}]->(upstream:Task)
+```
+
 ### How to classify
 Ask: "If this upstream task didn't exist at all, could I still physically DO the downstream task?"
 - NO → Hard dependency
 - YES but worse → Soft dependency
+- YES but only after enough signal/evidence → Threshold dependency
 
 ## Domain Operational Checklists
 

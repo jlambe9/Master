@@ -92,6 +92,7 @@
 | CLAWD-001 | Fix Overnight Failure Cascade | DECOMPOSED | 🔴 | 🟠 M | 🤖 Rich | L2 (mapped) | ✅ |
 | CLAWD-003 | Live Business Dashboard | CAPTURED | 🟡 | 🟢 E | 🤖 Rich | L1 (scoped) | ✅ |
 | CLAWD-004 | Daily Task Template Scan | CAPTURED | 🟡 | 🟢 E | 🤖 Rich | L1 (scoped) | ✅ |
+| CLAWD-005 | Ops Resilience & Access Verification | CAPTURED | 🔴 | 🟠 M | 🤖 Rich | L1 (scoped) | ✅ |
 
 ## meta/task-system
 
