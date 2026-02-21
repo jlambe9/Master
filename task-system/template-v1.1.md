@@ -14,6 +14,13 @@
 **Pipeline:** v1.1
 **Field Guide:** task-system/task-field-guide.md
 
+## Dependencies
+- **Hard → (can't proceed without):** [task IDs]
+- **Soft ~> (improves but not required):** [task IDs]
+- **Threshold ⊕ (proceeds when condition met):** [task ID + condition, e.g. "BC-SALES ⊕ ≥10 signups"]
+- **Downstream (blocks):** [what can't start until this is done]
+- **Domain checklist:** [boss/lead-gen, boss/sales, etc — see task-field-guide.md]
+
 ## Win State
 [What "done" looks like — specific, observable, output-defined]
 
@@ -27,12 +34,6 @@
 | # | Type | Task | Status | Owner | Notes |
 |---|------|------|--------|-------|-------|
 | 1 | | | CAPTURED | | |
-
-## Dependencies
-- **Hard → (can't proceed without):** [task IDs]
-- **Soft ~> (improves but not required):** [task IDs]
-- **Downstream (blocks):** [what can't start until this is done]
-- **Domain checklist:** [link to domain in task-field-guide.md]
 
 ## Execution Log
 | Date | What Happened | Outcome | Duration | Version |

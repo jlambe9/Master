@@ -48,6 +48,8 @@ Task pipeline expanded from v1.0 to v1.1 with full Layer 0 scoring, per-stage fa
 | 17 | EXPLOIT | Add hard vs soft dependency distinction to template + field guide | CAPTURED | 🤖 | Hard = can't proceed without. Soft = improves but not required. |
 | 18 | EXPLOIT | Create domain/subdomain operational checklists | CAPTURED | 🔄 | Each domain has a "is this actually running?" checklist. Atlas checks these when tracing to root of a chain. |
 | 19 | EXPLOIT | Update Atlas persona with dependency tracing rules | CAPTURED | 🤖 | When Atlas hits root of a chain → check domain checklist → verify infrastructure is online |
+| 20 | EXPLORE | Build in Mud mode — threshold-based dependencies, dynamic scanning, wicked problem design | IN PROGRESS | 🤖 | Atlas design task. How to track moving parts in dynamic system. Must be Neo4J-translatable. |
+| 21 | EXPLOIT | Expandi upstream checklist — full flow diagram from leads→validated→scraped→screened→intros written→reviewed(AI)→reviewed(Jamie)→uploaded→campaign active | CAPTURED | 🤖 | Subtask of LinkedIn outreach subdomain. "What to check when Expandi stops" |
 
 ## Steps (Input → Action → Output)
 1. **Input:** Layer 0 scoring docs + Jamie's profile → **Action:** Design gate integration → **Output:** pipeline.md v1.1 (DONE)
