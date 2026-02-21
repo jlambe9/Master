@@ -7,21 +7,34 @@
 **Status:** CAPTURED
 **Type:** [EXPLORE / EXPLOIT / ADMIN]
 **Cat:** [🟢 E / 🟡 B / 🔴 A-S / 🔴 A-I / 🟠 M]
-**Next Action:** [Agent-generated — what Jamie does next]
+**Owner:** [🤖 Rich / 🔄 Hybrid / 🧑 Jamie / ❓ Undefined]
+**Maturity:** [L0-L9]
+**Next Action:** [Agent-generated — what happens next]
 **Created:** [date]
 **Pipeline:** v1.1
+**Field Guide:** task-system/task-field-guide.md
 
 ## Win State
-[What "done" looks like — specific, observable]
+[What "done" looks like — specific, observable, output-defined]
+
+## Steps
+<!-- Input → Action → Output per step. Show the chain. -->
+| # | Input | Action | Output | Owner |
+|---|-------|--------|--------|-------|
+| 1 | | | | |
 
 ## Subtasks
-| # | Type | Task | Status | Notes |
-|---|------|------|--------|-------|
-| 1 | | | CAPTURED | |
+| # | Type | Task | Status | Owner | Notes |
+|---|------|------|--------|-------|-------|
+| 1 | | | CAPTURED | | |
+
+## Dependencies
+- **Upstream (needs):** [tasks/data/access this requires]
+- **Downstream (blocks):** [what can't start until this is done]
 
 ## Execution Log
-| Date | What Happened | Outcome | Duration |
-|------|--------------|---------|----------|
+| Date | What Happened | Outcome | Duration | Version |
+|------|--------------|---------|----------|---------|
 
 ## Outcome
 | Field | Predicted | Actual |
@@ -31,6 +44,33 @@
 | Duration | | |
 | Intervention | | |
 | Effectiveness | | |
+
+<!-- ============================================ -->
+<!-- RTP SECTION — fill when task recurs 2+ times -->
+<!-- Once all RTP fields filled → maturity = L6   -->
+<!-- ============================================ -->
+
+## Process Version
+**Current:** v1.0
+
+## Process Version Stack
+| Version | Dates Active | What Changed | Why | Outcome vs Previous |
+|---------|-------------|-------------|-----|-------------------|
+| v1.0 | [created] - present | Initial process | First documented | — |
+
+## Component Registry
+<!-- All data objects, tools, accounts, files that flow through this process -->
+| Component | Type | Used In Steps | Source | Notes |
+|-----------|------|--------------|--------|-------|
+| | | | | |
+
+## Automation Requirements
+<!-- What would need to exist for Rich to do this E2E autonomously? -->
+- **Scripts needed:** [existing or to-build]
+- **Access needed:** [APIs, accounts, credentials]
+- **Verification method:** [how to confirm output is correct without Jamie]
+- **Edge cases to handle:** [known failure modes]
+- **Human checkpoints:** [where Jamie MUST be involved, if any]
 
 ---
 

@@ -36,11 +36,15 @@ Task pipeline expanded from v1.0 to v1.1 with full Layer 0 scoring, per-stage fa
 | 5 | EXPLOIT | Validate v1.1 with first real task | CAPTURED | 🤖 | Next |
 | 6 | EXPLOIT | Create Task Registry | IN PROGRESS | 🤖 | TASK-REGISTRY.md |
 | 7 | EXPLOIT | Scan all tasks → populate registry | IN PROGRESS | 🤖 | Atlas reformat running |
-| 8 | EXPLORE | Define Owner field spec | COMPLETED | 🤖 | In template + registry |
-| 9 | EXPLORE | Define 3-bucket daily planning | CAPTURED | 🤖 | Rich E2E / Hybrid / Jamie only |
-| 10 | EXPLORE | Define instance vs profile distinction | CAPTURED | 🤖 | |
-| 11 | EXPLOIT | Build maturity scan task (CLAWD-004) | CAPTURED | 🤖 | |
-| 12 | EXPLORE | Define daily planning session format | CAPTURED | 🤖 | |
+| 8 | EXPLOIT | Define Owner field spec + add to template | COMPLETED | 🤖 | task-field-guide.md + AGENTS.md + template |
+| 9 | EXPLOIT | Define 3-bucket daily planning structure | IN PROGRESS | 🤖 | Skill being built |
+| 10 | EXPLOIT | Define instance vs profile distinction | COMPLETED | 🤖 | task-field-guide.md: profiles versioned, instances = exec log rows |
+| 11 | EXPLOIT | Build maturity scan (CLAWD-004) | CAPTURED | 🤖 | Needs field-guide + RTP sections defined first |
+| 12 | EXPLOIT | Daily planning = evening before, not morning | IN PROGRESS | 🤖 | Part of daily-planning skill |
+| 13 | EXPLOIT | Create task-field-guide.md | COMPLETED | 🤖 | Owner, levels, RTP graduation, maturity |
+| 14 | EXPLOIT | Update template — Owner, Maturity, RTP sections | COMPLETED | 🤖 | Process version stack, component registry, automation reqs |
+| 15 | EXPLOIT | Build daily-planning skill | IN PROGRESS | 🤖 | Evening scan → 3 buckets → tomorrow's outputs |
+| 16 | EXPLOIT | Create daily-planning cron (21:00) | CAPTURED | 🤖 | Depends on skill (#15) |
 
 ## Steps (Input → Action → Output)
 1. **Input:** Layer 0 scoring docs + Jamie's profile → **Action:** Design gate integration → **Output:** pipeline.md v1.1 (DONE)
