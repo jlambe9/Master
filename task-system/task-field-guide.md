@@ -3,6 +3,14 @@
 *Reference for any agent creating or updating tasks. Linked from every task template.*
 *Source of truth for: owner classification, task levels, field definitions, RTP graduation, maturity.*
 
+## Completion Gate
+
+A task is NOT done until every output in its Win State "Outputs" list verifiably exists. Steps and subtasks each have an "Output (proof of completion)" column — these must also exist.
+
+No vague win states. No self-reporting without verification. If the outputs aren't defined, the task can't be completed — it needs output definitions first.
+
+Full protocol: ~/clawd/AGENTS.md → Step 5: Mark Completion.
+
 ## Owner Classification
 
 Owner is NOT permanent. It's a function of how well-defined the task is + whether output can be verified without Jamie. Tasks move 🧑→🔄→🤖 as they mature.
@@ -239,7 +247,7 @@ When tracing upstream to find root blockers:
 |------|-----------|-------------|
 | **task-field-guide.md** (this file) | Central reference: how to fill tasks, owner rules, deps, maturity, domain checklists, tracing | Always — this is home base |
 | `pipeline.md` | Pipeline stages, gate checks, per-stage failure analysis | When advancing a task through stages |
-| `template-v1.1.md` | The actual template to copy when creating a task | When creating a new task |
+| `template-v1.2.md` | The actual template to copy when creating a task | When creating a new task |
 | `layer0-scoring.md` | 12 computational dimensions for scoring | When scoring a task (agent layer) |
 | `jamie-profile.md` | Jamie's CHC/7BES profile for scoring | When scoring a task (agent layer) |
 | `interventions.md` | Category routing (E/B/A/M) + pattern recognition | When a task is B/A and needs intervention |

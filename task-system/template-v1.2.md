@@ -11,7 +11,7 @@
 **Maturity:** [L0-L9]
 **Next Action:** [Agent-generated — what happens next]
 **Created:** [date]
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 **Field Guide:** task-system/task-field-guide.md
 
 ## Dependencies
@@ -23,16 +23,19 @@
 
 ## Win State
 [What "done" looks like — specific, observable, output-defined]
+**Outputs (completion gate — ALL must exist to mark done):**
+1. [Specific deliverable/artifact/state change that proves this is done]
+2. [Another one]
 
 ## Steps
-<!-- Input → Action → Output per step. Show the chain. -->
-| # | Input | Action | Output | Owner |
-|---|-------|--------|--------|-------|
+<!-- Input → Action → Output per step. Output = the thing that proves this step is done. -->
+| # | Input | Action | Output (proof of completion) | Owner |
+|---|-------|--------|----------------------------|-------|
 | 1 | | | | |
 
 ## Subtasks
-| # | Type | Task | Status | Owner | Notes |
-|---|------|------|--------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | | | CAPTURED | | |
 
 ## Execution Log
