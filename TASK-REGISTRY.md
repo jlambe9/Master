@@ -84,12 +84,13 @@
 | LA-002 | Clean Flat | CAPTURED | ⚪ | 🧑 Jamie | L0 (uncharted) | Physical task. Minimal spec needed. |
 | LA-003 | Do Washing | CAPTURED | ⚪ | 🧑 Jamie | L0 (uncharted) | Physical task. Embedded in daily-rail transitions. |
 
-## clawd/reliability + integrations
+## clawd/reliability + integrations + ops
 
 | ID | Task | Status | Priority | Owner | Maturity | Format Gaps |
 |----|------|--------|----------|-------|----------|-------------|
 | CLAWD-001 | Fix Overnight Failure Cascade | DECOMPOSED | 🔴 | 🤖 Rich | L2 (mapped) | 4 subtasks. Missing: execution log |
 | CLAWD-003 | Live Business Dashboard | CAPTURED | 🟡 | 🤖 Rich | L1 (scoped) | Vision doc. Missing: steps, process |
+| CLAWD-004 | Daily Task Template Scan | CAPTURED | 🟡 | 🤖 Rich | L1 (scoped) | 16:00 daily cron. Scan all tasks for v1.1 gaps + auto-fix |
 
 ## meta/task-system
 
