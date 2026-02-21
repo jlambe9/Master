@@ -70,26 +70,38 @@ IN_CONVERSATION → CALL_BOOKED → CALL_COMPLETED → CLOSED → ONBOARDED
 - **RTP:** skills/write-intro-messages/SKILL.md
 
 ### 7. INTRO_REVIEWED_AI
-- **Input:** Draft intro
-- **Process:** AI self-review — name validation, must-have/must-not, quality check
-- **Output:** Pass/fail + issues flagged
-- **H1 field:** `aiReviewResult` = "pass" | "fail" | "rewrite"
-- **H1 columns needed:** `aiReviewResult`, `aiReviewDate`, `aiReviewNotes`
-- **Existing?** ❌ (currently no AI review step tracked)
-- **RTP:** Part of write-intro-messages skill (needs extraction as separate step)
+- **Input:** Draft intro in `draft_message`
+- **Process:** AI validates against intro-writing-spec.md — name match, must-have/must-not, quality
+- **Output:** Pass/fail flag
+- **H1 field:** `aiPassed` = "yes" | "no" | "rewrite"
+- **H1 columns needed:** `aiPassed`
+- **Existing?** ✅ (Jamie just added this column)
+- **RTP:** Part of write-intro-messages skill validation step
 
 ### 8. INTRO_REVIEWED_JAMIE
 - **Input:** AI-passed intro
 - **Process:** Jamie reviews on mobile (skills/mobile-intro-review)
-- **Output:** Approved / Edit / Reject
-- **H1 field:** `jamieReviewResult` = "approved" | "edited" | "rejected"
-- **H1 columns needed:** `jamieReviewResult`, `jamieReviewDate`
-- **Existing?** `reviewed` column exists but meaning unclear ❌
+- **Output:** Approved (as-is) / Edited (Jamie's version) / Rejected
+- **H1 field:** `jamieReviewed` = "approved" | "edited" | "rejected"
+- **H1 columns needed:** `jamieReviewed`
+- **Existing?** ✅ (Jamie just renamed `reviewed` → `jamieReviewed`)
 - **RTP:** skills/mobile-intro-review/SKILL.md
 
+### 8b. SEND_MESSAGE (final canonical message)
+- **Input:** Jamie's review result
+- **Process:**
+  - If Jamie approved as-is → `draft_message` copies into `sendMessage`
+  - If Jamie edited → Jamie's edited version goes into `sendMessage`
+  - If rejected → no `sendMessage`, goes back to INTRO_WRITTEN for rewrite
+- **Output:** Final message ready for Expandi
+- **H1 field:** `sendMessage` = the exact text that gets sent
+- **H1 columns needed:** `sendMessage`
+- **Existing?** ✅ (Jamie just added this column)
+- **Rule:** NEVER send from `draft_message`. Always from `sendMessage`. This is the canonical final message.
+
 ### 9. UPLOADED_TO_EXPANDI
-- **Input:** Approved intro + LinkedIn URL
-- **Process:** Generate CSV with profile_link + custom_message → import to Expandi
+- **Input:** `sendMessage` + LinkedIn URL
+- **Process:** Generate CSV with profile_link + `sendMessage` as custom_message → import to Expandi
 - **Output:** Lead in Expandi campaign with message placeholder
 - **H1 field:** `expandiUploaded` = date uploaded
 - **H1 columns needed:** `expandiUploaded`, `expandiBatch`, `expandiCampaign`
@@ -172,22 +184,22 @@ IN_CONVERSATION → CALL_BOOKED → CALL_COMPLETED → CLOSED → ONBOARDED
 
 ## H1 Column Gap Analysis
 
-### Currently Exist (10 columns):
-fullName, linkedinUrl, crSent, crAccepted, draft_message, pbProfileScrape, pbActivityScrape, reviewed, passed?, introSent
+### Currently Exist (12 columns):
+fullName, linkedinUrl, crSent, crAccepted, draft_message, pbProfileScrape, pbActivityScrape, aiPassed (new), jamieReviewed (renamed from reviewed), sendMessage (new), introSent
 
-### Need Adding (28 columns):
-sourceDate, sourceBatch, headline, bio, preScreenResult, preScreenDate, activitySummary, screenResult, screenDate, screenNotes, problemTags, introWrittenDate, aiReviewResult, aiReviewDate, aiReviewNotes, jamieReviewResult, jamieReviewDate, expandiUploaded, expandiBatch, expandiCampaign, introSentMethod, firstReplyDate, conversationStatus, lastMessageDate, callBooked, callDate, callResult, callNotesLink, dealStatus, dealDate, dealValue, paymentReceived, clientStatus, onboardDate, programStartDate
+### Clarified:
+- `aiPassed` = Rich's AI validation result (was ambiguous `passed?`)
+- `jamieReviewed` = Jamie's review result (was ambiguous `reviewed`)
+- `sendMessage` = final canonical message for Expandi (new)
 
-### Need Clarifying (2 columns):
-- `reviewed` — what does this currently mean? Pre-screen? Jamie review? AI review?
-- `passed?` — pre-screen or full screen? What values?
+### Still Need Adding:
+sourceDate, sourceBatch, headline, bio, preScreenResult, preScreenDate, activitySummary, screenResult, screenDate, screenNotes, problemTags, introWrittenDate, expandiUploaded, expandiBatch, expandiCampaign, introSentMethod, firstReplyDate, conversationStatus, lastMessageDate, callBooked, callDate, callResult, callNotesLink, dealStatus, dealDate, dealValue, paymentReceived, clientStatus, onboardDate, programStartDate
 
-### Priority (what to add FIRST for minimum viable pipeline tracking):
+### Priority (what to add NEXT for minimum viable pipeline tracking):
 1. `pipelineStage` — single column showing current stage (sourced → closed)
-2. `screenResult` — qualified/competitor/grey (replace ambiguous `passed?`)
+2. `screenResult` — qualified/competitor/grey (full screen result, separate from AI intro pass)
 3. `introWrittenDate` — when Rich wrote the intro
-4. `jamieReviewResult` — approved/edited/rejected
-5. `expandiUploaded` — is this lead in Expandi?
-6. `conversationStatus` — are we talking to this person?
+4. `expandiUploaded` — is this lead in Expandi with sendMessage?
+5. `conversationStatus` — are we talking to this person?
 
-These 6 columns give us end-to-end pipeline visibility. The rest can be added incrementally.
+These 5 columns + the 3 Jamie just added give us end-to-end pipeline visibility.
