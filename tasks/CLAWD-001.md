@@ -1,60 +1,107 @@
 # CLAWD-001 — Fix Overnight Failure Cascade (Error Handling & Resilience)
 
-> **Summary:** One Anthropic rate limit at 19:18 on Feb 10 killed all automation for 8+ hours. No backoff, no recovery, no fallback provider. Cron jobs kept retrying into the same wall, resetting cooldown each time. Context overflow errors stacked on top. Need circuit breakers and a non-Anthropic escape hatch.
+> **Summary:** One Anthropic rate limit killed all automation for 8+ hours. No backoff, no recovery, no fallback. Need circuit breakers and non-Anthropic escape hatch.
 
 **Domain:** clawd/reliability
 **Priority:** 🔴 CRITICAL
 **Status:** DECOMPOSED
 **Type:** EXPLOIT
 **Cat:** 🟠 M
+**Owner:** 🤖 Rich
+**Next Action:** Add non-Anthropic fallback model (step 1) — Google Gemini key already configured
 **Created:** 2026-02-11
-
-## Root Cause Analysis
-
-**Trigger:** Heavy session usage → Anthropic API rate limit hit at 19:18 Feb 10
-
-**Why it cascaded:**
-1. **Single-provider dependency** — Primary: Opus. Fallbacks: Sonnet + Opus. All Anthropic. When Anthropic rate-limits, there's zero escape.
-2. **Cron jobs on main session** — All 4 crons use `sessionTarget: "main"`, piling onto the same context. Main session was already full → context overflow.
-3. **No backoff on cron failures** — Expandi health check fires every 2h. Each attempt hit rate limit, failed, and reset the cooldown window. 8-hour loop.
-4. **Stale token errors** — Some retries got 401 auth errors (invalid bearer token) from the cooldown state, adding noise.
-5. **Heartbeat amplified it** — `wakeMode: "next-heartbeat"` meant the hourly heartbeat kept triggering failed cron jobs.
-
-**Timeline:**
-- 19:18 — First rate limit error
-- 19:47 — Cron retry fails (401 + rate_limit)
-- 20:17 → 03:00 — Same pattern every hour for 8 hours
-- 04:00 — Session recycled, fresh context, API recovered
+**Pipeline:** v1.1
 
 ## Win State
-Overnight automation runs reliably. A single rate limit event does NOT cascade into hours of total failure.
+Overnight automation runs reliably. A single rate limit event does NOT cascade. Zero multi-hour failures.
+
+## Root Cause
+Trigger: Heavy usage → Anthropic API rate limit at 19:18 Feb 10.
+Cascade: Single-provider dependency → cron jobs on main session → no backoff → stale tokens → heartbeat amplification → 8h outage.
 
 ## Steps
+| # | Input | Action | Output |
+|---|-------|--------|--------|
+| 1 | Google Gemini key (configured) | Add non-Anthropic fallback model | `agents.defaults.model.fallbacks` updated |
+| 2 | Expandi active hours (06:00-21:30) | Restrict Expandi cron to active hours | Cron: `0 6-21/2 * * *` |
+| 3 | Current `sessionTarget: "main"` | Move cron jobs to isolated sessions | Each cron = clean context |
+| 4 | Current `mode: "safeguard"` | Evaluate compaction settings | Decision on auto vs safeguard |
 
-### 1. Add non-Anthropic fallback model
-- Add Google Gemini (key already configured) or XAI Grok as last-resort fallback
-- Config: `agents.defaults.model.fallbacks` — append a non-Anthropic model
-- Cron jobs can degrade to a cheaper model rather than fail entirely
+## Subtasks
+| # | Type | Task | Status | Owner | Notes |
+|---|------|------|--------|-------|-------|
+| 1 | EXPLOIT | Add Gemini fallback | CAPTURED | 🤖 Rich | Config change |
+| 2 | EXPLOIT | Restrict Expandi cron hours | CAPTURED | 🤖 Rich | Cron expr update |
+| 3 | EXPLOIT | Isolate cron sessions | CAPTURED | 🤖 Rich | Config change |
+| 4 | EXPLORE | Evaluate compaction | CAPTURED | 🤖 Rich | Test auto vs safeguard |
 
-### 2. Restrict Expandi cron to active hours
-- Expandi only sends CRs during 06:00–21:30 London time
-- Change cron expr from `0 */2 * * *` to `0 6-21/2 * * *`
-- Eliminates pointless overnight retries
-
-### 3. Move cron jobs to isolated sessions
-- Change `sessionTarget` from `"main"` to `"isolated"` + `payload.kind` to `"agentTurn"`
-- Each cron gets its own clean context — no more piling onto main session
-- Main session context stays lean for interactive use
-
-### 4. Evaluate compaction settings
-- Current: `mode: "safeguard"` — compaction only fires as last resort
-- Consider switching to `mode: "auto"` so long sessions compact before overflowing
-- Or set a token threshold for proactive compaction
-
-## KPI / How We Measure
-- Zero multi-hour cascading failures
-- Cron jobs succeed even when primary provider is rate-limited
-- Main session context never overflows due to cron accumulation
+## Dependencies / Links
+- **Upstream:** None — root reliability task
+- **Downstream:** All cron-dependent tasks (BC-067, BC-DAILY-OUTREACH), overall system reliability
+- **Related:** CLAWD-004 (daily scan depends on reliable crons)
 
 ## Decision Log
-- 2026-02-11 04:56 — Jamie flagged overnight failures. Diagnosed root cause: single-provider + no backoff + main session crons. Created this task.
+- 2026-02-11 04:56: Jamie flagged overnight failures. Root cause: single-provider + no backoff + main session crons.
+
+## Execution Log
+| Date | What Happened | Outcome | Duration |
+|------|--------------|---------|----------|
+
+## Outcome
+| Field | Predicted | Actual |
+|-------|-----------|--------|
+| Category | 🟠 M | |
+| Failure point | None (Rich E2E) | |
+| Duration | 2h | |
+| Intervention | Channel reroute (config, not code) | |
+| Effectiveness | | |
+
+---
+
+<!-- AGENT LAYER — Jamie doesn't read below this line -->
+
+## Layer 0 Profile (auto-scored at CAPTURED)
+
+### 0A: Computational Structure
+| Dimension | Score | Rationale |
+|-----------|-------|-----------|
+| Information entropy | Low | Root cause identified, fixes clear |
+| Procedure specification | Specified | 4 specific config changes |
+| Procedure complexity | Simple | Config edits, not code |
+| Temporal delay | Immediate | Fix and test now |
+| Error cost | Moderate | Bad config = new failures |
+| Reward magnitude | High | Prevents 8h+ outages |
+| Reward probability | Guaranteed | Config changes are deterministic |
+| Value density per unit | High | Each fix prevents failure class |
+| Feedback latency | Immediate | Next rate limit = test |
+| Process legibility | Clear | 4 discrete changes |
+| Model maturity | Familiar | Config management |
+| State-tracking load | Low | 4 items checklist |
+
+### 0B: Channel Requirements
+- **Input route:** Config files (Gc,Grw) → Rich handles
+- **Processing route:** Systems reasoning (Gf) → Rich handles
+- **Output route:** Config edits → Rich handles
+- **Channel flexible:** N/A — Rich autonomous
+- **Mismatch flags:** 🟠 M — task initially requires Rich to navigate OpenClaw config (tool-specific knowledge)
+
+### 0C: Affective Load
+All dimensions: N / —
+
+### Layer 3 Computation
+- **Epistemic value:** Low
+- **Pragmatic value:** High
+- **Effort cost:** Low
+- **Threat:** None
+- **Dominant signal:** → 🟠 M (channel mismatch — OpenClaw config specifics)
+
+### Predicted Failure Point
+- **Stage:** None
+- **Cause:** N/A
+- **Auto-intervention:** N/A
+
+### Version History
+| Version | Date | Change | By |
+|---------|------|--------|----|
+| 1.0 | 2026-02-11 | Initial creation with root cause | Rich |
+| 1.1 | 2026-02-21 | Reformatted to v1.1 template | Atlas |
