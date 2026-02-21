@@ -49,7 +49,11 @@ Task pipeline expanded from v1.0 to v1.1 with full Layer 0 scoring, per-stage fa
 | 18 | EXPLOIT | Create domain/subdomain operational checklists | CAPTURED | 🔄 | Each domain has a "is this actually running?" checklist. Atlas checks these when tracing to root of a chain. |
 | 19 | EXPLOIT | Update Atlas persona with dependency tracing rules | CAPTURED | 🤖 | When Atlas hits root of a chain → check domain checklist → verify infrastructure is online |
 | 20 | EXPLORE | Build in Mud mode — threshold-based dependencies, dynamic scanning, wicked problem design | IN PROGRESS | 🤖 | Atlas design task. How to track moving parts in dynamic system. Must be Neo4J-translatable. |
-| 21 | EXPLOIT | Expandi upstream checklist — full flow diagram from leads→validated→scraped→screened→intros written→reviewed(AI)→reviewed(Jamie)→uploaded→campaign active | CAPTURED | 🤖 | Subtask of LinkedIn outreach subdomain. "What to check when Expandi stops" |
+| 21 | EXPLOIT | Expandi upstream checklist — full flow diagram from leads→validated→scraped→screened→intros written→reviewed(AI)→reviewed(Jamie)→uploaded→campaign active | COMPLETED | 🤖 | checklists/boss-lead-gen-expandi.md |
+| 22 | EXPLOIT | Define lead pipeline stages as RTPs in task registry | CAPTURED | 🤖 | Each stage = RTP with input/output/status indicator |
+| 23 | EXPLOIT | Define H1 fields needed for pipeline stage tracking | CAPTURED | 🔄 | Map each stage → H1 column → what values mean |
+| 24 | EXPLOIT | Setup H1 dashboard — script to read lead counts at each pipeline stage | CAPTURED | 🤖 | `scripts/pipeline-status.js` → counts per stage |
+| 25 | EXPLOIT | Define script to pull pipeline stats into main dashboard / KPIs | CAPTURED | 🤖 | Feeds CLAWD-003 and daily briefing |
 
 ## Steps (Input → Action → Output)
 1. **Input:** Layer 0 scoring docs + Jamie's profile → **Action:** Design gate integration → **Output:** pipeline.md v1.1 (DONE)
