@@ -231,6 +231,28 @@ When tracing upstream to find root blockers:
 4. If a checklist item is failing → THAT is the true root blocker, not any task
 5. Report: "Root blocker for [domain]: [checklist item] is not operational"
 
+## File Map — Task System Architecture
+
+*This field guide is the central reference. Here's where everything else lives:*
+
+| File | What It Is | When to Read |
+|------|-----------|-------------|
+| **task-field-guide.md** (this file) | Central reference: how to fill tasks, owner rules, deps, maturity, domain checklists, tracing | Always — this is home base |
+| `pipeline.md` | Pipeline stages, gate checks, per-stage failure analysis | When advancing a task through stages |
+| `template-v1.1.md` | The actual template to copy when creating a task | When creating a new task |
+| `layer0-scoring.md` | 12 computational dimensions for scoring | When scoring a task (agent layer) |
+| `jamie-profile.md` | Jamie's CHC/7BES profile for scoring | When scoring a task (agent layer) |
+| `interventions.md` | Category routing (E/B/A/M) + pattern recognition | When a task is B/A and needs intervention |
+| `intervention-library.md` | Stack composition + conflict table | When composing intervention stacks |
+| `intervention-drivers.md` | Per-driver intervention menus | When selecting specific interventions |
+| `checklists/README.md` | Architecture for operational checklists (hierarchy) | When building or understanding checklists |
+| `checklists/global-infra.md` | Global pre-flight: APIs, gateway, browser, repos | Daily pre-flight (05:00) |
+| `checklists/boss-lead-gen-expandi.md` | Full Expandi upstream pipeline checklist | When Expandi stops or lead-gen breaks |
+| `~/clawd/reference/personas.md` | Atlas persona + dependency tracing rules | When doing systems/process work |
+| `~/Master/TASK-REGISTRY.md` | Canonical list of all task profiles | When creating/finding/scanning tasks |
+
+*If you can't find something, check this file map first. If it's not listed, it might not exist yet — create it.*
+
 ## Filing Rules
 
 - Task files: ~/Master/tasks/[ID].md

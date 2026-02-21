@@ -57,6 +57,60 @@ Before any cron fires, Rich can verify all required access is live. When access 
 | Neo4J | KPI storage, graph queries | Connection test | — | Skip KPI write |
 | Master repo (GitHub) | All pushes | `git push --dry-run` | Auth refresh | Alert Jamie |
 
+## Failure Classification Schema
+
+When something breaks, classify FIRST before tracing:
+
+### Level 1: Gateway / Platform Failure
+**Symptoms:** No crons firing, no sessions responding, gateway unreachable
+**Tags:** `failure:gateway`, `failure:platform`
+**Trace:** Is OpenClaw running? → Is gateway process alive? → Is port 18789 responding? → Is auth token valid?
+**Self-heal:** `openclaw gateway restart` → if fails, SSH/remote restart
+**Priority:** CRITICAL — nothing works until this is fixed
+
+### Level 2: Service / API Failure  
+**Symptoms:** Cron fires but fails on API call, auth error, timeout
+**Tags:** `failure:service`, `failure:auth`, `failure:timeout`
+**Trace:** Which service? → Is key valid? → Is service up? → Rate limited?
+**Self-heal:** Token refresh → fallback model → skip and retry next cycle
+**Priority:** HIGH — specific crons/tasks affected, others may still work
+
+### Level 3: Cron / Task Failure
+**Symptoms:** Cron runs, service works, but output is wrong/incomplete/missing context
+**Tags:** `failure:cron-logic`, `failure:context`, `failure:tool-access`
+**Trace:** Did the agent have the right prompt? → Right tools? → Right files? → Was context too large / compacted?
+**Self-heal:** Re-run with fixed prompt → provide missing context → adjust tool access
+**Priority:** MEDIUM — system is healthy, specific task needs fixing
+
+### Level 4: Data / State Failure
+**Symptoms:** Everything runs but data is stale, wrong, or inconsistent
+**Tags:** `failure:data-stale`, `failure:data-inconsistent`, `failure:sync`
+**Trace:** When was last successful sync? → Which source is authoritative? → Is there a sync conflict?
+**Self-heal:** Force re-sync → rebuild from authoritative source
+**Priority:** MEDIUM — may produce wrong outputs silently
+
+### Pre-flight Trace Order
+Always diagnose top-down: Level 1 → 2 → 3 → 4. Don't debug cron logic if the gateway is down.
+
+### Neo4J Schema Properties (for error tracking)
+```cypher
+(:Error {
+  id: 'ERR-YYYY-MM-DD-NNN',
+  level: 1-4,
+  tags: ['failure:gateway'],
+  detected: datetime(),
+  service: 'anthropic|expandi|h1|...',
+  cronJob: 'job-id',
+  selfHealAttempted: true|false,
+  selfHealResult: 'success|failed|partial',
+  resolved: datetime(),
+  resolvedBy: 'self-heal|jamie|rich',
+  rootCause: 'description'
+})
+-[:AFFECTED]->(Task|CronJob)
+-[:FIXED_BY]->(Decision)
+```
+
 ## Execution Log
 | Date | What Happened | Outcome | Duration |
 |------|--------------|---------|----------|

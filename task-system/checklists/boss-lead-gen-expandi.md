@@ -72,6 +72,20 @@ When debugging, verify in this order:
 4. **H1 Sheet API** → can scripts read/write?
 5. **Gmail** → is IMAP/polling functional?
 
+## Quick Triage: Resume vs Rebuild
+
+Before walking the full pipeline, determine which situation you're in:
+
+**RESUME (campaign was working, now stopped):**
+- Check step 9 FIRST: Is campaign active? Session connected? Queue populated?
+- If just deactivated/expired → reactivate → done
+- If session disconnected → reconnect in Expandi dashboard → reactivate
+- If queue empty but leads remain → check campaign settings, daily limits, schedule
+
+**REBUILD (new batch of leads needed):**
+- Walk steps 1-8 in order: source → validate → screen → scrape → screen → write → review → upload
+- First unchecked item = where to start
+
 ## When This Checklist Fires
 - Expandi health check returns INACTIVE or 0 CRs
 - Daily template scan detects lead-gen domain issues
