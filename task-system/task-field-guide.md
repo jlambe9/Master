@@ -137,6 +137,78 @@ The daily template scan (CLAWD-004, 16:00) checks:
 | Automation requirements | What would a script/cron/agent need to do this without Jamie? |
 | Win state | Ask: "How does Jamie know this is done?" — must be observable, not "worked on" |
 
+## Dependency Types
+
+### Hard Dependency (→)
+Can't physically proceed without this. The input literally doesn't exist yet.
+- "Can't send intros without intros being written"
+- "Can't calculate survival maths without knowing monthly expenses"
+- Notation in task files: **Hard →** [task ID]
+
+### Soft Dependency (~>)
+Makes it better / more effective, but you CAN proceed without it.
+- "Offer doc makes sales calls better but you can still have conversations"
+- "Dashboard is nice but you can read H1 manually"
+- Notation in task files: **Soft ~>** [task ID]
+
+### How to classify
+Ask: "If this upstream task didn't exist at all, could I still physically DO the downstream task?"
+- NO → Hard dependency
+- YES but worse → Soft dependency
+
+## Domain Operational Checklists
+
+When Atlas traces a dependency chain to the root of a domain, it must check the domain's operational checklist before declaring "no blockers." These checklists verify that the infrastructure/tools/access for that domain are actually running.
+
+### boss/lead-gen
+- [ ] Expandi campaign active + sending CRs
+- [ ] Expandi queue loaded with leads
+- [ ] Expandi session connected (not expired)
+- [ ] PhantomBuster cookies valid
+- [ ] H1 sheet accessible + columns correct
+- [ ] Intro writing skill functional (browser or PB data)
+- [ ] Gmail monitoring active (CR acceptance detection)
+- [ ] LinkedIn account not restricted
+
+### boss/sales
+- [ ] Offer document exists (BC-OFFER-V1)
+- [ ] Call prep template exists (BC-PRECALL-PREP)
+- [ ] Call notes template exists (BC-CALL-NOTES)
+- [ ] Calendly / booking link active
+- [ ] Payment system active (Stripe?)
+
+### boss/product
+- [ ] Program structure defined
+- [ ] Onboarding process exists (BOSS-ONBOARD)
+- [ ] Client app functional (BC-CLIENT-APP) — or manual alternative
+- [ ] Assessment tools ready (PSS-10, PANAS)
+
+### boss/legal-hr
+- [ ] Privacy policy written
+- [ ] Client contract template exists
+- [ ] T&Cs written
+- [ ] GDPR compliance documented
+
+### personal/finance
+- [ ] Bank access available
+- [ ] All accounts/bills identified
+- [ ] Spreadsheet or tool for tracking
+
+### clawd/ops
+- [ ] OpenClaw running + stable
+- [ ] Cron jobs active + delivering
+- [ ] Browser profile (clawd) functional
+- [ ] API keys valid (Anthropic, Google, Expandi, PB)
+- [ ] Master repo accessible + pushable
+
+### Atlas Dependency Tracing Rules
+When tracing upstream to find root blockers:
+1. Follow HARD dependencies only for "what's physically blocking progress"
+2. Note SOFT dependencies separately as "would improve effectiveness"
+3. When you reach the root of a domain chain (no more upstream tasks), CHECK the domain operational checklist
+4. If a checklist item is failing → THAT is the true root blocker, not any task
+5. Report: "Root blocker for [domain]: [checklist item] is not operational"
+
 ## Filing Rules
 
 - Task files: ~/Master/tasks/[ID].md

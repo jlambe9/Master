@@ -29,8 +29,10 @@
 | 1 | | | CAPTURED | | |
 
 ## Dependencies
-- **Upstream (needs):** [tasks/data/access this requires]
+- **Hard → (can't proceed without):** [task IDs]
+- **Soft ~> (improves but not required):** [task IDs]
 - **Downstream (blocks):** [what can't start until this is done]
+- **Domain checklist:** [link to domain in task-field-guide.md]
 
 ## Execution Log
 | Date | What Happened | Outcome | Duration | Version |

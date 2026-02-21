@@ -45,6 +45,9 @@ Task pipeline expanded from v1.0 to v1.1 with full Layer 0 scoring, per-stage fa
 | 14 | EXPLOIT | Update template — Owner, Maturity, RTP sections | COMPLETED | 🤖 | Process version stack, component registry, automation reqs |
 | 15 | EXPLOIT | Build daily-planning skill | IN PROGRESS | 🤖 | Evening scan → 3 buckets → tomorrow's outputs |
 | 16 | EXPLOIT | Create daily-planning cron (21:00) | CAPTURED | 🤖 | Depends on skill (#15) |
+| 17 | EXPLOIT | Add hard vs soft dependency distinction to template + field guide | CAPTURED | 🤖 | Hard = can't proceed without. Soft = improves but not required. |
+| 18 | EXPLOIT | Create domain/subdomain operational checklists | CAPTURED | 🔄 | Each domain has a "is this actually running?" checklist. Atlas checks these when tracing to root of a chain. |
+| 19 | EXPLOIT | Update Atlas persona with dependency tracing rules | CAPTURED | 🤖 | When Atlas hits root of a chain → check domain checklist → verify infrastructure is online |
 
 ## Steps (Input → Action → Output)
 1. **Input:** Layer 0 scoring docs + Jamie's profile → **Action:** Design gate integration → **Output:** pipeline.md v1.1 (DONE)
