@@ -34,21 +34,21 @@ Task pipeline expanded from v1.0 to v1.1 with full Layer 0 scoring, per-stage fa
 | 3 | EXPLOIT | Update pipeline.md with v1.1 definitions | COMPLETED | 🤖 | v1.1.0, 2026-02-20 |
 | 4 | EXPLOIT | Update template with new fields | COMPLETED | 🤖 | template-v1.1.md |
 | 5 | EXPLOIT | Validate v1.1 with first real task | CAPTURED | 🤖 | Next |
-| 6 | EXPLOIT | Create Task Registry | IN PROGRESS | 🤖 | TASK-REGISTRY.md |
-| 7 | EXPLOIT | Scan all tasks → populate registry | IN PROGRESS | 🤖 | Atlas reformat running |
+| 6 | EXPLOIT | Create Task Registry | COMPLETED | 🤖 | TASK-REGISTRY.md created + mirrored |
+| 7 | EXPLOIT | Scan all tasks → populate registry | COMPLETED | 🤖 | Atlas reformatted all 31 to v1.1 |
 | 8 | EXPLOIT | Define Owner field spec + add to template | COMPLETED | 🤖 | task-field-guide.md + AGENTS.md + template |
-| 9 | EXPLOIT | Define 3-bucket daily planning structure | IN PROGRESS | 🤖 | Skill being built |
+| 9 | EXPLOIT | Define 3-bucket daily planning structure | BLOCKED | 🤖 | Needs: #5 (validate template), #11 (maturity scan), #22 (pipeline RTPs), #23 (H1 fields) |
 | 10 | EXPLOIT | Define instance vs profile distinction | COMPLETED | 🤖 | task-field-guide.md: profiles versioned, instances = exec log rows |
 | 11 | EXPLOIT | Build maturity scan (CLAWD-004) | CAPTURED | 🤖 | Needs field-guide + RTP sections defined first |
-| 12 | EXPLOIT | Daily planning = evening before, not morning | IN PROGRESS | 🤖 | Part of daily-planning skill |
+| 12 | EXPLOIT | Daily planning = evening before, not morning | BLOCKED | 🤖 | Blocked by #9 |
 | 13 | EXPLOIT | Create task-field-guide.md | COMPLETED | 🤖 | Owner, levels, RTP graduation, maturity |
 | 14 | EXPLOIT | Update template — Owner, Maturity, RTP sections | COMPLETED | 🤖 | Process version stack, component registry, automation reqs |
-| 15 | EXPLOIT | Build daily-planning skill | IN PROGRESS | 🤖 | Evening scan → 3 buckets → tomorrow's outputs |
-| 16 | EXPLOIT | Create daily-planning cron (21:00) | CAPTURED | 🤖 | Depends on skill (#15) |
-| 17 | EXPLOIT | Add hard vs soft dependency distinction to template + field guide | CAPTURED | 🤖 | Hard = can't proceed without. Soft = improves but not required. |
-| 18 | EXPLOIT | Create domain/subdomain operational checklists | CAPTURED | 🔄 | Each domain has a "is this actually running?" checklist. Atlas checks these when tracing to root of a chain. |
-| 19 | EXPLOIT | Update Atlas persona with dependency tracing rules | CAPTURED | 🤖 | When Atlas hits root of a chain → check domain checklist → verify infrastructure is online |
-| 20 | EXPLORE | Build in Mud mode — threshold-based dependencies, dynamic scanning, wicked problem design | IN PROGRESS | 🤖 | Atlas design task. How to track moving parts in dynamic system. Must be Neo4J-translatable. |
+| 15 | EXPLOIT | Build daily-planning skill | BLOCKED | 🤖 | Skeleton built. Needs #9 dependencies resolved to be functional. |
+| 16 | EXPLOIT | Create daily-planning cron (21:00) | COMPLETED | 🤖 | Cron created. Will fire skeleton until #15 is unblocked. |
+| 17 | EXPLOIT | Add hard vs soft dependency distinction to template + field guide | COMPLETED | 🤖 | Hard/soft/threshold in template + field guide |
+| 18 | EXPLOIT | Create domain/subdomain operational checklists | COMPLETED | 🔄 | global-infra.md + boss-lead-gen-expandi.md + domain sections in field guide |
+| 19 | EXPLOIT | Update Atlas persona with dependency tracing rules | COMPLETED | 🤖 | Tracing rules + build-in-mud awareness added to personas.md |
+| 20 | EXPLORE | Build in Mud mode — threshold-based dependencies, dynamic scanning, wicked problem design | COMPLETED | 🤖 | Threshold deps (⊕) designed, documented, Neo4J schema defined |
 | 21 | EXPLOIT | Expandi upstream checklist — full flow diagram from leads→validated→scraped→screened→intros written→reviewed(AI)→reviewed(Jamie)→uploaded→campaign active | COMPLETED | 🤖 | checklists/boss-lead-gen-expandi.md |
 | 22 | EXPLOIT | Define lead pipeline stages as RTPs in task registry | CAPTURED | 🤖 | Each stage = RTP with input/output/status indicator |
 | 23 | EXPLOIT | Define H1 fields needed for pipeline stage tracking | CAPTURED | 🔄 | Map each stage → H1 column → what values mean |
