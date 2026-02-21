@@ -3,7 +3,8 @@
 *Every task type that exists in the system. Profiles, not instances.*
 *Mirrored: ~/Master/TASK-REGISTRY.md ↔ ~/clawd/TASK-REGISTRY.md*
 *Last scanned: 2026-02-21*
-*All tasks reformatted to v1.1 template with Layer 0 scoring, owner tags, process mapping.*
+*All tasks reformatted to v1.1+ template with Layer 0 scoring, owner tags, process mapping.*
+*LinkedIn pipeline reconciled: 6 LP tasks (v1.2) unify v0.2 processes + 17 lead stages.*
 
 ## How This Works
 
@@ -25,17 +26,32 @@
 
 ## boss/lead-gen
 
+### LinkedIn Pipeline (LP series — unified pipeline tasks)
+*Wiring doc: ~/Master/task-system/linkedin-pipeline-wiring.md*
+*Source specs: processes/linkedin-outreach-v0.2.json + task-system/lead-pipeline-stages.md*
+
+| ID | Task | Status | Priority | Cat | Owner | Maturity | v1.2 |
+|----|------|--------|----------|-----|-------|----------|------|
+| LP-001 | Lead Sourcing & Import | IN PROGRESS | 🔴 | 🟢 E | 🔄 Hybrid | L4 (working) | ✅ |
+| LP-002 | Lead Screening & Scoring | IN PROGRESS | 🔴 | 🟢 E | 🤖 Rich | L5 (validated) | ✅ |
+| LP-003 | Intro Writing & Review | IN PROGRESS | 🔴 | 🟢 E | 🔄 Hybrid | L5 (validated) | ✅ |
+| LP-004 | CR & Intro Delivery | IN PROGRESS | 🔴 | 🟢 E | 🔄 Hybrid | L4 (working) | ✅ |
+| LP-005 | Conversation & Close | CAPTURED | 🔴 | 🔴 A-S | 🔄 Hybrid | L2 (mapped) | ✅ |
+| LP-006 | Pipeline Infrastructure | IN PROGRESS | 🟡 | 🟢 E | 🤖 Rich | L7 (auto-built) | ✅ |
+
+### Legacy / Component Tasks (subsumed by LP series but still tracked)
+
 | ID | Task | Status | Priority | Cat | Owner | Maturity | v1.1 |
 |----|------|--------|----------|-----|-------|----------|------|
 | BC-052 | Define Intro Reference Spec | DECOMPOSED | 🔴 | 🟢 E | 🔄 Hybrid | L3 (resourced) | ✅ |
 | BC-057 | Rebuild Expandi + ICP Screening | COMPLETED | 🔴 | 🟠 M | 🔄 Hybrid | L5 (validated) | ✅ |
-| BC-058 | Pipeline Tracking Infrastructure | GOAL CLARITY | 🟡 | 🟢 E | 🤖 Rich | L1 (scoped) | ✅ |
-| BC-062 | Find Unwritten Intro Profiles | GOAL CLARITY | 🔴 | 🟡 B | 🤖 Rich | L7 (auto-built) | ✅ |
-| BC-063 | Write Personalized Intros | BLOCKED | 🔴 | 🟡 B | 🤖 Rich | L4 (working) | ✅ |
-| BC-065 | Pipeline v2 (Pre-Screen, Pre-Write, Auto-Send) | DECOMPOSED | 🔴 | 🟢 E | 🤖 Rich | L2 (mapped) | ✅ |
-| BC-067 | Outreach Cron Audit | IN PROGRESS | 🔴 | 🟢 E | 🤖 Rich | L3 (resourced) | ✅ |
+| BC-058 | Pipeline Tracking Infrastructure | SUBSUMED→LP-006 | 🟡 | 🟢 E | 🤖 Rich | L1 (scoped) | ✅ |
+| BC-062 | Find Unwritten Intro Profiles | SUBSUMED→LP-003 | 🔴 | 🟡 B | 🤖 Rich | L7 (auto-built) | ✅ |
+| BC-063 | Write Personalized Intros | SUBSUMED→LP-003 | 🔴 | 🟡 B | 🤖 Rich | L4 (working) | ✅ |
+| BC-065 | Pipeline v2 (Pre-Screen, Pre-Write, Auto-Send) | SUBSUMED→LP-001-006 | 🔴 | 🟢 E | 🤖 Rich | L2 (mapped) | ✅ |
+| BC-067 | Outreach Cron Audit | SUBSUMED→LP-006 | 🔴 | 🟢 E | 🤖 Rich | L3 (resourced) | ✅ |
 | BC-DAILY-OUTREACH | Morning Outreach Priority Block | CAPTURED | 🔴 | 🔴 A-S | 🔄 Hybrid | L1 (scoped) | ✅ |
-| BC-INTRO-VELOCITY | Max Intro Sending Velocity | IN PROGRESS | 🔴 | 🔴 A-S | 🔄 Hybrid | L2 (mapped) | ✅ |
+| BC-INTRO-VELOCITY | Max Intro Sending Velocity | SUBSUMED→LP-004 | 🔴 | 🔴 A-S | 🔄 Hybrid | L2 (mapped) | ✅ |
 
 ## boss/sales
 
@@ -106,20 +122,22 @@
 
 | Metric | Count |
 |--------|-------|
-| Total task profiles | 31 |
-| 🤖 Rich (autonomous) | 12 |
-| 🔄 Hybrid | 11 |
+| Total task profiles | 37 (31 legacy + 6 LP pipeline) |
+| 🤖 Rich (autonomous) | 14 |
+| 🔄 Hybrid | 13 |
 | 🧑 Jamie only | 5 |
 | ❓ Undefined | 2 |
-| 🟢 E tasks | 10 |
+| 🟢 E tasks | 15 |
 | 🟡 B tasks | 4 |
 | 🔴 A-S tasks | 12 |
 | 🔴 A-I tasks | 3 |
 | 🟠 M tasks | 2 |
 | COMPLETED | 1 |
+| SUBSUMED | 6 |
 | BLOCKED | 5 |
-| IN PROGRESS | 3 |
-| v1.1 formatted | **31/31** ✅ |
+| IN PROGRESS | 7 |
+| v1.2 formatted (LP) | **6/6** ✅ |
+| v1.1 formatted (legacy) | **31/31** ✅ |
 
 ## Key Observations
 
