@@ -103,7 +103,7 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 | # | Type | Task | Status | Owner | Output (proof of completion) |
 |---|------|------|--------|-------|----------------------------|
 | 42 | EXPLOIT | Implement enforcement rules into AGENTS.md | COMPLETED | 🤖 | Validated: 10/10 checks pass. Goal Creation Protocol, Goal Linkage (6b), Hybrid Subtypes (3c), Strategy/Execution Boundary, Morning Briefing, Weekly Review, Model Tiers, v1.3 ref. 429 lines / 21KB. |
-| 43 | EXPLOIT | Implement enforcement additions to SOUL.md | CAPTURED | 🤖 | SOUL.md has: System Discipline section + BPMN formalisation north star |
+| 43 | EXPLOIT | Implement enforcement additions to SOUL.md | COMPLETED | 🤖 | SOUL.md has: System Discipline section + BPMN formalisation north star |
 | 46 | EXPLOIT | Add model tier system to system overview + AGENTS.md | CAPTURED | 🤖 | System overview §11.2 + AGENTS.md define 3 tiers with assignment rules |
 | 47 | EXPLOIT | Create cron definition template | CAPTURED | 🤖 | `task-system/cron-template.md` exists with: name, scope, model tier, schedule, trigger, inputs, outputs, output location, constraints, tools needed, validation, error handling, linked OpenClaw cron ID, BPMN notation |
 | 48 | EXPLOIT | Update system overview — cron output locations, discovery, cross-referencing | CAPTURED | 🤖 | §11 documents: where cron outputs live (`memory/cron-outputs/[name]/YYYY-MM-DD.md`), how downstream processes find outputs, how to discover crons (links to registry) |
