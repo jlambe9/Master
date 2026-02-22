@@ -15,7 +15,10 @@
 ## Win State
 Overnight automation runs reliably. A single rate limit event does NOT cascade. Zero multi-hour failures.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. Non-Anthropic fallback model configured
+2. Expandi cron restricted to active hours
+3. Cron jobs running in isolated sessions
+4. Zero multi-hour failures from single provider outage
 
 ## Root Cause
 Trigger: Heavy usage → Anthropic API rate limit at 19:18 Feb 10.

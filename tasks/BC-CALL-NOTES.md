@@ -15,7 +15,9 @@
 ## Win State
 A reusable template: pre-filled with known intel (from call plan), Jamie fills in "what they said" during the call. After call = permanent record + triggers next actions in H1.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. `reference/call-notes-template.md` exists with all 7 Sandler stages
+2. Template pre-populates from BC-PRECALL-PREP output
+3. Post-call data flows into H1 pipeline updates
 
 ## Dependencies / Links
 - **Upstream:** BC-PRECALL-PREP (generates call plan that populates this), BC-OFFER-V1 (offer details for Fulfillment stage)

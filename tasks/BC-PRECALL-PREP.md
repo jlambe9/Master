@@ -15,7 +15,9 @@
 ## Win State
 When Jamie says "I've got a call with [Name]", Rich immediately produces a Sandler call plan: all known data structured, gaps identified, questions ready. Jamie skims before call and is prepared.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. `skills/pre-call-prep/SKILL.md` exists with full Sandler process
+2. Skill produces Sandler call plan when triggered
+3. All 6 data sources integrated (H1, RESEARCH, PB, DMs, SN, aiNotes)
 
 ## Trigger
 - Jamie tells Rich a call is booked → skill runs immediately

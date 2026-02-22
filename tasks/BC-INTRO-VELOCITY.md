@@ -15,7 +15,9 @@
 ## Win State
 Every CR-accepted lead has a validated intro with aiNotes, reviewed by Jamie, and sent. Zero backlog. New accepts get intros within 24h.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. Every CR-accepted lead has a validated intro with aiNotes
+2. All intros reviewed by Jamie and sent
+3. Zero backlog — new accepts get intros within 24h
 
 ## Current Pipeline Numbers (2026-02-11 16:49)
 | Stage | Count | Action |

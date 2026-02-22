@@ -15,7 +15,9 @@
 ## Win State
 Every morning at 08:00, Jamie receives a prioritised Telegram action list. Each item copy-paste ready or one-tap approve. Morning outreach block completes before any other work.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. Prioritised Telegram action list delivered daily at 08:00
+2. All 7 checklist items present (replies, send, review, FU, accepts, health, log)
+3. Each item copy-paste ready or one-tap approve
 
 ## Schedule
 **Daily at 08:00 GMT** (during cardio — mobile Telegram)

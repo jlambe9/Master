@@ -15,7 +15,11 @@
 ## Win State
 GDPR-compliant data handling policy, privacy policy, terms & conditions, and client contract — all drafted and reviewed. ICO registration confirmed or ruled out. Ready before first paying client.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. Privacy policy drafted and reviewed
+2. Terms & conditions drafted and reviewed
+3. Client contract/agreement drafted and reviewed
+4. ICO registration confirmed or ruled out
+5. Internal data handling policy created
 
 ## Subtasks
 | # | Type | Task | Status | Owner | Output (proof of completion) |

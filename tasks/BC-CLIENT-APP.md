@@ -15,7 +15,10 @@
 ## Win State
 Working V1 client bot: Telegram-based AI companion for coaching clients. Delivers protocol, captures tasks, tracks adherence, sends consented summaries to Jamie. Tested with first Founders Program client.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. Working V1 client bot deployed on Telegram
+2. Bot delivers protocol, captures tasks, tracks adherence
+3. Consented summaries sent to Jamie
+4. Tested with first Founders Program client
 
 ## Subtasks
 | # | Type | Task | Status | Owner | Output (proof of completion) |

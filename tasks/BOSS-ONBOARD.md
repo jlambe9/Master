@@ -15,7 +15,10 @@
 ## Win State
 Documented onboarding process: payment → first session. Steps, tools, templates, timeline. Time from payment to first session <48hrs. Tested with mock run-through.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. Documented onboarding process: payment → first session
+2. All steps, tools, templates, and timeline defined
+3. Time from payment to first session <48hrs
+4. Validated with mock run-through
 
 ## Subtasks
 | # | Type | Task | Status | Owner | Output (proof of completion) |

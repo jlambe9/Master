@@ -22,7 +22,11 @@
 ## Win State
 Before any cron fires, Rich can verify all required access is live. When access breaks, Rich can either self-heal or escalate with specific diagnosis. Remote recovery possible without Jamie at the machine.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. Access matrix completed (all crons × all services)
+2. `scripts/ops-health.js` exists and passes all checks
+3. Pre-flight cron running at 05:00 daily
+4. Fallback matrix documented for each service failure
+5. Remote recovery playbook documented
 
 ## Subtasks
 | # | Type | Task | Status | Owner | Output (proof of completion) |

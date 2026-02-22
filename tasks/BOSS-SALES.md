@@ -15,7 +15,10 @@
 ## Win State
 End-to-end sales process: lead books call → Sandler call → close → onboarding handoff. Tested with mock call. Call → sale conversion >25%.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. End-to-end sales workflow document exists
+2. Sandler call script + objection handling written
+3. Booking system live
+4. Validated with mock call
 
 ## Subtasks
 | # | Type | Task | Status | Owner | Output (proof of completion) |

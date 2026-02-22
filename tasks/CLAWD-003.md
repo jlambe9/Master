@@ -15,7 +15,9 @@
 ## Win State
 Live dashboard showing: revenue progress bar, daily KPI pips (streak tracker), cron status panel, current task, pipeline funnel. Auto-refreshing, mobile-accessible.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. Live dashboard accessible on mobile + web
+2. Revenue health bar, KPI pips, cron status panel, pipeline funnel visible
+3. Auto-refreshing with real data
 
 ## Layout
 - **Top Bar:** Revenue health bar (£ actual vs £5K target, color-coded)

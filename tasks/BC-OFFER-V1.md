@@ -15,7 +15,9 @@
 ## Win State
 A single document (`reference/offer-v1.md`) with all 10 sections below. Good enough to sell from this week. Jamie can read it before a call and know exactly what he's offering, at what price, with what deliverables.
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. `reference/offer-v1.md` exists with all 10 sections completed
+2. Jamie can read before a call and know exactly what he's offering
+3. Pricing, deliverables, and objection handling documented
 
 ## Why Critical
 Pipeline is sending CRs and writing intros — but what are we selling? Without this: vague "program", unstructured calls, no landing page, no delivery framework.

@@ -15,7 +15,10 @@
 ## Win State
 Every day at 16:00, Rich scans all task files in ~/Master/tasks/ and:
 **Outputs (completion gate — ALL must exist to mark done):**
-1. ⚠️ REVIEW — outputs not yet defined
+1. Scan script runs daily at 16:00
+2. Identifies tasks not in current template format
+3. Outputs remediation list in priority order
+4. TASK-REGISTRY.md updated with current maturity levels
 1. Identifies tasks NOT in v1.1 format
 2. Identifies missing required sections
 3. Identifies maturity gaps
