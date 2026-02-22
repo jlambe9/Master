@@ -27,12 +27,6 @@
 1. [Specific deliverable/artifact/state change that proves this is done]
 2. [Another one]
 
-## Steps
-<!-- Input → Action → Output per step. Output = the thing that proves this step is done. -->
-| # | Input | Action | Output (proof of completion) | Owner |
-|---|-------|--------|----------------------------|-------|
-| 1 | | | | |
-
 ## Subtasks
 | # | Type | Task | Status | Owner | Output (proof of completion) |
 |---|------|------|--------|-------|----------------------------|
@@ -66,7 +60,7 @@
 
 ## Component Registry
 <!-- All data objects, tools, accounts, files that flow through this process -->
-| Component | Type | Used In Steps | Source | Notes |
+| Component | Type | Used In Subtasks | Source | Notes |
 |-----------|------|--------------|--------|-------|
 | | | | | |
 

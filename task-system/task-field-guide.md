@@ -59,8 +59,7 @@ Process proven, output verifiable → 🤖 Rich
 ### FULL SPEC — Complete Task File
 **When:** Actively worked or planned, complex, has dependencies.
 **Required fields:** All headlines PLUS:
-- Steps with Input → Action → Output (proof of completion) per step
-- Subtasks (if applicable) — see Subtask Structure below
+- Subtasks — see Subtask Structure below
 - Dependencies / Links (upstream + downstream)
 - Layer 0 scoring (agent layer)
 - Intervention stack (if B/A)
