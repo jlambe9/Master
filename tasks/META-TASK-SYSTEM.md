@@ -108,7 +108,7 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 | 47 | EXPLOIT | Create cron definition template | COMPLETED | 🤖 | `task-system/cron-template.md` exists with: name, scope, model tier, schedule, trigger, inputs, outputs, output location, constraints, tools needed, validation, error handling, linked OpenClaw cron ID, BPMN notation |
 | 48 | EXPLOIT | Update system overview — cron output locations, discovery, cross-referencing | COMPLETED | 🤖 | §11 documents: where cron outputs live (`memory/cron-outputs/[name]/YYYY-MM-DD.md`), how downstream processes find outputs, how to discover crons (links to registry) |
 | 49 | EXPLOIT | Add one-line descriptions to every cron in system overview + cron registry | COMPLETED | 🤖 | Every cron entry has a one-line description explaining what it means in plain English |
-| 50 | EXPLOIT | Add BPMN formalisation north star to SOUL.md + AGENTS.md | CAPTURED | 🤖 | Both files state: "Every process must have explicit trigger, inputs, activities, decision gateways, outputs, error boundaries. Build with DAG portability in mind." |
+| 50 | EXPLOIT | Add BPMN formalisation north star to SOUL.md + AGENTS.md | COMPLETED | 🤖 | Both files state: "Every process must have explicit trigger, inputs, activities, decision gateways, outputs, error boundaries. Build with DAG portability in mind." |
 
 ### Phase 3 — Error Infrastructure [CAPTURED]
 | # | Type | Task | Status | Owner | Output (proof of completion) |
