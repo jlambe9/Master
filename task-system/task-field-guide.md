@@ -365,7 +365,10 @@ Determines which tasks surface first:
 | 🟡 Amber | moderate criticality or leverage | Should do |
 | 🟢 Green | low criticality + low leverage, or easy wins | Could do |
 
-WITHIN each colour, cognitive match (EBAM category + CHC profile) determines order and intervention style. The system supports personalised traffic lights per user based on their cognitive architecture.
+WITHIN each colour, cognitive match (EBAM category + CHC profile) determines order and intervention style. **Default ordering: worst cognitive match first** — get the hardest thing out of the way while energy is highest. The system supports personalised traffic lights per user based on their cognitive architecture.
+
+### Task Location
+Tasks are tagged: 🏠 Remote | 📍 On-site | 🔄 Either. On-site tasks can't be scheduled for remote work (e.g. gym, commute). If a task is on-site only, note what would be needed to make it remote — this feeds automation/systematisation planning.
 
 ### Morning Briefing Structure
 
