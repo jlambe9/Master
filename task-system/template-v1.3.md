@@ -79,6 +79,13 @@
 - **Edge cases to handle:** [known failure modes]
 - **Human checkpoints:** [where Jamie MUST be involved, if any]
 
+## Error Handling / Known Edge Cases
+<!-- Errors specific to THIS task's process. Populated during execution as edge cases are discovered. -->
+<!-- Rule: if the error could happen to any task using the same tool → put it in task-system/error-handling/[category].md instead -->
+| # | Error Pattern | Cause | Resolution | First Seen |
+|---|--------------|-------|------------|------------|
+| | | | | |
+
 ---
 
 <!-- AGENT LAYER — Jamie doesn't read below this line -->

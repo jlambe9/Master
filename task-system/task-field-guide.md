@@ -434,6 +434,16 @@ Transition: BUILDING → OPERATIONAL when System Stop Criteria met + ≥2 weeks 
 | `neo4j-schema-design.md` | Graph database schema (implement when DB provisioned) |
 | `v1.3-lexicon.md` | Precise definitions for all terms |
 
+## Error Handling — Task-Level vs Centralised
+
+Errors go in one of two places:
+
+**Task file** (`Error Handling / Known Edge Cases` section): Errors specific to THIS task's unique process. Example: "When scraping leads with headline containing 'Dr.', the name parser strips the prefix" — this is specific to the scraping task.
+
+**Centralised playbook** (`task-system/error-handling/[category].md`): Errors that could happen to ANY task using the same tool, cron, or infrastructure. Example: "Browser control service timeout" — any task using the browser can hit this.
+
+**Rule:** If in doubt, put it in the centralised playbook. Task-level errors are rare and very specific. Most errors are tool/infra/cron errors that belong in the shared playbooks.
+
 ## Filing Rules
 
 - Task files: ~/Master/tasks/[ID].md

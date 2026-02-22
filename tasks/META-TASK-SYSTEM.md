@@ -117,11 +117,11 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 | 52 | EXPLOIT | Create error playbook — cron errors | COMPLETED | 🤖 | `task-system/error-handling/cron-errors.md` exists with known cron error patterns → resolution procedures |
 | 53 | EXPLOIT | Create error playbook — tool errors | COMPLETED | 🤖 | `task-system/error-handling/tool-errors.md` exists with known tool error patterns (Expandi API, H1 sync, browser, etc.) |
 | 54 | EXPLOIT | Create error playbook — global infrastructure errors | COMPLETED | 🤖 | `task-system/error-handling/infra-errors.md` exists with: OpenClaw config, model fallback, auth failures, gateway restart procedures |
-| 55 | EXPLOIT | Add error handling protocol to AGENTS.md | CAPTURED | 🤖 | AGENTS.md has: "On error → check category-specific playbook in error-handling/ → if no resolution → check all files in error-handling/ → if still unknown → log structured error + alert Jamie" |
-| 56 | EXPLOIT | Add error handling section to system overview | CAPTURED | 🤖 | System overview has §12 Error Handling with: file structure, escalation procedure, structured error log format |
-| 57 | EXPLOIT | Create structured error log template | CAPTURED | 🤖 | `memory/error-log/YYYY-MM-DD.md` template with: timestamp, cron/process, phase, error, impact, resolution attempted, outcome, playbook entry created? |
+| 55 | EXPLOIT | Add error handling protocol to AGENTS.md | COMPLETED | 🤖 | AGENTS.md has: "On error → check category-specific playbook in error-handling/ → if no resolution → check all files in error-handling/ → if still unknown → log structured error + alert Jamie" |
+| 56 | EXPLOIT | Add error handling section to system overview | COMPLETED | 🤖 | System overview has §12 Error Handling with: file structure, escalation procedure, structured error log format |
+| 57 | EXPLOIT | Create structured error log template | COMPLETED | 🤖 | `memory/error-log/YYYY-MM-DD.md` template with: timestamp, cron/process, phase, error, impact, resolution attempted, outcome, playbook entry created? |
 | 80 | EXPLOIT | Create domain error playbook — Lead Gen | COMPLETED | 🤖 | `task-system/error-handling/domain-leadgen.md` exists with ≥5 entries from real lead gen pipeline failures |
-| 81 | EXPLOIT | Add error handling section to task template + field guide rule | CAPTURED | 🤖 | `template-v1.3.md` has Error Handling / Known Edge Cases section. Field guide documents task-level vs centralised playbook rule. |
+| 81 | EXPLOIT | Add error handling section to task template + field guide rule | COMPLETED | 🤖 | `template-v1.3.md` has Error Handling / Known Edge Cases section. Field guide documents task-level vs centralised playbook rule. |
 
 ### Phase 4 — Build & Deploy 10 Crons [CAPTURED]
 | # | Type | Task | Status | Owner | Output (proof of completion) |
