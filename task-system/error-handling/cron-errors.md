@@ -62,3 +62,18 @@ Known cron error patterns and resolutions. Add new entries as errors are encount
 - **Prevention:** System health prompt includes first-run grace period logic. Updated 2026-02-23.
 - **Severity:** 🟡 (false alarm erodes trust in the monitoring system)
 - **First seen:** 2026-02-23 — first system health run after Phase 4 cron deployment
+
+---
+
+## FALSE ALARM PATTERNS
+
+These are situations where the monitoring system incorrectly diagnoses a failure. They are as important as real failures because false alarms erode trust.
+
+### 7. Monitoring agent concludes "gateway down" while actively using gateway tools
+
+- **Pattern:** System health or other monitoring cron reports "gateway failure" or "gateway needs restart" while successfully calling gateway tools (cron list, message send, etc.) in the same session.
+- **Likely cause:** Agent sees unexpected data (missing runs, errors) and jumps to "gateway down" without checking whether it can still reach the gateway. Logical self-contradiction not caught.
+- **Resolution:** This is a prompt logic bug, not a real error. The self-validation gate ("can you call tools right now? then gateway is alive") must be enforced before any gateway-failure diagnosis.
+- **Prevention:** System health prompt includes self-validation step: "if you can call cron(action=list), the gateway is alive. You cannot diagnose gateway failure while successfully using gateway tools."
+- **Severity:** 🟡 (trust erosion — user receives scary alert for nothing)
+- **First seen:** 2026-02-23 — system health cron's first run
