@@ -66,7 +66,7 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 | 8 | EXPLOIT | Define Owner field spec + add to template | COMPLETED | 🤖 | Owner field in template + field guide + AGENTS.md |
 | 9 | EXPLOIT | Define 3-bucket daily planning structure | BLOCKED | 🤖 | Skill produces 3-bucket plan → needs #5, #11, LP-006 #8-9 |
 | 10 | EXPLOIT | Define instance vs profile distinction | COMPLETED | 🤖 | task-field-guide.md documents it |
-| 11 | EXPLOIT | Build CLAWD-004 maturity scan script | CAPTURED | 🤖 | `scripts/task-scan.js` runs + outputs non-compliant tasks |
+| 11 | EXPLOIT | Build CLAWD-004 maturity scan script | COMPLETED | 🤖 | Superseded by #11 in Phase 4 |
 | 12 | EXPLOIT | Daily planning = evening before | BLOCKED | 🤖 | Cron fires at 21:00, skill works → needs #9 |
 | 13 | EXPLOIT | Create task-field-guide.md | COMPLETED | 🤖 | File exists with owner, levels, RTP, maturity, completion gate |
 | 14 | EXPLOIT | Update template — Owner, Maturity, RTP, Completion Gate | COMPLETED | 🤖 | template-v1.2.md has all sections |
@@ -136,7 +136,7 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 | 63 | EXPLOIT | Build QUARTERLY-ENV cron (1st of quarter, Flash) | CAPTURED | 🤖 | Cron exists with environmental scan checklist trigger |
 | 64 | EXPLOIT | Confirm domain crons (EXPANDI-HEALTH, SYNC-EXPANDI-H1) on Flash | CAPTURED | 🤖 | Both crons confirmed on Flash with error handling |
 | 65 | EXPLOIT | Delete expired/redundant crons | CAPTURED | 🤖 | EXPANDI-AUTOSEND deleted. Any crons superseded by consolidation removed. OpenClaw cron list matches registry exactly. |
-| 11 | EXPLOIT | Build CLAWD-004 scan script (v1.3 compliance) | CAPTURED | 🤖 | `scripts/task-scan.js` checks v1.3 fields + goal linkage + ⚠️ REVIEW flags |
+| 11 | EXPLOIT | Build CLAWD-004 scan script (v1.3 compliance) | COMPLETED | 🤖 | Validation logic built into Daily Integrity cron (#62) Check 1. Standalone script deferred — not needed until cron proves insufficient. |
 
 ### Phase 5 — Create GOAL-001 & Reformat Tasks [CAPTURED]
 | # | Type | Task | Status | Owner | Output (proof of completion) |
