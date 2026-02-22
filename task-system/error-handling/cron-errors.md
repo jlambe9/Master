@@ -51,3 +51,14 @@ Known cron error patterns and resolutions. Add new entries as errors are encount
 - Prevention: Cron template includes timeout constraint. Complex crons tested manually before scheduling.
 - Severity: 🟡 Degrades system (checks don't run)
 - First seen: Anticipated — not yet hit but likely as daily integrity cron grows
+
+---
+
+### 6. System health cron false-alarms on newly deployed crons
+
+- **Pattern:** System health check flags crons as "missed" or recommends gateway restart when crons were just deployed and haven't had their first scheduled fire yet.
+- **Likely cause:** Health check sees no `lastRunAtMs` and assumes failure, rather than checking `createdAtMs` to determine if the cron is new.
+- **Resolution:** (1) Check `createdAtMs` — if <24h old, it's new and hasn't had a window yet. (2) Only flag crons that previously worked and stopped. (3) Never recommend gateway restart without evidence of actual failure (multiple previously-working crons failing simultaneously).
+- **Prevention:** System health prompt includes first-run grace period logic. Updated 2026-02-23.
+- **Severity:** 🟡 (false alarm erodes trust in the monitoring system)
+- **First seen:** 2026-02-23 — first system health run after Phase 4 cron deployment
