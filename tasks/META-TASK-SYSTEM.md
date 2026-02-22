@@ -35,9 +35,9 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 8. 10 consolidated crons live in OpenClaw with correct models, sequential execution, error handling
 9. All task files in v1.3 format (Goal, Location, Decision Log)
 10. GOAL-001 exists as worked example through full system
-11. All processes expressed in BPMN notation (trigger → activities → gateways → outputs → error boundaries) — Phase 6
-12. All BPMN definitions encoded as DAG (JSON/YAML, machine-readable, no prose) — Phase 7
-13. Complete DAG package ready for MyOS task_os handoff — Phase 7
+11. Master validation cron live — validates all other cron outputs against defined criteria
+12. All processes encoded as DAG with BPMN-grade properties (node types, gateways, lanes, boundary events, data objects) — Phase 6
+13. DAG renders as visual process map in MyOS + executes as runtime engine — Phase 7
 
 ## Steps
 | # | Input | Action | Output (proof of completion) |
@@ -123,20 +123,22 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 | 80 | EXPLOIT | Create domain error playbook — Lead Gen | COMPLETED | 🤖 | `task-system/error-handling/domain-leadgen.md` exists with ≥5 entries from real lead gen pipeline failures |
 | 81 | EXPLOIT | Add error handling section to task template + field guide rule | COMPLETED | 🤖 | `template-v1.3.md` has Error Handling / Known Edge Cases section. Field guide documents task-level vs centralised playbook rule. |
 
-### Phase 4 — Build & Deploy 10 Crons [CAPTURED]
+### Phase 4 — Build & Deploy 10 Crons [IN PROGRESS]
+Crons deployed to OpenClaw but NOT YET VALIDATED. System health cron produced false alarm on first run (post-mortem: `error-handling/post-mortems/2026-02-23-system-health-false-alarm.md`). Prompt rewritten with 7-step diagnostic logic. Other crons await first scheduled fire + output validation.
 | # | Type | Task | Status | Owner | Output (proof of completion) |
 |---|------|------|--------|-------|----------------------------|
-| 58 | EXPLOIT | Build SYSTEM-HEALTH cron (3x daily: 06:00, 12:00, 22:30, Flash) | CAPTURED | 🤖 | Cron exists in OpenClaw, fires 3x, checks all other crons fired, reports failures, writes output to `memory/cron-outputs/system-health/` |
-| 59 | EXPLOIT | Rebuild MORNING-BRIEFING cron (07:00, Sonnet) | CAPTURED | 🤖 | Cron exists with: 3 buckets, traffic lights, threshold scan, staleness check, stale tasks, outreach queue section. Sequential execution. Error handling per Phase 3. |
-| 60 | EXPLOIT | Confirm MIDDAY-CHECK cron (13:00, Sonnet) | CAPTURED | 🤖 | Cron exists with correct model + error handling |
-| 61 | EXPLOIT | Rebuild EVENING-BLOCK cron (21:00, Sonnet) | CAPTURED | 🤖 | Cron exists merging: daily wrap + completion review + domain metrics + tomorrow prep. Sequential. Error handling. |
-| 62 | EXPLOIT | Build DAILY-INTEGRITY cron (22:00, Flash) | CAPTURED | 🤖 | Cron exists with 6 sequential checks: task validation, completion audit, KPI collection, registry sync, maturity scan, intake scan. Error handling per check. Output to `memory/cron-outputs/daily-integrity/` |
-| 34 | EXPLOIT | Build WEEKLY-REVIEW-PREP cron (Sun 12:00, Sonnet) | CAPTURED | 🤖 | Cron exists with 6 sections: KPI rollup, domain report, foundation check, orphan scan, decision log review, bottleneck analysis. Output to `memory/cron-outputs/weekly-review-prep/` |
-| 35 | EXPLOIT | Build MONTHLY-GOAL-REVIEW cron (1st of month, Sonnet) | CAPTURED | 🤖 | Cron exists with monthly review checklist. Output to `memory/cron-outputs/monthly-goal-review/` |
-| 63 | EXPLOIT | Build QUARTERLY-ENV cron (1st of quarter, Flash) | CAPTURED | 🤖 | Cron exists with environmental scan checklist trigger |
-| 64 | EXPLOIT | Confirm domain crons (EXPANDI-HEALTH, SYNC-EXPANDI-H1) on Flash | CAPTURED | 🤖 | Both crons confirmed on Flash with error handling |
-| 65 | EXPLOIT | Delete expired/redundant crons | CAPTURED | 🤖 | EXPANDI-AUTOSEND deleted. Any crons superseded by consolidation removed. OpenClaw cron list matches registry exactly. |
+| 58 | EXPLOIT | Build SYSTEM-HEALTH cron (3x daily: 06:00, 12:00, 22:30, Flash) | DEPLOYED-UNVALIDATED | 🤖 | Cron exists in OpenClaw. Prompt rewritten after false alarm. Validation: next fire must produce clean silent output with correct 3-state classification. |
+| 59 | EXPLOIT | Rebuild MORNING-BRIEFING cron (07:00, Sonnet) | DEPLOYED-UNVALIDATED | 🤖 | Cron exists with v1.3 prompt. Validation: 07:00 fire must produce output with all 8 sections, correct traffic lights, graceful handling of missing goal files. |
+| 60 | EXPLOIT | Update MIDDAY-CHECK cron (13:00, Sonnet) | DEPLOYED-UNVALIDATED | 🤖 | Cron exists with updated prompt. Validation: 13:00 fire must reference morning briefing output and flag unstarted 🔴 items. |
+| 61 | EXPLOIT | Build EVENING-BLOCK cron (21:00, Sonnet) | DEPLOYED-UNVALIDATED | 🤖 | Cron exists with 4-section prompt. Validation: 21:00 fire must produce output with all 4 sections, write to memory/cron-outputs/evening-block/. |
+| 62 | EXPLOIT | Build DAILY-INTEGRITY cron (22:00, Flash) | DEPLOYED-UNVALIDATED | 🤖 | Cron exists with 6-check prompt. Validation: 22:00 fire must produce output with all 6 check sections, errors on individual checks don't kill the run. |
+| 34 | EXPLOIT | Build WEEKLY-REVIEW-PREP cron (Sun 12:00, Sonnet) | DEPLOYED-UNVALIDATED | 🤖 | Cron exists. Validation: Sunday 12:00 fire must produce 6-section review document. |
+| 35 | EXPLOIT | Build MONTHLY-GOAL-REVIEW cron (1st of month, Sonnet) | DEPLOYED-UNVALIDATED | 🤖 | Cron exists. Validation: March 1st fire must produce monthly review checklist. |
+| 63 | EXPLOIT | Build QUARTERLY-ENV cron (1st of quarter, Flash) | DEPLOYED-UNVALIDATED | 🤖 | Cron exists. Validation: next quarterly fire (April 1st) must produce env scan. |
+| 64 | EXPLOIT | Confirm domain crons (EXPANDI-HEALTH, SYNC-EXPANDI-H1) on Flash | DEPLOYED-UNVALIDATED | 🤖 | Both crons updated with error handling. Validation: next fire must write output to memory/cron-outputs/ with error handling reference. |
+| 65 | EXPLOIT | Delete expired/redundant crons | COMPLETED | 🤖 | 11 crons deleted. `cron list` shows exactly 10 active crons. Verified. |
 | 11 | EXPLOIT | Build CLAWD-004 scan script (v1.3 compliance) | COMPLETED | 🤖 | Validation logic built into Daily Integrity cron (#62) Check 1. Standalone script deferred — not needed until cron proves insufficient. |
+| 82 | EXPLOIT | Build MASTER VALIDATION CRON | CAPTURED | 🤖 | See spec below. Single cron that validates output of all other crons against defined criteria. |
 
 ### Phase 5 — Create GOAL-001 & Reformat Tasks [CAPTURED]
 | # | Type | Task | Status | Owner | Output (proof of completion) |
@@ -146,26 +148,24 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 | 67 | EXPLOIT | Add Location field to all existing task files | CAPTURED | 🤖 | All task files have Location: 🏠/📍/🔄 |
 | 68 | EXPLOIT | Package worked example for MyOS task_os | CAPTURED | 🔄 | Set of files (goal + tasks + cron definitions + process definitions) that Claude Code can use to build task_os UI |
 
-### Phase 6 — BPMN Formalisation [CAPTURED]
-Express every process as formal BPMN notation. Validates process design — reveals loops, missing gateways, unclear branching. Must complete before DAG encoding.
+### Phase 6 — DAG Schema & Process Encoding [CAPTURED]
+BPMN killed as separate phase. BPMN-grade schema properties (node types, gateway types, lanes, boundary events, data objects) absorbed directly into DAG schema. One translation: markdown → DAG (with visual process map properties). No intermediate BPMN notation step.
 | # | Type | Task | Status | Owner | Output (proof of completion) |
 |---|------|------|--------|-------|----------------------------|
-| 69 | EXPLORE | Define BPMN notation standard for task system processes | CAPTURED | 🤖 | `task-system/bpmn-standard.md` exists with: notation format, required elements (trigger event, activities, decision gateways, error boundary events, output events, data objects), examples |
-| 70 | EXPLOIT | Convert all system overview processes (§4-§7) to BPMN notation | CAPTURED | 🤖 | Every process in system overview has BPMN-ready definition with: trigger → activities → gateways → outputs → error boundaries |
-| 71 | EXPLOIT | Convert all 10 cron definitions to BPMN notation | CAPTURED | 🤖 | Every cron in registry has BPMN process definition alongside the operational prompt |
-| 72 | EXPLOIT | Convert error handling escalation to BPMN notation | CAPTURED | 🤖 | Error handling flow expressed as BPMN with decision gateways at each escalation step |
-| 73 | EXPLOIT | Validate BPMN completeness — every process has explicit nodes, edges, gateways, no prose-only steps | CAPTURED | 🤖 | Validation report confirms all BPMN definitions are complete. Any design issues (loops, missing branches) fixed before Phase 7. |
+| 69 | EXPLORE | Define DAG schema with BPMN-grade properties | CAPTURED | 🔄 | `task-system/dag-schema.md` + JSON schema. Node types: task (human/agent/system), gateway (XOR/AND/OR), event (start/end/timer/error/signal/boundary). Edge types: sequence/conditional/default. Lanes: 🧑 Jamie / 🤖 Rich / 🔧 System / 🌐 External. Boundary events (error handlers + timeouts attached to tasks). Data objects (inputs/outputs = completion gate artifacts). Subprocess expansion. Must render as visual process map in MyOS. |
+| 70 | EXPLOIT | Encode all system overview processes (§4-§7) as DAG | CAPTURED | 🤖 | Every process in system overview encoded in DAG schema. Each has: trigger event, activities with lane assignments, decision gateways with conditions + default branch, error boundary events, output data objects. |
+| 71 | EXPLOIT | Encode all 10 cron definitions as DAG | CAPTURED | 🤖 | Every cron encoded in DAG schema. Each step in the cron prompt = a DAG node with explicit gateway logic. |
+| 72 | EXPLOIT | Encode error handling escalation as DAG | CAPTURED | 🤖 | Error handling flow as DAG with decision gateways at each escalation step. Try-before-fail rule = explicit gateway with retry loop. |
+| 73 | EXPLOIT | Encode master validation cron as DAG | CAPTURED | 🤖 | Validation cron process as DAG — demonstrates self-referential monitoring pattern. |
+| 83 | EXPLOIT | Validate DAG completeness — every process has explicit nodes, edges, gateways, no prose-only steps | CAPTURED | 🤖 | Validation script or manual check: all DAGs have explicit nodes + edges, all decision branches defined, no orphan nodes, execution order deterministic, all nodes have lane assignment, all gateways have conditions. |
 
-### Phase 7 — DAG Encoding & MyOS Portability [CAPTURED]
-Take validated BPMN definitions and encode as machine-readable directed acyclic graphs. Depends on Phase 6 completion — cannot encode processes that haven't been formalised and validated first.
+### Phase 7 — MyOS Portability & Handoff [CAPTURED]
+Package validated DAGs for MyOS task_os runtime. The DAG schema IS the spec — MyOS renders it as visual process maps and executes it as a runtime engine.
 | # | Type | Task | Status | Owner | Output (proof of completion) |
 |---|------|------|--------|-------|----------------------------|
-| 74 | EXPLOIT | Define DAG schema for MyOS task_os consumption | CAPTURED | 🔄 | JSON/YAML schema that represents process flow as nodes + edges with execution semantics, consumable by Claude Code |
-| 75 | EXPLOIT | Encode all BPMN process definitions as DAG | CAPTURED | 🤖 | Every BPMN definition from Phase 6 encoded in DAG schema. Machine-readable. No prose. |
-| 76 | EXPLOIT | Encode all cron BPMN definitions as DAG | CAPTURED | 🤖 | Every cron process from Phase 6 encoded in DAG schema |
-| 77 | EXPLOIT | Encode error handling BPMN as DAG | CAPTURED | 🤖 | Error escalation flow encoded in DAG schema |
-| 78 | EXPLOIT | Validate DAG portability — can a runtime engine execute these? | CAPTURED | 🤖 | Script or manual validation: every DAG has explicit nodes + edges, all decision branches defined, no orphan nodes, execution order deterministic |
-| 79 | EXPLOIT | Package complete DAG set for MyOS task_os handoff | CAPTURED | 🔄 | Directory of DAG files + schema definition + documentation that Claude Code can consume to build task_os execution engine |
+| 74 | EXPLOIT | Validate DAG executability — can a runtime engine execute these? | CAPTURED | 🤖 | Script walks every DAG: confirms start/end events, no cycles, all gateways have conditions + default, all data objects referenced exist, all lanes assigned. |
+| 75 | EXPLOIT | Build DAG → visual process map renderer spec | CAPTURED | 🔄 | Spec for MyOS: how to render DAG nodes as visual process map. Lane layout, gateway symbols, flow arrows, boundary event indicators, subprocess expand/collapse. |
+| 76 | EXPLOIT | Package complete DAG set for MyOS task_os handoff | CAPTURED | 🔄 | Directory of DAG files + schema definition + renderer spec + documentation that Claude Code can consume to build task_os execution engine + visual process map UI. |
 
 ## Execution Log
 | Date | What Happened | Outcome | Duration |
