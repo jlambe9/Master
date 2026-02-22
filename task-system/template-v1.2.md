@@ -13,6 +13,7 @@
 **Created:** [date]
 **Pipeline:** v1.2
 **Field Guide:** task-system/task-field-guide.md
+**Goal:** [GOAL-ID | PATH-ID | Mechanism Step — e.g. GOAL-001 | PATH-LI | M1: Outreach] *(optional)*
 
 ## Dependencies
 - **Hard → (can't proceed without):** [task IDs]
@@ -35,6 +36,11 @@
 ## Execution Log
 | Date | What Happened | Outcome | Duration | Version |
 |------|--------------|---------|----------|---------|
+
+## Decision Log
+| Date | Decision | Rationale | Reversible? |
+|------|----------|-----------|-------------|
+| | | | |
 
 ## Outcome
 | Field | Predicted | Actual |

@@ -281,8 +281,155 @@ When tracing upstream to find root blockers:
 | `checklists/boss-lead-gen-expandi.md` | Full Expandi upstream pipeline checklist | When Expandi stops or lead-gen breaks |
 | `~/clawd/reference/personas.md` | Atlas persona + dependency tracing rules | When doing systems/process work |
 | `~/Master/TASK-REGISTRY.md` | Canonical list of all task profiles | When creating/finding/scanning tasks |
+| `goal-template-v1.3.md` | Goal file template (v1.3) | When creating a new goal |
+| `strategy-change-protocol.md` | Persevere vs change decision framework | During strategy reviews |
+| `neo4j-schema-design.md` | Neo4J graph schema for goal/task system | When implementing graph database |
+| `v1.3-lexicon.md` | Precise terminology definitions | When terms are ambiguous |
 
 *If you can't find something, check this file map first. If it's not listed, it might not exist yet — create it.*
+
+---
+
+## Goal Layer (v1.3)
+
+> Everything below is part of the MyOS `task_os` submodule specification.
+
+### Hierarchy
+
+```
+STRATEGY LAYER
+  Goal → Sub-Goal → Mechanism Chain (Outreach → Qualify → Close) → Path
+
+EXECUTION LAYER
+  Path → Task → Subtask
+```
+
+**Path** is the bridge between strategy and execution. Above it = stable strategy. Below it = volatile tasks.
+
+Every task traces to a goal in ≤4 hops: Task → Path → MechanismStep → SubGoal → Goal.
+
+### Foundations
+
+The 8 irreducible infrastructure components every business needs. Assessed at goal-setting time. From BMC/Lean Canvas synthesis:
+
+| Foundation | What It Means |
+|------------|--------------|
+| **Offer** | What you sell, to whom, packaged how |
+| **Audience** | Who you serve + how to find them |
+| **Channel** | How you reach the audience |
+| **Conversion Mechanism** | How interest becomes revenue (the mechanism chain) |
+| **Delivery System** | How you deliver value after sale |
+| **Revenue Model** | How money flows in |
+| **Legal Framework** | Permission to operate (contract, T&Cs, GDPR) |
+| **Cost Structure** | What it costs to operate |
+
+Each has a maturity state: `raw → draft → tested → proven`. Every goal file has a Foundations section assessing current state and sufficiency.
+
+### Strategy / Execution Boundary
+
+| If the blocker is... | It's a... | Action |
+|---------------------|-----------|--------|
+| Task status (CAPTURED/BLOCKED/not started) | **Execution problem** | Do the task. Unblock it. |
+| Conversion ratio (doing work but not converting) | **Strategy problem** | Wait for strategy review. |
+| Missing foundation | **Infrastructure problem** | Priority unblock. |
+| Emotional resistance | **Behavioural problem** | Use intervention stack (EBAM). |
+
+### Hybrid Task Subtypes
+
+When a task is 🔄 Hybrid, classify the specific handoff pattern:
+
+| Subtype | Meaning | Example |
+|---------|---------|---------|
+| 🔓 **Unblock** | Jamie does X so Rich can proceed | Jamie approves intro tone → Rich sends |
+| ⚙️ **Systematise** | Jamie creates spec/skill/cron so Rich can automate forever | Jamie writes intro guidelines → Rich writes all future intros |
+| 🚀 **Execute** | Jamie does something to directly produce an output | Jamie has the discovery call |
+
+### Strategy Traffic Light
+
+Every task gets one of these in the morning briefing. Tells you whether executing this task is strategically sound RIGHT NOW.
+
+| Emoji | Meaning |
+|-------|---------|
+| ✅ | **Aligned** — strategy sound, just execute |
+| ⚠️ | **Suboptimal** — strategy has gaps but proceeding anyway |
+| 🔴 | **Blocked** — something upstream broken, task may be wasted effort |
+| ❓ | **Undefined** — strategy not mapped for this task |
+
+### Task Priority Traffic Light (MyOS task_os)
+
+Determines which tasks surface first:
+
+| Colour | Criteria | Meaning |
+|--------|----------|---------|
+| 🔴 Red | max(criticality, strategic_leverage) = HIGH | Must do — blocks goal or has outsized impact |
+| 🟡 Amber | moderate criticality or leverage | Should do |
+| 🟢 Green | low criticality + low leverage, or easy wins | Could do |
+
+WITHIN each colour, cognitive match (EBAM category + CHC profile) determines order and intervention style. The system supports personalised traffic lights per user based on their cognitive architecture.
+
+### Morning Briefing Structure
+
+```
+## Context (auto-generated, read-only)
+GOAL-001 [BUILDING]: Bottleneck at M2. 0/5 foundations sufficient.
+
+## 🔴 Must Do
+- [strategy emoji] [task] (🔓/⚙️/🚀 if hybrid) — [why]
+
+## 🟡 Should Do
+- [strategy emoji] [task] — [why]
+
+## 🟢 Could Do
+- [strategy emoji] [task] — [why]
+
+## ⏸️ Explicitly NOT Doing
+- [deferred items from goal file — active deferral, visible]
+```
+
+Three owner buckets within each priority: 🧑 Jamie only / 🤖 Rich E2E / 🔄 Hybrid (with 🔓/⚙️/🚀 subtypes).
+
+### Weekly Review Structure
+
+Run in strategy mode. OODA Observe + Orient + Decide phases.
+
+1. **Strategy sense-check:** Does this still make sense?
+2. **Data pull:** Update mechanism chain metrics
+3. **Volume check:** Enough data to judge? (Check minimum thresholds)
+4. **Mechanism chain review:** Has bottleneck moved?
+5. **Signals table:** Persevere vs change (see [Strategy Change Protocol](strategy-change-protocol.md))
+6. **Threshold gates:** Any approaching unlock?
+7. **Path archive:** Learnings from dropped paths?
+8. **Foundations:** Any maturity changes?
+
+### OODA Cadence Discipline (from Hoshin Kanri)
+
+| Layer | Cadence | Mode |
+|-------|---------|------|
+| Goals | Monthly | Strategy |
+| Mechanism chains / bottleneck | Weekly | Strategy |
+| Paths | Weekly | Strategy |
+| Tasks | Daily | Execution |
+| Environment | Quarterly | Strategy |
+
+**Rule:** "You cannot change strategy from execution mode." Capture insights as notes, act on them in next strategy review.
+
+### Goal Modes
+
+| Mode | Meaning |
+|------|---------|
+| **BUILDING** | Active construction — creating infrastructure, defining processes |
+| **OPERATIONAL** | Run mode — monitoring, exception handling, incremental optimisation. NOT structural changes |
+
+Transition: BUILDING → OPERATIONAL when System Stop Criteria met + ≥2 weeks stable operation.
+
+### Reference Files
+
+| File | Purpose |
+|------|---------|
+| `goal-template-v1.3.md` | Template for new goal files |
+| `strategy-change-protocol.md` | When to persevere vs change — linked from every goal |
+| `neo4j-schema-design.md` | Graph database schema (implement when DB provisioned) |
+| `v1.3-lexicon.md` | Precise definitions for all terms |
 
 ## Filing Rules
 
