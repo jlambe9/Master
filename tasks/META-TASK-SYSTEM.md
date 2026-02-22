@@ -76,6 +76,15 @@ Task system v1.2 operational with completion gates, pipeline integration, and au
 | 24 | — | MOVED → LP-006 #9 (pipeline status script) | — | — | Not a task system concern |
 | 25 | — | MOVED → LP-006 #10 (pipeline stats → KPIs) | — | — | Not a task system concern |
 | 26 | EXPLOIT | Completion gate enforcement | COMPLETED | 🤖 | AGENTS.md Step 5 + template Output columns |
+| 27 | EXPLOIT | Reformat all tasks to v1.2 | COMPLETED | 🤖 | 37 files: Steps removed, Output columns added, completion gates |
+| 28 | EXPLORE | v1.3 Goal layer design (Atlas framework) | IN PROGRESS | 🔄 | Draft + 3 critiques + lexicon + frameworks research complete. Final synthesis pending. |
+| 29 | EXPLOIT | Define traffic light task prioritisation schema | CAPTURED | 🔄 | Red/Amber/Green from: criticality × strategic leverage × cognitive match. For MyOS task_os. |
+| 30 | EXPLOIT | Define morning briefing structure | CAPTURED | 🔄 | Strategy emoji per task + 3 buckets (🧑/🤖/🔄 with 🔓/⚙️/🚀) + "NOT doing" section |
+| 31 | EXPLOIT | Define weekly review structure | CAPTURED | 🔄 | Strategy sense-check, data pull, minimum volume thresholds, mechanism chain review |
+| 32 | EXPLOIT | Define strategy/execution boundary | CAPTURED | 🤖 | Where does a trace stop being strategic and become execution? Task status = execution, conversion ratio = strategy |
+| 33 | EXPLOIT | Document hybrid task subtypes in field guide | CAPTURED | 🤖 | 🔓 Unblock / ⚙️ Systematise / 🚀 Execute |
+| 34 | EXPLOIT | Build strategic alignment cron | CAPTURED | 🤖 | Weekly cron: trace goals → verify execution serves current bottleneck |
+| 35 | EXPLOIT | Build execution monitoring cron | CAPTURED | 🤖 | Daily cron: check task statuses, flag stalled/blocked, produce morning briefing |
 
 ## Execution Log
 | Date | What Happened | Outcome | Duration |
