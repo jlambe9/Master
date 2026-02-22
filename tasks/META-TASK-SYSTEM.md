@@ -16,7 +16,7 @@
 
 ## Dependencies
 **Hard →:** None (root task)
-**Soft ~>:** CLAWD-003 (KPI dashboard benefits from pipeline stats)
+**Soft ~>:** CLAWD-003 (KPI dashboard), LP-006 (pipeline data feeds daily planning)
 **Downstream (blocks):** Daily planning skill, CLAWD-004 (scan), LP-001→006 (pipeline tasks use this template)
 **Domain checklist:** meta/task-system
 
@@ -58,7 +58,7 @@ Task system v1.2 operational with completion gates, pipeline integration, and au
 | 6 | EXPLOIT | Create Task Registry | COMPLETED | 🤖 | `TASK-REGISTRY.md` exists + mirrored |
 | 7 | EXPLOIT | Scan all tasks → populate registry | COMPLETED | 🤖 | All 31 tasks reformatted by Atlas |
 | 8 | EXPLOIT | Define Owner field spec + add to template | COMPLETED | 🤖 | Owner field in template + field guide + AGENTS.md |
-| 9 | EXPLOIT | Define 3-bucket daily planning structure | BLOCKED | 🤖 | Skill produces 3-bucket plan → needs #5, #11, #22, #23 |
+| 9 | EXPLOIT | Define 3-bucket daily planning structure | BLOCKED | 🤖 | Skill produces 3-bucket plan → needs #5, #11, LP-006 #8-9 |
 | 10 | EXPLOIT | Define instance vs profile distinction | COMPLETED | 🤖 | task-field-guide.md documents it |
 | 11 | EXPLOIT | Build CLAWD-004 maturity scan script | CAPTURED | 🤖 | `scripts/task-scan.js` runs + outputs non-compliant tasks |
 | 12 | EXPLOIT | Daily planning = evening before | BLOCKED | 🤖 | Cron fires at 21:00, skill works → needs #9 |
@@ -72,9 +72,9 @@ Task system v1.2 operational with completion gates, pipeline integration, and au
 | 20 | EXPLORE | Build in Mud — threshold deps | COMPLETED | 🤖 | Threshold deps (⊕) in template + field guide + Neo4J schema |
 | 21 | EXPLOIT | Expandi upstream checklist | COMPLETED | 🤖 | checklists/boss-lead-gen-expandi.md |
 | 22 | EXPLOIT | Reconcile pipeline spec + create LP tasks | COMPLETED | 🤖 | linkedin-pipeline-wiring.md + LP-001→006 in registry |
-| 23 | EXPLOIT | Define H1 fields for pipeline tracking | IN PROGRESS | 🔄 | H1 has all priority columns (aiPassed ✅, jamieReviewed ✅, sendMessage ✅, pipelineStage ❌, screenResult ❌) |
-| 24 | EXPLOIT | Pipeline status script | CAPTURED | 🤖 | `scripts/pipeline-status.js` outputs lead counts per stage |
-| 25 | EXPLOIT | Pipeline stats → dashboard/KPIs | CAPTURED | 🤖 | CLAWD-003 receives pipeline data |
+| 23 | — | MOVED → LP-006 #8 (H1 fields) | — | — | Not a task system concern |
+| 24 | — | MOVED → LP-006 #9 (pipeline status script) | — | — | Not a task system concern |
+| 25 | — | MOVED → LP-006 #10 (pipeline stats → KPIs) | — | — | Not a task system concern |
 | 26 | EXPLOIT | Completion gate enforcement | COMPLETED | 🤖 | AGENTS.md Step 5 + template Output columns |
 
 ## Execution Log
