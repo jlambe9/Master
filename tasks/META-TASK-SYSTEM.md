@@ -149,3 +149,6 @@ All dimensions: N / —
 | 1.0 | 2026-02-10 | Created | Rich |
 | 1.1 | 2026-02-21 | Reformatted to v1.1 | Atlas |
 | 1.2 | 2026-02-21 | Completion gate, Output columns, pipeline reconciliation | Rich |
+
+## Notes
+- LP-006 #8-9 (H1 columns + pipeline status script) is a priority test case for validating the task system with real data, but it's not owned by META-TASK-SYSTEM. The task system is domain-agnostic — it won't always be outputting LinkedIn data.
