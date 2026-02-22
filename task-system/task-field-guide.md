@@ -270,7 +270,7 @@ When tracing upstream to find root blockers:
 |------|-----------|-------------|
 | **task-field-guide.md** (this file) | Central reference: how to fill tasks, owner rules, deps, maturity, domain checklists, tracing | Always — this is home base |
 | `pipeline.md` | Pipeline stages, gate checks, per-stage failure analysis | When advancing a task through stages |
-| `template-v1.2.md` | The actual template to copy when creating a task | When creating a new task |
+| `template-v1.3.md` | The actual template to copy when creating a task | When creating a new task |
 | `layer0-scoring.md` | 12 computational dimensions for scoring | When scoring a task (agent layer) |
 | `jamie-profile.md` | Jamie's CHC/7BES profile for scoring | When scoring a task (agent layer) |
 | `interventions.md` | Category routing (E/B/A/M) + pattern recognition | When a task is B/A and needs intervention |
@@ -439,6 +439,6 @@ Transition: BUILDING → OPERATIONAL when System Stop Criteria met + ≥2 weeks 
 - Task files: ~/Master/tasks/[ID].md
 - Registry: ~/Master/TASK-REGISTRY.md (mirrored to ~/clawd/TASK-REGISTRY.md)
 - Process reference: this file (~/Master/task-system/task-field-guide.md)
-- Template: ~/Master/task-system/template-v1.1.md
+- Template: ~/Master/task-system/template-v1.3.md
 - Scoring: ~/Master/task-system/layer0-scoring.md
 - Profile: ~/Master/task-system/jamie-profile.md

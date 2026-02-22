@@ -11,7 +11,7 @@
 **Maturity:** [L0-L9]
 **Next Action:** [Agent-generated — what happens next]
 **Created:** [date]
-**Pipeline:** v1.2
+**Pipeline:** v1.3
 **Field Guide:** task-system/task-field-guide.md
 **Goal:** [GOAL-ID | PATH-ID | Mechanism Step — e.g. GOAL-001 | PATH-LI | M1: Outreach] *(optional)*
 **Location:** [🏠 Remote | 📍 On-site | 🔄 Either] *(if on-site: what's needed to make it remote?)*

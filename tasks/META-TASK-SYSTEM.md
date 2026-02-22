@@ -85,6 +85,7 @@ Task system v1.2 operational with completion gates, pipeline integration, and au
 | 33 | EXPLOIT | Document hybrid task subtypes in field guide | CAPTURED | 🤖 | 🔓 Unblock / ⚙️ Systematise / 🚀 Execute |
 | 34 | EXPLOIT | Build strategic alignment cron | CAPTURED | 🤖 | Weekly cron: trace goals → verify execution serves current bottleneck |
 | 35 | EXPLOIT | Build execution monitoring cron | CAPTURED | 🤖 | Daily cron: check task statuses, flag stalled/blocked, produce morning briefing |
+| 36 | EXPLOIT | Reformat all tasks to v1.3 | CAPTURED | 🤖 | All task files have Goal field, Location field, Decision Log section. template-v1.3.md used as reference. |
 
 ## Execution Log
 | Date | What Happened | Outcome | Duration |
