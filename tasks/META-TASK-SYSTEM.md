@@ -86,6 +86,16 @@ Task system v1.2 operational with completion gates, pipeline integration, and au
 | 34 | EXPLOIT | Build strategic alignment cron | CAPTURED | 🤖 | Weekly cron: trace goals → verify execution serves current bottleneck |
 | 35 | EXPLOIT | Build execution monitoring cron | CAPTURED | 🤖 | Daily cron: check task statuses, flag stalled/blocked, produce morning briefing |
 | 36 | EXPLOIT | Reformat all tasks to v1.3 | CAPTURED | 🤖 | All task files have Goal field, Location field, Decision Log section. template-v1.3.md used as reference. |
+| 37 | EXPLORE | v1.3 system overview document | COMPLETED | 🤖 | `v1.3-system-overview.md` exists with all 10 sections + 4 appendices |
+| 38 | EXPLORE | Process leak vulnerability audit (10 vulnerabilities) | COMPLETED | 🤖 | `v1.3-vulnerability-audit.md` exists with all 10 failure modes + enforcement specs |
+| 39 | EXPLORE | Cron map audit (24 crons reviewed) | COMPLETED | 🤖 | `v1.3-cron-registry.md` exists with all 24 crons mapped, prioritised, dependency chain |
+| 40 | EXPLORE | Enforcement rules audit (AGENTS.md/SOUL.md gaps) | COMPLETED | 🤖 | `v1.3-enforcement-rules.md` exists with 5 new sections, 4 modifications, SOUL.md additions |
+| 41 | EXPLOIT | Add cron classification (system/domain) to system overview + cron registry | IN PROGRESS | 🤖 | System overview §11 has Cron Classification table. Cron registry has Scope field on every cron. |
+| 42 | EXPLOIT | Implement enforcement rules into AGENTS.md | CAPTURED | 🤖 | AGENTS.md has: Goal Creation Protocol, Goal Linkage (Step 6b), Hybrid Subtypes (Step 3c), Strategy/Execution Boundary, Morning Briefing Protocol, Weekly Review Triggers, template ref → v1.3 |
+| 43 | EXPLOIT | Implement enforcement additions to SOUL.md | CAPTURED | 🤖 | SOUL.md has System Discipline section (stick-to-plan, don't over-map, one bottleneck) |
+| 44 | EXPLOIT | Add automation enforcement section to system overview | CAPTURED | 🤖 | System overview has §11 Automation Enforcement with: cron classification, model tiers, consolidated cron table, dependency map |
+| 45 | EXPLOIT | Build/consolidate all 10 crons with model tier assignments | CAPTURED | 🤖 | 10 crons exist in OpenClaw with correct models. Old redundant crons removed. |
+| 46 | EXPLOIT | Add model tier system to system overview + AGENTS.md | CAPTURED | 🤖 | System overview + AGENTS.md define 3 model tiers (Strategy/Judgment/Validation) with assignment rules |
 
 ## Execution Log
 | Date | What Happened | Outcome | Duration |
