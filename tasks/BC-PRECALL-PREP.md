@@ -10,22 +10,16 @@
 **Owner:** 🤖 Rich
 **Next Action:** Build `skills/pre-call-prep/SKILL.md` with full Sandler process
 **Created:** 2026-02-11
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 When Jamie says "I've got a call with [Name]", Rich immediately produces a Sandler call plan: all known data structured, gaps identified, questions ready. Jamie skims before call and is prepared.
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Trigger
 - Jamie tells Rich a call is booked → skill runs immediately
 - OR: `callBooked` column in H1 populated → auto-trigger (future)
-
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | Lead name + H1 data + PB data + LinkedIn DMs | Pull all available intelligence | Raw data compiled |
-| 2 | Raw data + Sandler 7-stage framework | Structure into call plan sections | Sandler-structured call plan |
-| 3 | Call plan | Identify information gaps | Gap list + targeted questions |
-| 4 | Full call plan | Output to Jamie (Telegram or file) | Ready-to-use call prep doc |
 
 ## Call Plan Structure (Sandler 7-Stage)
 
@@ -52,8 +46,8 @@ Third-level pain = buying motivation. People buy to fix personal pain.
 6. aiNotes column
 
 ## Subtasks
-| # | Type | Task | Status | Owner |
-|---|------|------|--------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | EXPLOIT | Build `skills/pre-call-prep/SKILL.md` | CAPTURED | 🤖 Rich |
 | 2 | EXPLOIT | Create `reference/call-plan-template.md` | CAPTURED | 🤖 Rich |
 | 3 | EXPLOIT | Wire to H1 `callBooked` trigger | CAPTURED | 🤖 Rich |

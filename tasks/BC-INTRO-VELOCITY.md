@@ -10,10 +10,12 @@
 **Owner:** 🔄 Hybrid
 **Next Action:** Jamie sends the 8 ready intros (ST-0), Rich validates 13 existing intros (ST-1)
 **Created:** 2026-02-11
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 Every CR-accepted lead has a validated intro with aiNotes, reviewed by Jamie, and sent. Zero backlog. New accepts get intros within 24h.
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Current Pipeline Numbers (2026-02-11 16:49)
 | Stage | Count | Action |
@@ -26,19 +28,9 @@ Every CR-accepted lead has a validated intro with aiNotes, reviewed by Jamie, an
 | CR accepted, no intro (grey area) | ~8 | ST-3: Jamie decides |
 | CR sent, awaiting accept | 59 | ST-4: Write as they accept |
 
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 0 | 8 ready intros in H1 | Jamie copies from H1 col L → sends via LinkedIn DM | 8 intros sent, H1 updated |
-| 1 | 13 intros with draft_message but no aiNotes | Rich validates against updated process + adds aiNotes | 13 intros ready for Jamie review |
-| 2 | 21 accepted customers with no intro | Rich writes full intros: PB → screen → write → aiNotes | 21 intros ready for review |
-| 3 | 8 grey area leads | Jamie decides: partner/customer/exclude per lead | Classification decisions |
-| 4 | New accepts (ongoing) | Rich monitors + auto-writes within 24h | Continuous pipeline |
-| 5 | Automatable? | Investigate Expandi send vs manual LinkedIn DM | Send automation decision |
-
 ## Subtasks
-| # | Type | Task | Status | Owner | Notes |
-|---|------|------|--------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | ST-0 | EXPLOIT | Send 8 ready intros | CAPTURED | 🧑 Jamie | Rows 3,4,5,14,15,22,26,27 |
 | ST-1 | EXPLOIT | Validate 13 + add aiNotes | CAPTURED | 🤖 Rich | ~30min sub-agent |
 | ST-2 | EXPLOIT | Write 21 new intros | CAPTURED | 🤖 Rich | ~45min sub-agent |

@@ -10,25 +10,16 @@
 **Owner:** 🔄 Hybrid
 **Next Action:** Validate existing 07:30 cron (BC-067.4) delivers all 7 checklist items
 **Created:** 2026-02-11
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 Every morning at 08:00, Jamie receives a prioritised Telegram action list. Each item copy-paste ready or one-tap approve. Morning outreach block completes before any other work.
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Schedule
 **Daily at 08:00 GMT** (during cardio — mobile Telegram)
 Rich prepares at 07:30 → delivers at 08:00
-
-## Steps (Daily Execution)
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | H1 (replied leads) + LinkedIn inbox | 🔴 Reply to responses | Responses sent, H1 updated |
-| 2 | H1 (reviewed ✅ + passed ✅ + introSent empty) | 🟠 Send reviewed intros | Intros sent, H1 dates updated |
-| 3 | H1 (draft_message + aiNotes, not reviewed) | 🟡 Review new intros (mobile-intro-review) | Intros approved/edited |
-| 4 | H1 (intro sent, no reply, FU due) | 🟡 Follow-ups & ghosts (FU1 3d, FU2 5d, Ghost 5d) | FU messages sent |
-| 5 | detect-new-connections output | 🟢 Check new accepts → trigger writing | New intros queued for tomorrow |
-| 6 | `scripts/expandi-status.js` | 🟢 Pipeline health check | Health status |
-| 7 | All above | ⚪ Log to H1 + `memory/YYYY-MM-DD.md` | Daily stats recorded |
 
 ## Output Format (Telegram)
 ```

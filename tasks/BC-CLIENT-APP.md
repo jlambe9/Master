@@ -10,14 +10,16 @@
 **Owner:** 🤖 Rich
 **Next Action:** Create client workspace template files (subtask 1) — needed for Founders Program
 **Created:** 2026-02-11
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 Working V1 client bot: Telegram-based AI companion for coaching clients. Delivers protocol, captures tasks, tracks adherence, sends consented summaries to Jamie. Tested with first Founders Program client.
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Subtasks
-| # | Type | Task | Status | Priority | Owner | Notes |
-|---|------|------|--------|----------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | EXPLOIT | Create client workspace template files | CAPTURED | P1 | 🤖 | ~/clients/[name]/ structure |
 | 2 | EXPLOIT | Write client-setup.sh script | CAPTURED | P1 | 🤖 | One-click provisioning |
 | 3 | EXPLOIT | Create client-facing SOUL.md persona | CAPTURED | P1 | 🔄 | Not Rich — purpose-built |
@@ -27,14 +29,6 @@ Working V1 client bot: Telegram-based AI companion for coaching clients. Deliver
 | 7 | EXPLORE | Friction tagging system | CAPTURED | P2 | 🤖 | Identify highest-leverage automation |
 | 8 | EXPLORE | Multi-tenant architecture | CAPTURED | P3 | 🤖 | When >5 clients |
 | 9 | EXPLORE | Standalone app feasibility | CAPTURED | P4 | 🤖 | When >20 clients |
-
-## Steps (Input → Action → Output)
-1. **Input:** Product vision + architecture decisions → **Action:** Create workspace template → **Output:** ~/clients/ template structure
-2. **Input:** Template → **Action:** Write client-setup.sh → **Output:** One-click provisioning script
-3. **Input:** Brand voice + ADHD coaching principles → **Action:** Create client-facing SOUL.md → **Output:** Bot persona
-4. **Input:** Consent config + coach report format → **Action:** Build report cron → **Output:** Automated consented summaries
-5. **Input:** Onboarding questions + consent categories → **Action:** Build Telegram onboarding flow → **Output:** Client self-onboards
-6. **Input:** V1 running with clients → **Action:** Deploy to first Founders Program client → **Output:** Validated product
 
 ## Dependencies / Links
 - **Upstream:** BC-OFFER-V1 (defines what Founders Program includes — this is a deliverable), BOSS-ONBOARD (onboarding feeds into client setup)

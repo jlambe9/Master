@@ -10,23 +10,16 @@
 **Owner:** ❓ Undefined
 **Next Action:** Consolidate BC-PRECALL-PREP + BC-CALL-NOTES + BC-OFFER-V1 into overall workflow map
 **Created:** 2026-02-10
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 End-to-end sales process: lead books call → Sandler call → close → onboarding handoff. Tested with mock call. Call → sale conversion >25%.
-
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | BC-PRECALL-PREP, BC-CALL-NOTES, BC-OFFER-V1 | Consolidate into overall workflow | Sales workflow document |
-| 2 | Workflow + industry best practices | Write Sandler call script + objection handling | Call script |
-| 3 | Scheduling needs | Set up booking system (Calendly?) | Live booking link |
-| 4 | BC-OFFER-V1 pricing | Create pricing/packaging presentation | Sales collateral |
-| 5 | All above | Mock call test | Validated workflow |
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Subtasks
-| # | Type | Task | Status | Owner | Notes |
-|---|------|------|--------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | EXPLORE | Research coaching sales best practices | CAPTURED | 🤖 Rich | |
 | 2 | EXPLOIT | Write call script + objection handling | CAPTURED | 🔄 | BC-PRECALL-PREP covers much of this |
 | 3 | EXPLOIT | Set up booking system | CAPTURED | 🤖 Rich | Calendly? |

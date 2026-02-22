@@ -10,23 +10,16 @@
 **Owner:** ❓ Undefined
 **Next Action:** Map ideal client journey from payment to first session (subtask 1)
 **Created:** 2026-02-10
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 Documented onboarding process: payment → first session. Steps, tools, templates, timeline. Time from payment to first session <48hrs. Tested with mock run-through.
-
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | Product design (`boss/product.md`) | Map ideal client journey | Journey map document |
-| 2 | Journey map | Create welcome email/pack template | Welcome materials |
-| 3 | Scheduling needs | Set up scheduling for initial assessment | Calendly or equivalent |
-| 4 | Assessment tools (PSS-10, PANAS, BPS) | Create baseline assessment protocol | Operational assessment flow |
-| 5 | All above | Test with mock client run-through | Validated process |
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Subtasks
-| # | Type | Task | Status | Owner | Notes |
-|---|------|------|--------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | EXPLORE | Map ideal client journey | CAPTURED | ❓ | |
 | 2 | EXPLOIT | Create welcome email/pack | CAPTURED | 🤖 Rich | Template |
 | 3 | EXPLOIT | Set up scheduling | CAPTURED | 🤖 Rich | Calendly? |

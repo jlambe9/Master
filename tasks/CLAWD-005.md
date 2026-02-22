@@ -11,7 +11,7 @@
 **Maturity:** L1
 **Next Action:** Map all tools/services used by all crons → build verification script
 **Created:** 2026-02-21
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 **Field Guide:** task-system/task-field-guide.md
 
 ## Dependencies
@@ -21,20 +21,12 @@
 
 ## Win State
 Before any cron fires, Rich can verify all required access is live. When access breaks, Rich can either self-heal or escalate with specific diagnosis. Remote recovery possible without Jamie at the machine.
-
-## Steps
-| # | Input | Action | Output | Owner |
-|---|-------|--------|--------|-------|
-| 1 | List of all crons + processes | Map every tool/API/service each one needs | Access matrix: cron × service | 🤖 |
-| 2 | Access matrix | Build verification script that checks each service | `scripts/ops-health.js` — returns pass/fail per service | 🤖 |
-| 3 | Verification script | Add to daily pre-flight (run before first cron of day) | Pre-flight cron at 05:00 | 🤖 |
-| 4 | Failure scenarios | Define fallback for each service failure | Fallback matrix in this file | 🔄 |
-| 5 | Fallback matrix | Implement self-heal where possible (token refresh, restart, retry) | Auto-recovery in script | 🤖 |
-| 6 | Non-self-healable failures | Build remote recovery playbook | Documented: how to fix from phone/laptop via Claude Code / Codex web | 🔄 |
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Subtasks
-| # | Type | Task | Status | Owner | Notes |
-|---|------|------|--------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | EXPLOIT | Map all cron/process → tool/service dependencies | CAPTURED | 🤖 | |
 | 2 | EXPLOIT | Build ops-health verification script | CAPTURED | 🤖 | |
 | 3 | EXPLOIT | Pre-flight cron (05:00 daily) | CAPTURED | 🤖 | |

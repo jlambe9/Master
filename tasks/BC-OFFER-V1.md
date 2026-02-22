@@ -10,23 +10,15 @@
 **Owner:** 🔄 Hybrid
 **Next Action:** Jamie + Rich draft sections 1-3 (pitch, problem, mechanism) into `reference/offer-v1.md`
 **Created:** 2026-02-11
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 A single document (`reference/offer-v1.md`) with all 10 sections below. Good enough to sell from this week. Jamie can read it before a call and know exactly what he's offering, at what price, with what deliverables.
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Why Critical
 Pipeline is sending CRs and writing intros — but what are we selling? Without this: vague "program", unstructured calls, no landing page, no delivery framework.
-
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | Jamie's domain knowledge + `reference/problems-we-solve.md` | Draft sections 1-3: pitch, problem, mechanism | Core positioning |
-| 2 | Jamie's coaching design | Draft sections 4-6: deliverables, outcomes, pricing | Offer structure |
-| 3 | Competitive landscape | Draft sections 7-9: differentiation, proof, objections | Sales ammunition |
-| 4 | BOSS-SALES workflow | Draft section 10: sales call flow | Call integration |
-| 5 | Full draft | Jamie reviews and edits | Approved offer doc |
-| 6 | Approved doc | Mock sales call using the offer | Validated offer |
 
 ## Sections Required
 1. **One-Sentence Pitch** — "I help [person] [result] through [mechanism] in [timeframe]"
@@ -41,8 +33,8 @@ Pipeline is sending CRs and writing intros — but what are we selling? Without 
 10. **Sales Call Flow** — Opening → problem → mechanism → offer → proof → close
 
 ## Subtasks
-| # | Type | Task | Status | Owner | Notes |
-|---|------|------|--------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | EXPLOIT | Draft sections 1-3 | CAPTURED | 🔄 Jamie + Rich | Core — Jamie's knowledge |
 | 2 | EXPLOIT | Draft sections 4-6 | CAPTURED | 🧑 Jamie | Jamie decides deliverables/pricing |
 | 3 | EXPLOIT | Draft sections 7-9 | CAPTURED | 🤖 Rich → Jamie validates | Rich drafts, Jamie validates |

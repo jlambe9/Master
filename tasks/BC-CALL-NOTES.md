@@ -10,18 +10,12 @@
 **Owner:** 🔄 Hybrid
 **Next Action:** Build template file at `reference/call-notes-template.md` from spec below
 **Created:** 2026-02-11
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 A reusable template: pre-filled with known intel (from call plan), Jamie fills in "what they said" during the call. After call = permanent record + triggers next actions in H1.
-
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | BC-PRECALL-PREP (call plan) | Auto-populate pre-call intel columns | Pre-filled template |
-| 2 | Live call | Jamie fills "their answer" / "exact words" columns | Completed call notes |
-| 3 | Completed notes | Jamie fills outcome + post-call reflection | Final record |
-| 4 | Final record | Rich updates H1: call outcome, next action, status, pain notes | Updated pipeline |
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Dependencies / Links
 - **Upstream:** BC-PRECALL-PREP (generates call plan that populates this), BC-OFFER-V1 (offer details for Fulfillment stage)

@@ -10,10 +10,12 @@
 **Owner:** 🤖 Rich
 **Next Action:** Design data schema — which APIs/sources feed each widget
 **Created:** 2026-02-12
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 Live dashboard showing: revenue progress bar, daily KPI pips (streak tracker), cron status panel, current task, pipeline funnel. Auto-refreshing, mobile-accessible.
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Layout
 - **Top Bar:** Revenue health bar (£ actual vs £5K target, color-coded)
@@ -21,15 +23,6 @@ Live dashboard showing: revenue progress bar, daily KPI pips (streak tracker), c
 - **Cron Panel:** Every cron/daemon with 🟢🟡🔴 status, last/next run
 - **Task Panel:** Active task, time on task, subtask progress
 - **Pipeline Funnel:** Leads → CRs → Accepts → Intros → Replies → Calls → Clients with conversion rates
-
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | Widget requirements | Design data schema + API mapping | Architecture doc |
-| 2 | Architecture | Build frontend (dark HTML, responsive) | Dashboard page |
-| 3 | APIs (H1, Expandi, cron state, Master repo) | Wire data sources | Populated widgets |
-| 4 | Auth requirements | Add token/IP auth | Secured dashboard |
-| 5 | Hosting options | Deploy (Cloudflare Pages or local + Tailscale) | Live URL |
 
 ## Data Sources
 | Widget | Source |

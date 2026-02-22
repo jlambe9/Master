@@ -10,10 +10,12 @@
 **Owner:** 🤖 Rich
 **Next Action:** Build scan script (node or shell) that checks each task file against v1.1 template
 **Created:** 2026-02-20
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 Every day at 16:00, Rich scans all task files in ~/Master/tasks/ and:
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 1. Identifies tasks NOT in v1.1 format
 2. Identifies missing required sections
 3. Identifies maturity gaps
@@ -21,17 +23,9 @@ Every day at 16:00, Rich scans all task files in ~/Master/tasks/ and:
 5. Updates TASK-REGISTRY.md with current maturity levels
 6. Alerts Jamie only if critical tasks have format gaps
 
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | v1.1 template sections | Build scan script comparing task files to template | Scan script |
-| 2 | Scan script | Create 16:00 daily cron (isolated session) | Live cron |
-| 3 | Scan results | Auto-fix unambiguous missing fields | Updated task files |
-| 4 | Remaining gaps | Output remediation list to Jamie via Telegram | Jamie reviews critical gaps |
-
 ## Subtasks
-| # | Type | Task | Status | Owner | Notes |
-|---|------|------|--------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | EXPLOIT | Build scan script | CAPTURED | 🤖 Rich | Compare sections present vs required |
 | 2 | EXPLOIT | Create 16:00 daily cron | CAPTURED | 🤖 Rich | Isolated session |
 | 3 | EXPLOIT | Auto-fix inferrable fields | CAPTURED | 🤖 Rich | Only unambiguous fills |

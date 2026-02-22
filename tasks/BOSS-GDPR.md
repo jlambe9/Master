@@ -10,25 +10,16 @@
 **Owner:** 🔄 Hybrid
 **Next Action:** Rich researches ICO registration requirements (subtask 1)
 **Created:** 2026-02-10
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 GDPR-compliant data handling policy, privacy policy, terms & conditions, and client contract — all drafted and reviewed. ICO registration confirmed or ruled out. Ready before first paying client.
-
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | UK GDPR requirements | Determine ICO registration requirements | ICO decision doc |
-| 2 | UK coaching regulations | Determine professional indemnity insurance needs | Insurance decision |
-| 3 | ICO + industry templates | Draft privacy policy | Privacy policy doc |
-| 4 | Privacy policy + business model | Draft terms & conditions | T&Cs doc |
-| 5 | Coaching deliverables (BC-OFFER-V1) | Draft client contract/agreement | Client contract |
-| 6 | BC-CLIENT-APP data architecture | Create internal data handling policy | Internal GDPR doc |
-| 7 | All drafts | Professional legal review ⚠️ REVIEW (may need solicitor) | Validated legal docs |
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Subtasks
-| # | Type | Task | Status | Owner | Notes |
-|---|------|------|--------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | EXPLORE | Determine ICO registration requirements | CAPTURED | 🤖 Rich | Research task |
 | 2 | EXPLORE | Determine professional indemnity insurance | CAPTURED | 🤖 Rich | Research task |
 | 3 | EXPLOIT | Draft privacy policy | CAPTURED | 🤖 Rich | From template |

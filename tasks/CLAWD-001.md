@@ -10,26 +10,20 @@
 **Owner:** 🤖 Rich
 **Next Action:** Add non-Anthropic fallback model (step 1) — Google Gemini key already configured
 **Created:** 2026-02-11
-**Pipeline:** v1.1
+**Pipeline:** v1.2
 
 ## Win State
 Overnight automation runs reliably. A single rate limit event does NOT cascade. Zero multi-hour failures.
+**Outputs (completion gate — ALL must exist to mark done):**
+1. ⚠️ REVIEW — outputs not yet defined
 
 ## Root Cause
 Trigger: Heavy usage → Anthropic API rate limit at 19:18 Feb 10.
 Cascade: Single-provider dependency → cron jobs on main session → no backoff → stale tokens → heartbeat amplification → 8h outage.
 
-## Steps
-| # | Input | Action | Output |
-|---|-------|--------|--------|
-| 1 | Google Gemini key (configured) | Add non-Anthropic fallback model | `agents.defaults.model.fallbacks` updated |
-| 2 | Expandi active hours (06:00-21:30) | Restrict Expandi cron to active hours | Cron: `0 6-21/2 * * *` |
-| 3 | Current `sessionTarget: "main"` | Move cron jobs to isolated sessions | Each cron = clean context |
-| 4 | Current `mode: "safeguard"` | Evaluate compaction settings | Decision on auto vs safeguard |
-
 ## Subtasks
-| # | Type | Task | Status | Owner | Notes |
-|---|------|------|--------|-------|-------|
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
 | 1 | EXPLOIT | Add Gemini fallback | CAPTURED | 🤖 Rich | Config change |
 | 2 | EXPLOIT | Restrict Expandi cron hours | CAPTURED | 🤖 Rich | Cron expr update |
 | 3 | EXPLOIT | Isolate cron sessions | CAPTURED | 🤖 Rich | Config change |
