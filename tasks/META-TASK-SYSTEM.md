@@ -35,8 +35,9 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 8. 10 consolidated crons live in OpenClaw with correct models, sequential execution, error handling
 9. All task files in v1.3 format (Goal, Location, Decision Log)
 10. GOAL-001 exists as worked example through full system
-11. All processes expressed in BPMN-ready notation (trigger → activities → gateways → outputs → error boundaries)
-12. Process definitions mechanically parseable into DAG format
+11. All processes expressed in BPMN notation (trigger → activities → gateways → outputs → error boundaries) — Phase 6
+12. All BPMN definitions encoded as DAG (JSON/YAML, machine-readable, no prose) — Phase 7
+13. Complete DAG package ready for MyOS task_os handoff — Phase 7
 
 ## Steps
 | # | Input | Action | Output (proof of completion) |
@@ -143,15 +144,26 @@ Task management system v1.3 operational with: goal layer, enforcement rules, err
 | 67 | EXPLOIT | Add Location field to all existing task files | CAPTURED | 🤖 | All task files have Location: 🏠/📍/🔄 |
 | 68 | EXPLOIT | Package worked example for MyOS task_os | CAPTURED | 🔄 | Set of files (goal + tasks + cron definitions + process definitions) that Claude Code can use to build task_os UI |
 
-### Phase 6 — BPMN Formalisation & DAG Portability [CAPTURED]
+### Phase 6 — BPMN Formalisation [CAPTURED]
+Express every process as formal BPMN notation. Validates process design — reveals loops, missing gateways, unclear branching. Must complete before DAG encoding.
 | # | Type | Task | Status | Owner | Output (proof of completion) |
 |---|------|------|--------|-------|----------------------------|
 | 69 | EXPLORE | Define BPMN notation standard for task system processes | CAPTURED | 🤖 | `task-system/bpmn-standard.md` exists with: notation format, required elements (trigger event, activities, decision gateways, error boundary events, output events, data objects), examples |
 | 70 | EXPLOIT | Convert all system overview processes (§4-§7) to BPMN notation | CAPTURED | 🤖 | Every process in system overview has BPMN-ready definition with: trigger → activities → gateways → outputs → error boundaries |
 | 71 | EXPLOIT | Convert all 10 cron definitions to BPMN notation | CAPTURED | 🤖 | Every cron in registry has BPMN process definition alongside the operational prompt |
 | 72 | EXPLOIT | Convert error handling escalation to BPMN notation | CAPTURED | 🤖 | Error handling flow expressed as BPMN with decision gateways at each escalation step |
-| 73 | EXPLOIT | Validate DAG portability — can all BPMN definitions be mechanically parsed? | CAPTURED | 🤖 | Script or manual validation confirms: every BPMN definition has explicit nodes + edges, no prose-only steps, all decision gateways have defined branches |
-| 74 | EXPLOIT | Define DAG schema for MyOS task_os consumption | CAPTURED | 🔄 | JSON/YAML schema that represents BPMN processes as DAG nodes + edges, consumable by Claude Code for task_os |
+| 73 | EXPLOIT | Validate BPMN completeness — every process has explicit nodes, edges, gateways, no prose-only steps | CAPTURED | 🤖 | Validation report confirms all BPMN definitions are complete. Any design issues (loops, missing branches) fixed before Phase 7. |
+
+### Phase 7 — DAG Encoding & MyOS Portability [CAPTURED]
+Take validated BPMN definitions and encode as machine-readable directed acyclic graphs. Depends on Phase 6 completion — cannot encode processes that haven't been formalised and validated first.
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
+| 74 | EXPLOIT | Define DAG schema for MyOS task_os consumption | CAPTURED | 🔄 | JSON/YAML schema that represents process flow as nodes + edges with execution semantics, consumable by Claude Code |
+| 75 | EXPLOIT | Encode all BPMN process definitions as DAG | CAPTURED | 🤖 | Every BPMN definition from Phase 6 encoded in DAG schema. Machine-readable. No prose. |
+| 76 | EXPLOIT | Encode all cron BPMN definitions as DAG | CAPTURED | 🤖 | Every cron process from Phase 6 encoded in DAG schema |
+| 77 | EXPLOIT | Encode error handling BPMN as DAG | CAPTURED | 🤖 | Error escalation flow encoded in DAG schema |
+| 78 | EXPLOIT | Validate DAG portability — can a runtime engine execute these? | CAPTURED | 🤖 | Script or manual validation: every DAG has explicit nodes + edges, all decision branches defined, no orphan nodes, execution order deterministic |
+| 79 | EXPLOIT | Package complete DAG set for MyOS task_os handoff | CAPTURED | 🔄 | Directory of DAG files + schema definition + documentation that Claude Code can consume to build task_os execution engine |
 
 ## Execution Log
 | Date | What Happened | Outcome | Duration |
