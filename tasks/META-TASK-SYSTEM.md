@@ -138,7 +138,7 @@ Crons deployed to OpenClaw but NOT YET VALIDATED. System health cron produced fa
 | 64 | EXPLOIT | Confirm domain crons (EXPANDI-HEALTH, SYNC-EXPANDI-H1) on Flash | DEPLOYED-UNVALIDATED | 🤖 | Both crons updated with error handling. Validation: next fire must write output to memory/cron-outputs/ with error handling reference. |
 | 65 | EXPLOIT | Delete expired/redundant crons | COMPLETED | 🤖 | 11 crons deleted. `cron list` shows exactly 10 active crons. Verified. |
 | 11 | EXPLOIT | Build CLAWD-004 scan script (v1.3 compliance) | COMPLETED | 🤖 | Validation logic built into Daily Integrity cron (#62) Check 1. Standalone script deferred — not needed until cron proves insufficient. |
-| 82 | EXPLOIT | Build MASTER VALIDATION CRON | CAPTURED | 🤖 | See spec below. Single cron that validates output of all other crons against defined criteria. |
+| 82 | EXPLOIT | Build MASTER VALIDATION CRON | CAPTURED | 🤖 | See spec below. Single cron that validates output of all other crons against defined criteria. Fires hourly at :30, checks only new outputs since last run. Catches bad output within 30 min of any cron firing. |
 
 ### Phase 5 — Create GOAL-001 & Reformat Tasks [CAPTURED]
 | # | Type | Task | Status | Owner | Output (proof of completion) |
