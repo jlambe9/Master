@@ -1,18 +1,19 @@
-# META-TASK-SYSTEM — Expand Task Tracker to v1.2
+# META-TASK-SYSTEM — Task Manager System v1.3
 
-> **Summary:** Upgrade task tracking system with auto-scoring, completion gates, pipeline wiring, and daily planning.
+> **Summary:** Full task management system with goals, mechanisms, enforcement, error handling, cron infrastructure, and BPMN-ready process definitions. North star: every process formalised to DAG-portable notation.
 
 **Domain:** meta/task-system
-**Priority:** 🟡 HIGH
+**Priority:** 🔴 CRITICAL
 **Status:** IN PROGRESS
 **Type:** EXPLORE
 **Cat:** 🟢 E
 **Owner:** 🤖 Rich
 **Maturity:** L3
-**Next Action:** #23 (H1 fields) + #11 (maturity scan script)
+**Next Action:** Phase 1 (#42, #43, #46, #47, #48, #49, #50)
 **Created:** 2026-02-10
-**Pipeline:** v1.2
+**Pipeline:** v1.3
 **Field Guide:** task-system/task-field-guide.md
+**Goal:** STANDALONE | Meta-system — enables all other goals
 
 ## Dependencies
 **Hard →:** None (root task)
@@ -21,18 +22,21 @@
 **Domain checklist:** meta/task-system
 
 ## Win State
-Task system v1.2 operational with completion gates, pipeline integration, and automated daily planning.
+Task management system v1.3 operational with: goal layer, enforcement rules, error handling, 10 consolidated crons, all tasks v1.3 compliant, and every process written in BPMN-ready notation portable to DAG.
 
 **Outputs (completion gate — ALL must exist to mark done):**
-1. `template-v1.2.md` exists with completion gate fields ✅
-2. `task-field-guide.md` documents completion gate protocol ✅
-3. `AGENTS.md` Step 5 enforces completion verification ✅
-4. All task files in v1.2 format (Output columns in Steps + Subtasks)
-5. `TASK-REGISTRY.md` current with all tasks including LP-001→006
-6. `linkedin-pipeline-wiring.md` maps stages → tasks → scripts → H1 ✅
-7. CLAWD-004 scan script runs and identifies non-compliant tasks
-8. Daily planning skill produces 3-bucket plan with real pipeline data
-9. H1 has all priority columns for pipeline tracking
+1. `template-v1.3.md` exists with Goal, Location, Decision Log fields ✅
+2. `goal-template-v1.3.md` exists with foundations, mechanisms, paths, gates ✅
+3. `v1.3-system-overview.md` exists with all sections including §11 Automation Enforcement ✅ (partial)
+4. `AGENTS.md` enforces v1.3: goal creation protocol, goal linkage, hybrid subtypes, strategy/execution boundary, model tiers, BPMN north star
+5. `SOUL.md` has system discipline + BPMN formalisation north star
+6. `v1.3-cron-registry.md` has all 10 crons with: scope, model tier, inputs, outputs, error handling, cron template definition
+7. `error-playbook.md` exists with structured error categories + resolution procedures
+8. 10 consolidated crons live in OpenClaw with correct models, sequential execution, error handling
+9. All task files in v1.3 format (Goal, Location, Decision Log)
+10. GOAL-001 exists as worked example through full system
+11. All processes expressed in BPMN-ready notation (trigger → activities → gateways → outputs → error boundaries)
+12. Process definitions mechanically parseable into DAG format
 
 ## Steps
 | # | Input | Action | Output (proof of completion) |
@@ -48,6 +52,7 @@ Task system v1.2 operational with completion gates, pipeline integration, and au
 | 9 | Pipeline data + task data | Build daily planning skill | Skill produces 3-bucket plan from real data |
 
 ## Subtasks
+### Phase 0 — Foundation (v1.0→v1.2) [COMPLETED]
 | # | Type | Task | Status | Owner | Output (proof of completion) |
 |---|------|------|--------|-------|----------------------------|
 | 1 | EXPLORE | Review Layer 0 scoring for gate integration | COMPLETED | 🤖 | pipeline.md v1.1 |
@@ -77,25 +82,76 @@ Task system v1.2 operational with completion gates, pipeline integration, and au
 | 25 | — | MOVED → LP-006 #10 (pipeline stats → KPIs) | — | — | Not a task system concern |
 | 26 | EXPLOIT | Completion gate enforcement | COMPLETED | 🤖 | AGENTS.md Step 5 + template Output columns |
 | 27 | EXPLOIT | Reformat all tasks to v1.2 | COMPLETED | 🤖 | 37 files: Steps removed, Output columns added, completion gates |
-| 28 | EXPLORE | v1.3 Goal layer design (Atlas framework) | IN PROGRESS | 🔄 | Draft + 3 critiques + lexicon + frameworks research complete. Final synthesis pending. |
-| 29 | EXPLOIT | Define traffic light task prioritisation schema | CAPTURED | 🔄 | Red/Amber/Green from: criticality × strategic leverage × cognitive match. For MyOS task_os. |
-| 30 | EXPLOIT | Define morning briefing structure | CAPTURED | 🔄 | Strategy emoji per task + 3 buckets (🧑/🤖/🔄 with 🔓/⚙️/🚀) + "NOT doing" section |
-| 31 | EXPLOIT | Define weekly review structure | CAPTURED | 🔄 | Strategy sense-check, data pull, minimum volume thresholds, mechanism chain review |
-| 32 | EXPLOIT | Define strategy/execution boundary | CAPTURED | 🤖 | Where does a trace stop being strategic and become execution? Task status = execution, conversion ratio = strategy |
-| 33 | EXPLOIT | Document hybrid task subtypes in field guide | CAPTURED | 🤖 | 🔓 Unblock / ⚙️ Systematise / 🚀 Execute |
-| 34 | EXPLOIT | Build strategic alignment cron | CAPTURED | 🤖 | Weekly cron: trace goals → verify execution serves current bottleneck |
-| 35 | EXPLOIT | Build execution monitoring cron | CAPTURED | 🤖 | Daily cron: check task statuses, flag stalled/blocked, produce morning briefing |
-| 36 | EXPLOIT | Reformat all tasks to v1.3 | CAPTURED | 🤖 | All task files have Goal field, Location field, Decision Log section. template-v1.3.md used as reference. |
-| 37 | EXPLORE | v1.3 system overview document | COMPLETED | 🤖 | `v1.3-system-overview.md` exists with all 10 sections + 4 appendices |
-| 38 | EXPLORE | Process leak vulnerability audit (10 vulnerabilities) | COMPLETED | 🤖 | `v1.3-vulnerability-audit.md` exists with all 10 failure modes + enforcement specs |
-| 39 | EXPLORE | Cron map audit (24 crons reviewed) | COMPLETED | 🤖 | `v1.3-cron-registry.md` exists with all 24 crons mapped, prioritised, dependency chain |
-| 40 | EXPLORE | Enforcement rules audit (AGENTS.md/SOUL.md gaps) | COMPLETED | 🤖 | `v1.3-enforcement-rules.md` exists with 5 new sections, 4 modifications, SOUL.md additions |
-| 41 | EXPLOIT | Add cron classification (system/domain) to system overview + cron registry | IN PROGRESS | 🤖 | System overview §11 has Cron Classification table. Cron registry has Scope field on every cron. |
-| 42 | EXPLOIT | Implement enforcement rules into AGENTS.md | CAPTURED | 🤖 | AGENTS.md has: Goal Creation Protocol, Goal Linkage (Step 6b), Hybrid Subtypes (Step 3c), Strategy/Execution Boundary, Morning Briefing Protocol, Weekly Review Triggers, template ref → v1.3 |
-| 43 | EXPLOIT | Implement enforcement additions to SOUL.md | CAPTURED | 🤖 | SOUL.md has System Discipline section (stick-to-plan, don't over-map, one bottleneck) |
-| 44 | EXPLOIT | Add automation enforcement section to system overview | CAPTURED | 🤖 | System overview has §11 Automation Enforcement with: cron classification, model tiers, consolidated cron table, dependency map |
-| 45 | EXPLOIT | Build/consolidate all 10 crons with model tier assignments | CAPTURED | 🤖 | 10 crons exist in OpenClaw with correct models. Old redundant crons removed. |
-| 46 | EXPLOIT | Add model tier system to system overview + AGENTS.md | CAPTURED | 🤖 | System overview + AGENTS.md define 3 model tiers (Strategy/Judgment/Validation) with assignment rules |
+
+### Phase 1 — v1.3 Design & Audit [COMPLETED]
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
+| 28 | EXPLORE | v1.3 Goal layer design (Atlas framework) | COMPLETED | 🔄 | goal-template-v1.3.md + strategy-change-protocol.md + lexicon + field guide updated |
+| 29 | EXPLOIT | Define traffic light task prioritisation schema | COMPLETED | 🔄 | Defined in v1.3-system-overview.md §7.1 + field guide |
+| 30 | EXPLOIT | Define morning briefing structure | COMPLETED | 🔄 | Defined in v1.3-system-overview.md §7.1 |
+| 31 | EXPLOIT | Define weekly review structure | COMPLETED | 🔄 | Defined in v1.3-system-overview.md §7.2 |
+| 32 | EXPLOIT | Define strategy/execution boundary | COMPLETED | 🤖 | Defined in v1.3-system-overview.md §6.3 |
+| 33 | EXPLOIT | Document hybrid task subtypes in field guide | COMPLETED | 🤖 | In field guide + v1.3-enforcement-rules.md |
+| 37 | EXPLORE | v1.3 system overview document | COMPLETED | 🤖 | `v1.3-system-overview.md` exists with 11 sections + 4 appendices |
+| 38 | EXPLORE | Process leak vulnerability audit (10 vulnerabilities) | COMPLETED | 🤖 | `v1.3-vulnerability-audit.md` — 10 failure modes + enforcement specs |
+| 39 | EXPLORE | Cron map audit (24→10 consolidation) | COMPLETED | 🤖 | `v1.3-cron-registry.md` — all 24 mapped, classified, consolidated |
+| 40 | EXPLORE | Enforcement rules audit (AGENTS.md/SOUL.md gaps) | COMPLETED | 🤖 | `v1.3-enforcement-rules.md` — 5 new sections, 4 mods, SOUL.md additions |
+| 41 | EXPLOIT | Add cron classification (system/domain) to system overview + cron registry | COMPLETED | 🤖 | §11 has classification table + cron registry has Scope + Model Tier on all 24 |
+
+### Phase 2 — Enforcement Rules & Infrastructure [CURRENT]
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
+| 42 | EXPLOIT | Implement enforcement rules into AGENTS.md | CAPTURED | 🤖 | AGENTS.md has: Goal Creation Protocol, Goal Linkage (6b), Hybrid Subtypes (3c), Strategy/Execution Boundary, Morning Briefing Protocol, Weekly Review Triggers, template ref → v1.3 |
+| 43 | EXPLOIT | Implement enforcement additions to SOUL.md | CAPTURED | 🤖 | SOUL.md has: System Discipline section + BPMN formalisation north star |
+| 46 | EXPLOIT | Add model tier system to system overview + AGENTS.md | CAPTURED | 🤖 | System overview §11.2 + AGENTS.md define 3 tiers with assignment rules |
+| 47 | EXPLOIT | Create cron definition template | CAPTURED | 🤖 | `task-system/cron-template.md` exists with: name, scope, model tier, schedule, trigger, inputs, outputs, output location, constraints, tools needed, validation, error handling, linked OpenClaw cron ID, BPMN notation |
+| 48 | EXPLOIT | Update system overview — cron output locations, discovery, cross-referencing | CAPTURED | 🤖 | §11 documents: where cron outputs live (`memory/cron-outputs/[name]/YYYY-MM-DD.md`), how downstream processes find outputs, how to discover crons (links to registry) |
+| 49 | EXPLOIT | Add one-line descriptions to every cron in system overview + cron registry | CAPTURED | 🤖 | Every cron entry has a one-line description explaining what it means in plain English |
+| 50 | EXPLOIT | Add BPMN formalisation north star to SOUL.md + AGENTS.md | CAPTURED | 🤖 | Both files state: "Every process must have explicit trigger, inputs, activities, decision gateways, outputs, error boundaries. Build with DAG portability in mind." |
+
+### Phase 3 — Error Infrastructure [CAPTURED]
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
+| 51 | EXPLOIT | Design centralised error handling file structure | CAPTURED | 🤖 | `task-system/error-handling/README.md` exists with: directory structure, error categories (cron / tool / global infra / domain-specific), how to add new error types, how agents find resolution procedures. Referenced in SOUL.md + AGENTS.md |
+| 52 | EXPLOIT | Create error playbook — cron errors | CAPTURED | 🤖 | `task-system/error-handling/cron-errors.md` exists with known cron error patterns → resolution procedures |
+| 53 | EXPLOIT | Create error playbook — tool errors | CAPTURED | 🤖 | `task-system/error-handling/tool-errors.md` exists with known tool error patterns (Expandi API, H1 sync, browser, etc.) |
+| 54 | EXPLOIT | Create error playbook — global infrastructure errors | CAPTURED | 🤖 | `task-system/error-handling/infra-errors.md` exists with: OpenClaw config, model fallback, auth failures, gateway restart procedures |
+| 55 | EXPLOIT | Add error handling protocol to AGENTS.md | CAPTURED | 🤖 | AGENTS.md has: "On error → check category-specific playbook in error-handling/ → if no resolution → check all files in error-handling/ → if still unknown → log structured error + alert Jamie" |
+| 56 | EXPLOIT | Add error handling section to system overview | CAPTURED | 🤖 | System overview has §12 Error Handling with: file structure, escalation procedure, structured error log format |
+| 57 | EXPLOIT | Create structured error log template | CAPTURED | 🤖 | `memory/error-log/YYYY-MM-DD.md` template with: timestamp, cron/process, phase, error, impact, resolution attempted, outcome, playbook entry created? |
+
+### Phase 4 — Build & Deploy 10 Crons [CAPTURED]
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
+| 58 | EXPLOIT | Build SYSTEM-HEALTH cron (3x daily: 06:00, 12:00, 22:30, Flash) | CAPTURED | 🤖 | Cron exists in OpenClaw, fires 3x, checks all other crons fired, reports failures, writes output to `memory/cron-outputs/system-health/` |
+| 59 | EXPLOIT | Rebuild MORNING-BRIEFING cron (07:00, Sonnet) | CAPTURED | 🤖 | Cron exists with: 3 buckets, traffic lights, threshold scan, staleness check, stale tasks, outreach queue section. Sequential execution. Error handling per Phase 3. |
+| 60 | EXPLOIT | Confirm MIDDAY-CHECK cron (13:00, Sonnet) | CAPTURED | 🤖 | Cron exists with correct model + error handling |
+| 61 | EXPLOIT | Rebuild EVENING-BLOCK cron (21:00, Sonnet) | CAPTURED | 🤖 | Cron exists merging: daily wrap + completion review + domain metrics + tomorrow prep. Sequential. Error handling. |
+| 62 | EXPLOIT | Build DAILY-INTEGRITY cron (22:00, Flash) | CAPTURED | 🤖 | Cron exists with 6 sequential checks: task validation, completion audit, KPI collection, registry sync, maturity scan, intake scan. Error handling per check. Output to `memory/cron-outputs/daily-integrity/` |
+| 34 | EXPLOIT | Build WEEKLY-REVIEW-PREP cron (Sun 12:00, Sonnet) | CAPTURED | 🤖 | Cron exists with 6 sections: KPI rollup, domain report, foundation check, orphan scan, decision log review, bottleneck analysis. Output to `memory/cron-outputs/weekly-review-prep/` |
+| 35 | EXPLOIT | Build MONTHLY-GOAL-REVIEW cron (1st of month, Sonnet) | CAPTURED | 🤖 | Cron exists with monthly review checklist. Output to `memory/cron-outputs/monthly-goal-review/` |
+| 63 | EXPLOIT | Build QUARTERLY-ENV cron (1st of quarter, Flash) | CAPTURED | 🤖 | Cron exists with environmental scan checklist trigger |
+| 64 | EXPLOIT | Confirm domain crons (EXPANDI-HEALTH, SYNC-EXPANDI-H1) on Flash | CAPTURED | 🤖 | Both crons confirmed on Flash with error handling |
+| 65 | EXPLOIT | Delete expired/redundant crons | CAPTURED | 🤖 | EXPANDI-AUTOSEND deleted. Any crons superseded by consolidation removed. OpenClaw cron list matches registry exactly. |
+| 11 | EXPLOIT | Build CLAWD-004 scan script (v1.3 compliance) | CAPTURED | 🤖 | `scripts/task-scan.js` checks v1.3 fields + goal linkage + ⚠️ REVIEW flags |
+
+### Phase 5 — Create GOAL-001 & Reformat Tasks [CAPTURED]
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
+| 66 | EXPLOIT | Create GOAL-001 (£5k/month profit) | CAPTURED | 🔄 | `~/Master/goals/GOAL-001.md` exists with: all 8 foundations assessed, sub-goals, mechanism chains with ratios, paths with MVP, threshold gates, system stop criteria |
+| 36 | EXPLOIT | Reformat all tasks to v1.3 | CAPTURED | 🤖 | All task files have Goal field, Location field, Decision Log section |
+| 67 | EXPLOIT | Add Location field to all existing task files | CAPTURED | 🤖 | All task files have Location: 🏠/📍/🔄 |
+| 68 | EXPLOIT | Package worked example for MyOS task_os | CAPTURED | 🔄 | Set of files (goal + tasks + cron definitions + process definitions) that Claude Code can use to build task_os UI |
+
+### Phase 6 — BPMN Formalisation & DAG Portability [CAPTURED]
+| # | Type | Task | Status | Owner | Output (proof of completion) |
+|---|------|------|--------|-------|----------------------------|
+| 69 | EXPLORE | Define BPMN notation standard for task system processes | CAPTURED | 🤖 | `task-system/bpmn-standard.md` exists with: notation format, required elements (trigger event, activities, decision gateways, error boundary events, output events, data objects), examples |
+| 70 | EXPLOIT | Convert all system overview processes (§4-§7) to BPMN notation | CAPTURED | 🤖 | Every process in system overview has BPMN-ready definition with: trigger → activities → gateways → outputs → error boundaries |
+| 71 | EXPLOIT | Convert all 10 cron definitions to BPMN notation | CAPTURED | 🤖 | Every cron in registry has BPMN process definition alongside the operational prompt |
+| 72 | EXPLOIT | Convert error handling escalation to BPMN notation | CAPTURED | 🤖 | Error handling flow expressed as BPMN with decision gateways at each escalation step |
+| 73 | EXPLOIT | Validate DAG portability — can all BPMN definitions be mechanically parsed? | CAPTURED | 🤖 | Script or manual validation confirms: every BPMN definition has explicit nodes + edges, no prose-only steps, all decision gateways have defined branches |
+| 74 | EXPLOIT | Define DAG schema for MyOS task_os consumption | CAPTURED | 🔄 | JSON/YAML schema that represents BPMN processes as DAG nodes + edges, consumable by Claude Code for task_os |
 
 ## Execution Log
 | Date | What Happened | Outcome | Duration |
