@@ -97,14 +97,15 @@
 
 | ID | Task | Status | Priority | Cat | Owner | Maturity | v1.1 |
 |----|------|--------|----------|-----|-------|----------|------|
-| LA-001 | Organise Cleaner | CAPTURED | ⚪ | 🟡 B | 🤖 Rich | L1 (scoped) | ✅ |
-| LA-002 | Clean Flat | CAPTURED | ⚪ | 🟡 B | 🧑 Jamie | L0 (uncharted) | ✅ |
+| LA-001 | Organise Cleaner | CAPTURED | 🔴 | 🟡 B | 🔄 Hybrid | L1 (scoped) | ✅ |
+| LA-002 | Clean & Tidy Flat | CAPTURED | 🔴 | 🟡 B | 🧑 Jamie | L1 (scoped) | ✅ |
 | LA-003 | Do Washing | CAPTURED | ⚪ | 🟡 B | 🧑 Jamie | L0 (uncharted) | ✅ |
 | LA-006 | Set Up Council Tax at New Fulham Address | IN PROGRESS | 🔴 | 🟡 B | 🔄 Hybrid | L4 (working) | ✅ |
 | LA-007 | Estate Agent Maintenance & Meter Queries | CAPTURED | 🔴 | 🟡 B | 🔄 Hybrid | L1 (scoped) | ✅ |
 | LA-008 | Utilities: Onboarding & Meter Readings | CAPTURED | 🔴 | 🟡 B | 🔄 Hybrid | L1 (scoped) | ✅ |
 | LA-009 | Home Connectivity: Router & Setup | CAPTURED | 🔴 | 🟡 B | 🔄 Hybrid | L1 (scoped) | ✅ |
 | LA-010 | Furniture & Flat "Later" Tasks | CAPTURED | ⚪ | 🟢 E | 🔄 Hybrid | L1 (scoped) | ✅ |
+| LA-011 | Flat Repair & Breakages | CAPTURED | 🔴 | 🟡 B | 🧑 Jamie | L1 (scoped) | ✅ |
 
 ## clawd/reliability + integrations + ops
 
