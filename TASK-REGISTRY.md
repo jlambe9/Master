@@ -104,7 +104,7 @@
 | LA-007 | Estate Agent Maintenance & Meter Queries | CAPTURED | 🔴 | 🟡 B | 🔄 Hybrid | L1 (scoped) | ✅ |
 | LA-008 | Utilities: Onboarding & Meter Readings | CAPTURED | 🔴 | 🟡 B | 🔄 Hybrid | L1 (scoped) | ✅ |
 | LA-009 | Home Connectivity: Router & Setup | CAPTURED | 🔴 | 🟡 B | 🔄 Hybrid | L1 (scoped) | ✅ |
-| LA-010 | Furniture & Flat "Later" Tasks | CAPTURED | ⚪ | 🟢 E | 🔄 Hybrid | L1 (scoped) | ✅ |
+| LA-010 | Furniture, Measurements & Flat "Later" Tasks | CAPTURED | ⚪ | 🟢 E | 🔄 Hybrid | L1 (scoped) | ✅ |
 | LA-011 | Flat Repair & Breakages | CAPTURED | 🔴 | 🟡 B | 🧑 Jamie | L1 (scoped) | ✅ |
 
 ## clawd/reliability + integrations + ops
