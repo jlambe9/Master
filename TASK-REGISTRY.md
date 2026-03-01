@@ -52,6 +52,7 @@
 | BC-067 | Outreach Cron Audit | SUBSUMED→LP-006 | 🔴 | 🟢 E | 🤖 Rich | L3 (resourced) | ✅ |
 | BC-DAILY-OUTREACH | Morning Outreach Priority Block | CAPTURED | 🔴 | 🔴 A-S | 🔄 Hybrid | L1 (scoped) | ✅ |
 | BC-INTRO-VELOCITY | Max Intro Sending Velocity | SUBSUMED→LP-004 | 🔴 | 🔴 A-S | 🔄 Hybrid | L2 (mapped) | ✅ |
+| BC-082 | Mental Health Platform Enterprise RFP Research | CAPTURED | 🟡 | 🟢 E | 🤖 Rich | L1 (scoped) | ✅ |
 
 ## boss/sales
 
